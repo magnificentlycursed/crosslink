@@ -307,11 +307,12 @@
       "uuid": "89b50e39-951f-4a33-ba60-26460565c4fd",
       "display_id": 19,
       "title": "REAL CUTOVER: mdatron 0.8.0 v2 hub -> 0.9 v3 (migrate + finalize per rehearsal runbook, local #17)",
-      "status": "open",
+      "status": "closed",
       "priority": "critical",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-22T15:07:13.958418Z",
-      "updated_at": "2026-07-22T15:43:52.792677Z",
+      "updated_at": "2026-07-22T15:43:59.264688Z",
+      "closed_at": "2026-07-22T15:43:59.264679Z",
       "labels": [
         "cutover"
       ],
@@ -531,11 +532,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 2,
       "timestamp": "2026-07-22T15:43:52.792677Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 3,
+      "timestamp": "2026-07-22T15:43:59.264688Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-22T15:43:52.792677Z",
+    "timestamp": "2026-07-22T15:43:59.264688Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 2
+    "agent_seq": 3
   }
 }
