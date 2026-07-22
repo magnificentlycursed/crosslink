@@ -1,0 +1,511 @@
+{
+  "next_display_id": 21,
+  "next_comment_id": 28,
+  "display_id_map": {
+    "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
+    "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
+    "34964a88-4547-4c86-8e43-b299623b1bc7": 11,
+    "39c1a88a-4b2a-4027-8297-4b62859dbdf8": 6,
+    "5325f968-4d13-46f9-b6f7-ceb63eb68f21": 5,
+    "64034bd7-6b24-4189-b9de-c7c5b6d64775": 8,
+    "68d2e5e5-e021-4906-a8d2-546df21b34ac": 14,
+    "6fc8c45a-fbd1-4d70-8978-d9058ff1d884": 18,
+    "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0": 10,
+    "7f4e1659-55cb-442e-a66a-d7b9aa91621d": 3,
+    "89b50e39-951f-4a33-ba60-26460565c4fd": 19,
+    "d4c17dc3-f1e7-4f56-9573-729bfd0bfed5": 13,
+    "da78cc6e-31c6-4805-9e80-75028c248ff0": 12,
+    "df19144c-bfa8-4056-ac54-44f6db40c21a": 1,
+    "e00178bc-6f75-4207-a84f-ff2b13362379": 15,
+    "e75c8af8-d483-40bd-9dbf-0d841edef2ee": 17,
+    "e9fa1a15-41d3-48e6-9291-76bffa2e2dec": 16,
+    "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5": 20,
+    "f06bd3bc-97ff-40c2-a4f8-da3695d3080f": 4,
+    "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b": 2
+  },
+  "locks": {},
+  "issues": {
+    "042841eb-595c-4efa-9c20-8c70ca0e8d06": {
+      "uuid": "042841eb-595c-4efa-9c20-8c70ca0e8d06",
+      "display_id": 9,
+      "title": "gh#12: mutating invocations against v2 hub duplicate hub-hydrated comments (fail-closed path not side-effect-free)",
+      "status": "closed",
+      "priority": "medium",
+      "parent_uuid": "7f4e1659-55cb-442e-a66a-d7b9aa91621d",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:36.677052Z",
+      "updated_at": "2026-07-21T20:09:12.497811Z",
+      "closed_at": "2026-07-21T20:09:12.497811Z",
+      "labels": [
+        "upstream"
+      ],
+      "comments": {
+        "e5fc9067-152b-4bb9-bc55-9a385812256d": {
+          "author": "anon-8ea7a055",
+          "content": "Fix implemented: commit 2dbcd1c7 on fix/7-8-12-v3-state-reads. comment_uuid_exists guard in v2 comment hydration and preservation restore stops the +1-per-pass duplication and self-heals accumulated duplicates; v2 refusal moved above acquire_lock in write_commit_push and emit_compact_push so refused mutations are side-effect-free. Regression test test_hydrate_v2_comment_dedup_across_passes. Full-suite gate: 2836/2838 pass; the 2 failures are pre-existing env-dependent bootstrap tests (no global git identity on this host), documented on gh#34.",
+          "created_at": "2026-07-21T16:37:53.411685Z",
+          "kind": "result"
+        }
+      }
+    },
+    "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": {
+      "uuid": "1ded09e0-6f5c-428d-aa3e-36ca44d0b368",
+      "display_id": 7,
+      "title": "gh#8: v3 locks release is a silent no-op across processes (read_lock_v2 empty in-process cache)",
+      "status": "closed",
+      "priority": "medium",
+      "parent_uuid": "7f4e1659-55cb-442e-a66a-d7b9aa91621d",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:32.446548Z",
+      "updated_at": "2026-07-21T20:09:08.544944Z",
+      "closed_at": "2026-07-21T20:09:08.544944Z",
+      "labels": [
+        "upstream"
+      ],
+      "comments": {
+        "0e3e85ab-8264-4318-a036-de6ef3f06d38": {
+          "author": "anon-8ea7a055",
+          "content": "Fix implemented and verified: commit 51e53d10 on fix/7-8-12-v3-state-reads. read_lock_v2 v3 branch lazily refreshes via refresh_v3_state (now pub(super)) when last_v3_state is cold; mirrors load_milestone_by_id idiom. Regression test v3_lock_release_works_from_fresh_process passes along with all existing v3_lock tests (4/4); clippy adds no new warnings (6 pre-existing on develop, none in touched files); fmt clean. Not closing this subissue until the bundled PR merges upstream.",
+          "created_at": "2026-07-21T02:49:31.990989Z",
+          "kind": "result"
+        },
+        "6f8b4892-cbf3-467d-8ff4-b731b375e377": {
+          "author": "anon-8ea7a055",
+          "content": "Plan: implement the investigated fix - read_lock_v2's v3 branch (shared_writer/locks.rs:101-118,194-215) returns Ok(None) from the never-populated in-process last_v3_state RefCell in a fresh process (core.rs:145), making locks release report 'was not locked' while locks list (checkpoint read, sync/locks.rs:45-70) shows the claim. Fix: fall back to refresh_v3_state() when the cache is None; also repairs the AlreadyHeld pre-check at locks.rs:37. Branch fix/8-locks-release-v3-cache in a worktree off upstream/develop.",
+          "created_at": "2026-07-21T02:34:27.112881Z",
+          "kind": "plan"
+        },
+        "c3e3119f-559f-413c-a5af-5edf83aa0446": {
+          "author": "anon-8ea7a055",
+          "content": "Root cause mapped: locks list reads checkpoint ref state (sync/locks.rs:45-70) and sees claims; locks release builds a FRESH SharedWriter whose read_lock_v2 v3 branch reads in-process last_v3_state RefCell - None in a fresh process (core.rs:145) so release returns 'was not locked'. Fix: read_lock_v2 v3 branch falls back to refresh_v3_state() when cache is None (also fixes AlreadyHeld pre-check at shared_writer/locks.rs:37).",
+          "created_at": "2026-07-21T02:27:26.168973Z",
+          "kind": "observation"
+        }
+      }
+    },
+    "34964a88-4547-4c86-8e43-b299623b1bc7": {
+      "uuid": "34964a88-4547-4c86-8e43-b299623b1bc7",
+      "display_id": 11,
+      "title": "gh#14: quiet mode routes issue lists through human renderer - titles truncated to 40 chars",
+      "description": "Operational guard until fixed: use --json whenever titles or exact text matter, never -q output.",
+      "status": "open",
+      "priority": "medium",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:42.136141Z",
+      "updated_at": "2026-07-21T02:18:21.637747Z",
+      "labels": [
+        "output",
+        "upstream"
+      ]
+    },
+    "39c1a88a-4b2a-4027-8297-4b62859dbdf8": {
+      "uuid": "39c1a88a-4b2a-4027-8297-4b62859dbdf8",
+      "display_id": 6,
+      "title": "gh#7: integrity counters/hydration spurious FAIL on v3 hub (read legacy v2 worktree, ignore checkpoint)",
+      "status": "closed",
+      "priority": "medium",
+      "parent_uuid": "7f4e1659-55cb-442e-a66a-d7b9aa91621d",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:30.586987Z",
+      "updated_at": "2026-07-21T20:09:06.592213Z",
+      "closed_at": "2026-07-21T20:09:06.592213Z",
+      "labels": [
+        "upstream"
+      ],
+      "comments": {
+        "5e17b303-1635-433d-8ff9-2226ed0ef2a7": {
+          "author": "anon-8ea7a055",
+          "content": "Fix implemented: commit ac93ed8b on fix/7-8-12-v3-state-reads. Integrity counters/hydration checks now read the reduced checkpoint state on v3 (v3_reduced_state helper, check_counters_v3, collect_count_mismatch_v3, detect() takes Option<&CheckpointState>); v3 hydration repair uses hydrate_from_state instead of the destructive clear+empty-rehydrate; v3 counters repair reports honestly. Both previously-failing smoke tests pass.",
+          "created_at": "2026-07-21T16:37:51.219852Z",
+          "kind": "result"
+        }
+      }
+    },
+    "5325f968-4d13-46f9-b6f7-ceb63eb68f21": {
+      "uuid": "5325f968-4d13-46f9-b6f7-ceb63eb68f21",
+      "display_id": 5,
+      "title": "gh#5: create/quick after legacy import reports Created but silently loses the issue (IDs from empty hub state)",
+      "status": "closed",
+      "priority": "medium",
+      "parent_uuid": "7f4e1659-55cb-442e-a66a-d7b9aa91621d",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:28.667922Z",
+      "updated_at": "2026-07-21T20:09:04.675099Z",
+      "closed_at": "2026-07-21T20:09:04.675099Z",
+      "labels": [
+        "upstream"
+      ],
+      "comments": {
+        "3d76f1a4-89ef-43d6-b79d-a930f87c4f4d": {
+          "author": "anon-8ea7a055",
+          "content": "gh#5 closed upstream: fixed by PR#6 (import promotion + hydration re-key + create durability check), merged to main; reaches develop via sync PR#39.",
+          "created_at": "2026-07-21T20:09:02.561396Z",
+          "kind": "result"
+        },
+        "610d1b9c-5e05-4d34-a5f3-772fdb1caa21": {
+          "author": "anon-8ea7a055",
+          "content": "Root cause mapped (investigation agent). The loss is NOT hub state wiping SQLite - it is hydrate_from_state's own restore pass. Sequence inside one transaction (src/hydration.rs:380-414): (1) clear_shared_data deletes issues; (2) hydrate_state_issues INSERT OR REPLACEs the new issue at reduced-state id (starts at 1 on post-import hubs, compaction.rs:861-935 seeded from checkpoint.rs:61 - SQLite never consulted for ID allocation); (3) restore_sqlite_only_issues (hydration.rs:900-923) re-inserts imported SQLite-only rows LAST, also INSERT OR REPLACE - colliding primary key REPLACEs (deletes) the just-created row. Success message prints after (create.rs:465) from the reduced-state map. Event IS durable on the agent ref (core.rs:679-683) - issue survives in hub, invisible locally. Loss self-heals once next_display_id passes the imported max. Fix: restore pass must never REPLACE an id occupied by a reduced-state row - re-key colliding preserved rows to negative local ids (existing offline convention, hydration.rs:472-477).",
+          "created_at": "2026-07-21T02:27:21.695389Z",
+          "kind": "observation"
+        }
+      }
+    },
+    "64034bd7-6b24-4189-b9de-c7c5b6d64775": {
+      "uuid": "64034bd7-6b24-4189-b9de-c7c5b6d64775",
+      "display_id": 8,
+      "title": "gh#11: post-migrate-hub-v3 sync aborts with SQLite constraint 1555",
+      "status": "closed",
+      "priority": "medium",
+      "parent_uuid": "7f4e1659-55cb-442e-a66a-d7b9aa91621d",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:34.358255Z",
+      "updated_at": "2026-07-21T20:09:10.522709Z",
+      "closed_at": "2026-07-21T20:09:10.522709Z",
+      "labels": [
+        "upstream"
+      ],
+      "comments": {
+        "5a7c91cb-9cc7-4444-acf0-2339483a1efa": {
+          "author": "anon-8ea7a055",
+          "content": "gh#11 fix implemented: commit 1431cbfe on fix/4-11-to-shared-and-comment-ids (based on upstream PR#6 head). Preservation restore re-keys colliding preserved comment ids to negative locals, mirroring PR#6's issue remap. Regression test passes. HOLDING - no push/PR until operator confirms PR#6 and PR#35 merged.",
+          "created_at": "2026-07-21T17:47:55.340093Z",
+          "kind": "result"
+        },
+        "a1a5e601-5c38-45c6-bc99-f06e59cd3842": {
+          "author": "anon-8ea7a055",
+          "content": "gh#11 mechanism hypothesis strengthened by PR#6 review: preserved SQLite-only comments carry positive v2 ids; hydrated comments with FROZEN positive display ids use plain INSERT (db/hydration.rs:95-113, not OR REPLACE) - a positive-positive collision aborts the whole hydration transaction with SQLite PK constraint error 1555. PR#6 only renumbers the NEGATIVE comment sequence (comment_id_start below preserved min), so the positive-frozen collision remains live post-PR#6. Matches the post-migrate-hub-v3 sync abort signature: migration hydrates frozen comment ids against a DB full of preserved import rows.",
+          "created_at": "2026-07-21T02:31:00.787288Z",
+          "kind": "observation"
+        }
+      }
+    },
+    "68d2e5e5-e021-4906-a8d2-546df21b34ac": {
+      "uuid": "68d2e5e5-e021-4906-a8d2-546df21b34ac",
+      "display_id": 14,
+      "title": "gh#33: sync ID-promotion strands session work binding, .active-issue sentinel, and lock claims",
+      "status": "open",
+      "priority": "medium",
+      "parent_uuid": "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:53.886459Z",
+      "updated_at": "2026-07-21T02:34:22.800781Z",
+      "labels": [
+        "upstream"
+      ],
+      "comments": {
+        "517fa7ec-76d2-4cc9-8c99-5aa639e7eae7": {
+          "author": "anon-8ea7a055",
+          "content": "Filed upstream as dollspace-gay/crosslink#33 with evidence from the vsdd-cli hub (promotion-log.json -1/L1 -> 294 vs sessions.work_item still -1; project details anonymized in the public filing) and a 4-step 0.8.0 repro. Expected fix: promotion remaps sessions.work_item, .active-issue sentinel, lock claims, and timer state atomically using the map it already writes to promotion-log.json.",
+          "created_at": "2026-07-21T02:34:24.851995Z",
+          "kind": "result"
+        }
+      }
+    },
+    "6fc8c45a-fbd1-4d70-8978-d9058ff1d884": {
+      "uuid": "6fc8c45a-fbd1-4d70-8978-d9058ff1d884",
+      "display_id": 18,
+      "title": "Upgrade rehearsal: vsdd-cli sandbox - migrate hub-v3 + six retest scenarios with develop binary 6f1bb0ed",
+      "status": "closed",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T20:57:28.029397Z",
+      "updated_at": "2026-07-21T21:02:29.926719Z",
+      "closed_at": "2026-07-21T21:02:29.926719Z",
+      "labels": [
+        "retest"
+      ],
+      "comments": {
+        "2a4c8fd2-c78b-458b-99ae-5d11ef65b427": {
+          "author": "anon-8ea7a055",
+          "content": "VSDD-CLI REHEARSAL PASSED - all six scenarios green with 0.9.0-beta.1+6f1bb0ed in an isolated sandbox. Snapshot note: live db required sqlite .backup (raw cp of the active WAL db was torn). Baseline v2: 738 issues, 12810 comments with 6 duplicated uuids = 11858 EXTRA COPIES (92% of the comment table is gh#12 bloat on the real repo), 7 stale locks (xqjG). Migration: clean, 3 refs. Post-migrate sync: [gh#11] no 1555 through 11858 preserved dupes; [gh#12] SELF-HEAL EXACT: comments 12810->952, dupes 0. [gh#7] integrity v3-aware check surfaced REAL drift: 17 sqlite-only rows = uuid-mismatched shadows of hub-backed issues (created_by NULL, zero comments, exact title twins - gh#33-era promotion fingerprint). Runbook step validated: purge shadows -> hydration PASS, 738==state. [gh#5] quick/create -> 739/740 durable; [gh#12 cont] 953 comments stable, 0 dupes; [gh#8] fresh-process release works, list agrees; [gh#4] to-shared full-coverage, idempotent. REAL CUTOVER RUNBOOK: (1) quiet moment - repo is actively in use; (2) backup branches + db snapshot; (3) purge the 17 shadow rows first; (4) binary swap + migrate hub-v3 + --finalize in ONE sitting (mixed-version writes to v2 are invisible to v3); (5) release/steal 7 stale locks; (6) integrity + counts verification. mdatron runbook same minus shadow purge (clean data, 2 stale locks).",
+          "created_at": "2026-07-21T21:02:27.895290Z",
+          "kind": "result"
+        }
+      }
+    },
+    "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0": {
+      "uuid": "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0",
+      "display_id": 10,
+      "title": "Epic: v2 persistence lies at 0.8.0 - success reported without persisting (gh#29 30 + unfiled promotion stranding)",
+      "description": "Live data-integrity defects on the 0.8.0 daily-driver hubs (vsdd-cli, mdatron). Operational guard until fixed: re-read state after issue close / archive add; never trust the success message. Third member: sync ID-promotion strands session work binding and locks (forecast-bio#653-era defect, live at 0.8.0) - NO dollspace-gay issue filed yet, needs filing.",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:40.223084Z",
+      "updated_at": "2026-07-21T02:18:19.888218Z",
+      "labels": [
+        "persistence",
+        "upstream"
+      ]
+    },
+    "7f4e1659-55cb-442e-a66a-d7b9aa91621d": {
+      "uuid": "7f4e1659-55cb-442e-a66a-d7b9aa91621d",
+      "display_id": 3,
+      "title": "Epic: hub-v3 correctness - 0.8.0 upgrade-hold retest triggers (gh#4 5 7 8 11 12)",
+      "description": "Operator ruling 2026-07-20 (decision on vsdd-cli #597): host binary pinned to crosslink 0.8.0, no migrate hub-v3, for vsdd-cli and mdatron. Lift the hold only when dollspace-gay/crosslink #4 #5 #7 #8 #11 #12 close. This epic tracks fixing those six v3-hub defects upstream.",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:16.198461Z",
+      "updated_at": "2026-07-21T02:18:18.084992Z",
+      "labels": [
+        "hub-v3",
+        "upstream"
+      ],
+      "comments": {
+        "011842fe-8fbb-4a5f-bdac-e4f4900a0e3c": {
+          "author": "anon-8ea7a055",
+          "content": "Bundle PR opened: dollspace-gay/crosslink#35 (fix/7-8-12-v3-state-reads, base develop) - fixes gh#7, gh#8, gh#12 in three commits with regression tests. Epic remaining after this PR and upstream PR#6 both merge: gh#11 (comment PK collision, extends PR#6 machinery) and gh#4 to-shared half (routes through PR#6 import_issues); then all six retest triggers for the 0.8.0 upgrade hold are addressed. Side artifact: gh#34 filed for the non-hermetic test families (dashboard askpass network calls, bootstrap identity dependence).",
+          "created_at": "2026-07-21T16:40:42.544738Z",
+          "kind": "result"
+        },
+        "13d0f7a8-9e09-42a0-a843-6f8982124f21": {
+          "author": "anon-8ea7a055",
+          "content": "Grouping rationale: gh#4 and gh#5 are one root-cause cluster (v3 ID allocation from empty reduced hub state vs SQLite persistence; import never emits hub events; migrate to-shared pushes stale v2 crosslink/hub refspec). gh#5 secondary symptom (locks list/release/steal reading different state) bridges into gh#8 read_lock_v2. Starting with the 4/5 cluster - it is the silent-data-loss member.",
+          "created_at": "2026-07-21T02:20:04.147755Z",
+          "kind": "plan"
+        },
+        "25e1107e-e918-45c7-ac71-beb2a9e43337": {
+          "author": "anon-8ea7a055",
+          "content": "Final bundle PR opened: dollspace-gay/crosslink#38 (fix/4-11-to-shared-and-comment-ids, base main per operator decision - depends on PR#6 machinery which develop lacks). Fixes gh#11 and completes gh#4. With #6, #32, #35 merged and #38 pending, ALL SIX retest triggers for the 0.8.0 upgrade hold (gh#4 5 7 8 11 12) are addressed. PR body flags the develop-sync conflict point (restore comment loop: #35 uuid guard + #38 re-key compose; guard first, re-key survivors). Awaiting dollspace workflow approval + review + merge; then the upgrade-hold retest condition is met.",
+          "created_at": "2026-07-21T19:17:54.559976Z",
+          "kind": "result"
+        },
+        "87f3ef9e-fc33-43ee-b4fa-cb2003f107c3": {
+          "author": "anon-8ea7a055",
+          "content": "Operator amendment 2026-07-21: the 0.8.0 upgrade hold lifts once dollspace completes the main/develop sync (upstream PR#39, currently OPEN and MERGEABLE). gh#4's dashboard-visibility remnant (evaluation posted upstream with file:line map) is explicitly not a hold blocker - it becomes ordinary follow-on work. Next after lift: sandboxed upgrade rehearsal for vsdd-cli and mdatron per crosslink-upgrade-hold memory.",
+          "created_at": "2026-07-21T20:19:31.514036Z",
+          "kind": "decision"
+        },
+        "989575f2-f005-47da-90d9-b945c2a7e4ba": {
+          "author": "anon-8ea7a055",
+          "content": "Second bundle (gh#4 to-shared + gh#11 comment re-key) complete and HOLDING on fix/4-11-to-shared-and-comment-ids in worktree bundle2, based on upstream PR#6 head - awaiting operator confirmation that dollspace merged PR#6 and PR#35, then rebase-or-recreate onto develop, push (operator), and PR. First bundle: PR#35 open (gh#7/8/12). Upstream filed this session: #31 #33 #34 (+#34 comment), review on PR#6. Epic #3 tracks everything; #14=gh#33, #15=gh#34. Local test runs need GIT_TERMINAL_PROMPT=0 GIT_ASKPASS=/usr/bin/false (gh#34) and expect 2 pre-existing bootstrap failures (no global git identity).",
+          "created_at": "2026-07-21T17:47:59.549870Z",
+          "kind": "handoff"
+        },
+        "b0a78aa6-502d-4829-86ad-b39616130391": {
+          "author": "anon-8ea7a055",
+          "content": "Upstream PR dollspace-gay/crosslink#6 (joedaws, OPEN, base main) covers gh#5 entirely and the import half of gh#4: SharedWriter::import_issues batch-emits events; restore_sqlite_only_issues re-keys colliding preserved rows to negative local ids with children remapped; create verifies SQLite durability before reporting. Independently validated against our code-path investigation - the hydration remap matches our proposed fix line-for-line including the two-pass allocation and both-endpoint dep/relation remap. Our fix/5 implementation is therefore CANCELLED as duplicate. Remaining in epic after PR#6: migrate to-shared half of gh#4 (should build on PR#6's import_issues machinery - wait for merge), gh#7, gh#8, gh#11, gh#12.",
+          "created_at": "2026-07-21T02:30:58.450281Z",
+          "kind": "decision"
+        },
+        "c5f4cd78-d0d9-45ad-8f47-904c1b857b8c": {
+          "author": "anon-8ea7a055",
+          "content": "Epic #3 endgame: PR#38 open against main (gh#11 + gh#4 to-shared), all other retest triggers merged (#6 to main, #32/#35 to develop). Note main/develop divergence upstream: import_issues main-only until dollspace syncs. Main checkout now on develop (hook fix merged, local patch obsolete, fix-8-locks worktree removed; bundle2 worktree still at crosslink-worktrees/bundle2). Local #16 (CI lint parity) done - process adopted in memory + knowledge page contribution-ci-checklist. When #38 merges: close local epic #3 subissues (#4-#9) and #16, watch for CHANGELOG side effect on issue close (restore if it fires), then plan the vsdd-cli/mdatron 0.8.0->0.9 upgrade retest per crosslink-upgrade-hold memory.",
+          "created_at": "2026-07-21T19:17:56.567941Z",
+          "kind": "handoff"
+        },
+        "cc903d10-e535-4bba-a174-33cd172ff2ee": {
+          "author": "anon-8ea7a055",
+          "content": "Decision (operator): bundle PR#6-independent fixes gh#7+gh#8+gh#12 into ONE PR (branch fix/7-8-12-v3-state-reads) - thematic unit: state-layer read/mutation correctness. Second PR after upstream PR#6 merges: gh#11 (extends PR#6 comment numbering) + gh#4 to-shared half (routes through PR#6 import_issues). gh#8 fix complete pending test run.",
+          "created_at": "2026-07-21T02:41:57.398811Z",
+          "kind": "decision"
+        }
+      }
+    },
+    "89b50e39-951f-4a33-ba60-26460565c4fd": {
+      "uuid": "89b50e39-951f-4a33-ba60-26460565c4fd",
+      "display_id": 19,
+      "title": "REAL CUTOVER: mdatron 0.8.0 v2 hub -> 0.9 v3 (migrate + finalize per rehearsal runbook, local #17)",
+      "status": "open",
+      "priority": "critical",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-22T15:07:13.958418Z",
+      "updated_at": "2026-07-22T15:07:15.945490Z",
+      "labels": [
+        "cutover"
+      ]
+    },
+    "d4c17dc3-f1e7-4f56-9573-729bfd0bfed5": {
+      "uuid": "d4c17dc3-f1e7-4f56-9573-729bfd0bfed5",
+      "display_id": 13,
+      "title": "gh#30: v2 hub 0.8.0 - archive add reports success but membership wiped by subsequent invocations",
+      "status": "open",
+      "priority": "medium",
+      "parent_uuid": "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:51.926341Z",
+      "updated_at": "2026-07-21T02:18:14.436266Z",
+      "labels": [
+        "upstream"
+      ]
+    },
+    "da78cc6e-31c6-4805-9e80-75028c248ff0": {
+      "uuid": "da78cc6e-31c6-4805-9e80-75028c248ff0",
+      "display_id": 12,
+      "title": "gh#29: v2 hub 0.8.0 - issue close reports success, writes changelog, but rows revert to open",
+      "status": "open",
+      "priority": "medium",
+      "parent_uuid": "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:49.976967Z",
+      "updated_at": "2026-07-21T02:18:12.505397Z",
+      "labels": [
+        "upstream"
+      ]
+    },
+    "df19144c-bfa8-4056-ac54-44f6db40c21a": {
+      "uuid": "df19144c-bfa8-4056-ac54-44f6db40c21a",
+      "display_id": 1,
+      "title": "Verify 0.9.0-beta.1 hook/MCP scaffolding install and document work-check false-pause bug",
+      "status": "closed",
+      "priority": "medium",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T01:38:53.989220Z",
+      "updated_at": "2026-07-21T01:40:56.411575Z",
+      "closed_at": "2026-07-21T01:40:56.411575Z",
+      "labels": [
+        "chore"
+      ],
+      "comments": {
+        "abd7256f-8458-4ff5-8387-f6d2101069e4": {
+          "author": "anon-8ea7a055",
+          "content": "False-pause bug found during scaffolding verification: check_control_flags() in resources/claude/hooks/work-check.py invokes bare 'crosslink agent flags --strict' via PATH lookup instead of find_crosslink_binary(). With an older binary on PATH (0.8.0, which lacks the 'agent flags' subcommand), clap exits 2 for the usage error - the same exit code the hook treats as pause/kill flags set. Empty stdout then fails JSON parse, state={}, and the hook reports AGENT PAUSED with no operator involved. Evidence: 0.8.0 'crosslink agent flags --strict' -> 'error: unrecognized subcommand', exit 2; 0.9.0-beta.1 -> valid JSON, exit 0. Fix: resolve binary via find_crosslink_binary() AND only treat exit 2 as pause/kill when stdout parses as flag-state JSON, else fail open. Local workaround applied to this clone's .claude/hooks/work-check.py. Upstream fix should target crosslink/resources/claude/hooks/work-check.py and the tracked .claude/hooks/work-check.py copy. Also noticed: init --update leaves .claude/skills/ and .crosslink/init-manifest.json untracked - candidates for .gitignore upstream.",
+          "created_at": "2026-07-21T01:40:02.570361Z",
+          "kind": "observation"
+        },
+        "f8d723fb-e281-49bb-91bc-aeee3a3a9f5c": {
+          "author": "anon-8ea7a055",
+          "content": "Delivered: full 0.9.0-beta.1 scaffolding installed via repo-built binary (crosslink init --update --no-prompt, 77 files: 7 hooks, 3 MCP servers, commands, skills, rules). Machine-local binary override in .crosslink/hook-config.local.json points hooks at crosslink/target/release/crosslink so global 0.8.0 stays intact for other repos. Verified: work-check gate blocks and passes correctly, prompt-guard injects behavioral context, all 3 MCP servers answer JSON-RPC initialize. False-pause bug documented in observation comment; local workaround applied. Upstream fix is follow-up work.",
+          "created_at": "2026-07-21T01:40:53.731758Z",
+          "kind": "result"
+        }
+      }
+    },
+    "e00178bc-6f75-4207-a84f-ff2b13362379": {
+      "uuid": "e00178bc-6f75-4207-a84f-ff2b13362379",
+      "display_id": 15,
+      "title": "gh#34: dashboard tests do live network git I/O against dead-org URLs - env-dependent hangs/failures; also a product hang risk in dashboard poll",
+      "description": "Filed upstream as dollspace-gay/crosslink#34 after it hung our full-suite runs (9h credential-prompt deadlock via VS Code askpass) and produced the 2 phantom failures in the first pass. Workaround for local test runs: GIT_TERMINAL_PROMPT=0 GIT_ASKPASS=/usr/bin/false.",
+      "status": "open",
+      "priority": "medium",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T16:32:17.474074Z",
+      "updated_at": "2026-07-21T16:32:23.371107Z",
+      "labels": [
+        "test-hermeticity",
+        "upstream"
+      ]
+    },
+    "e75c8af8-d483-40bd-9dbf-0d841edef2ee": {
+      "uuid": "e75c8af8-d483-40bd-9dbf-0d841edef2ee",
+      "display_id": 17,
+      "title": "Upgrade rehearsal: mdatron sandbox - migrate hub-v3 + six retest scenarios with develop binary 6f1bb0ed",
+      "status": "closed",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T20:53:19.150418Z",
+      "updated_at": "2026-07-21T20:57:25.720050Z",
+      "closed_at": "2026-07-21T20:57:25.720050Z",
+      "labels": [
+        "retest"
+      ],
+      "comments": {
+        "ef336733-5836-4a9e-8289-394e1dd032ba": {
+          "author": "anon-8ea7a055",
+          "content": "MDATRON REHEARSAL PASSED - all six retest scenarios green with develop binary 0.9.0-beta.1+6f1bb0ed in a fully isolated sandbox (local bare mirror, real origin never touched). Baseline v2: 74 issues, 198 comments, 0 dupes, integrity PASS except 2 genuinely stale locks (#59/#64, agent 79Ig = mdatron's own identity). migrate hub-v3: clean, 6 refs (4 agents + meta + checkpoint), v2 escape hatch retained. Post-migrate: [gh#11] sync clean, no 1555; [gh#7] integrity counters+hydration PASS on v3; [gh#5] quick/create -> #75/#76, ids continue, durable and listed; [gh#12] comments 198->199 via one add, zero duplication across further mutations; [gh#8] AlreadyHeld pre-check fires, fresh-process release works, list agrees; [gh#4] to-shared reports full coverage, idempotent. Counts stable throughout. Notes for real cutover: mixed-version warning until --finalize (v2 binaries writing to crosslink/hub are invisible to v3) - the real upgrade must swap the binary and migrate in one sitting; stale locks #59/#64 exist on the REAL mdatron too - clean up before or after migration.",
+          "created_at": "2026-07-21T20:57:23.138265Z",
+          "kind": "result"
+        }
+      }
+    },
+    "e9fa1a15-41d3-48e6-9291-76bffa2e2dec": {
+      "uuid": "e9fa1a15-41d3-48e6-9291-76bffa2e2dec",
+      "display_id": 16,
+      "title": "Fix upstream linter CI failures on PR#32 and PR#35 branches; adopt CI lint parity as pre-commit process",
+      "status": "closed",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T17:57:22.176360Z",
+      "updated_at": "2026-07-21T20:09:24.274918Z",
+      "closed_at": "2026-07-21T20:09:24.274918Z",
+      "labels": [
+        "ci"
+      ],
+      "comments": {
+        "446a7123-5fc1-4408-a9f2-82261c75047a": {
+          "author": "anon-8ea7a055",
+          "content": "Root cause: the CI lint job runs cargo clippy -- -D warnings -W clippy::unwrap_used -W clippy::expect_used on the runner's current stable; four pre-existing develop lint spots (knowledge/core.rs useless_borrows_in_formatting x2, seam.rs question_mark, migrate_hub_v3.rs question_mark) fail every PR regardless of content. Fixed for real on both PR branches: f3bb39bd on fix/31-hook-binary-resolution (PR#32), 213fbc72 on fix/7-8-12-v3-state-reads (PR#35) - identical to the lint fixes PR#6 already carried to main. bundle2 verified clean (inherits PR#6 base). Process adopted: CI-exact clippy + fmt --check as mandatory pre-commit gate (memory + knowledge page contribution-ci-checklist). Awaiting operator push of both branches to rerun CI.",
+          "created_at": "2026-07-21T18:12:45.515169Z",
+          "kind": "result"
+        },
+        "c10da558-cc83-4420-afcd-523cfd8ffbc1": {
+          "author": "anon-8ea7a055",
+          "content": "Blocked: no active issue",
+          "created_at": "2026-07-21T17:57:43.007012Z",
+          "kind": "intervention",
+          "trigger_type": "tool_blocked",
+          "intervention_context": "Reading CI workflow lint job and PR check statuses after operator reported linter pipeline failures"
+        }
+      }
+    },
+    "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5": {
+      "uuid": "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5",
+      "display_id": 20,
+      "title": "REAL CUTOVER: vsdd-cli v2 hub -> v3 (fresh-fetch genesis, immediate finalize, shadow purge, per runbook #18)",
+      "status": "open",
+      "priority": "critical",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-22T15:36:59.150963Z",
+      "updated_at": "2026-07-22T15:37:01.109865Z",
+      "labels": [
+        "cutover"
+      ]
+    },
+    "f06bd3bc-97ff-40c2-a4f8-da3695d3080f": {
+      "uuid": "f06bd3bc-97ff-40c2-a4f8-da3695d3080f",
+      "display_id": 4,
+      "title": "gh#4: imported/created issues stay SQLite-only; migrate to-shared pushes dead v2 ref on v3 layout",
+      "status": "open",
+      "priority": "medium",
+      "parent_uuid": "7f4e1659-55cb-442e-a66a-d7b9aa91621d",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T02:17:26.807602Z",
+      "updated_at": "2026-07-21T02:17:57.729675Z",
+      "labels": [
+        "upstream"
+      ],
+      "comments": {
+        "8deacaed-aed6-42c1-9133-e2f7bb6fe2c4": {
+          "author": "anon-8ea7a055",
+          "content": "gh#4 to-shared half implemented: commit 1e912b00 on fix/4-11-to-shared-and-comment-ids. to_shared branches on hub_mode before v2 worktree writes; v3 path promotes sqlite-only rows via PR#6's import_issues with preserved uuids and carried display ids (new ImportedIssueSpec::display_id honored by the reducer); idempotent. E2e test passes incl. no-op second run. HOLDING for PR#6/PR#35 merge confirmation; branch recreates trivially onto merged develop if needed.",
+          "created_at": "2026-07-21T17:47:57.582348Z",
+          "kind": "result"
+        },
+        "edb17fbe-db17-4ad8-bbe2-70beefcc1283": {
+          "author": "anon-8ea7a055",
+          "content": "Root cause mapped: import (src/commands/import.rs) does pure db.* writes - dispatch at main.rs:3044-3048 uses get_db(), never get_writer; no IssueCreated events, no promote-to-hub helper exists. migrate to-shared pushes HUB_BRANCH=crosslink/hub (sync/mod.rs:22, push at migrate.rs:201) which does not exist on v3; deeper: entire to_shared body writes v2 worktree JSON v3 never reads - refspec-only fix would push garbage. Fix: route import through writer emitting IssueCreated (display_id: Some(id) honored by assign_issue_display_id, compaction.rs:909-921); branch to_shared on sync.hub_mode().is_v3() (pattern at locks_cmd.rs:246).",
+          "created_at": "2026-07-21T02:27:24.057775Z",
+          "kind": "observation"
+        }
+      }
+    },
+    "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b": {
+      "uuid": "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b",
+      "display_id": 2,
+      "title": "Upstream fix: false AGENT PAUSED when check_control_flags hits older binary (clap exit-2 conflation)",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-21T01:45:12.654356Z",
+      "updated_at": "2026-07-21T01:45:14.649280Z",
+      "labels": [
+        "bug"
+      ],
+      "comments": {
+        "7952fee1-80c6-493f-a31c-5eecc06a4091": {
+          "author": "anon-8ea7a055",
+          "content": "Plan: fix all three bare-PATH crosslink invocations in the shipped Claude hooks (work-check check_control_flags, heartbeat Popen, session-start private run_crosslink) to resolve via find_crosslink_binary(); restructure check_control_flags exit-2 handling to fail open unless stdout parses as flag-state JSON with kill/paused/reprioritise actually set. Mirror the fix into the tracked .claude/hooks/work-check.py dogfood copy (kept byte-identical to the resource). Changelog entry under Unreleased/Fixed. Verified with 7-case functional test: clap usage error, garbage stdout, and flagless JSON fail open; pause, kill, reprioritise still block; clean exit 0 passes. Upstream issue: gh#31.",
+          "created_at": "2026-07-21T01:50:22.449570Z",
+          "kind": "plan"
+        }
+      }
+    }
+  },
+  "next_milestone_id": 1,
+  "watermark": {
+    "timestamp": "1970-01-01T00:00:00Z",
+    "agent_id": "hub-v3-genesis",
+    "agent_seq": 0
+  }
+}
