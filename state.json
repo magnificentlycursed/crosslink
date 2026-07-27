@@ -1,6 +1,6 @@
 {
   "next_display_id": 23,
-  "next_comment_id": 36,
+  "next_comment_id": 37,
   "display_id_map": {
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
@@ -496,11 +496,18 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-27T18:16:58.654121Z",
-      "updated_at": "2026-07-27T18:26:55.571897Z",
+      "updated_at": "2026-07-27T20:17:36.574161Z",
       "labels": [
         "upstream"
       ],
       "comments": {
+        "084e1987-2e21-4108-aa4d-bb83f56d3010": {
+          "display_id": 36,
+          "author": "anon-8ea7a055",
+          "content": "Both fixes implemented and committed on fix/4-45-dashboard-v3-and-finalize-guard: 57404fa1 (gh#45 - HubMeta genesis persistence, RefHubSource::at_tips, verify_finalize with v2-frozen/ancestry/bounded-reduce checks + pre-metadata fallback, 5 tests) and b19f05ab (gh#4 - seven dashboard sites: glob fetch refspec + worktree gate, checkpoint-keyed freshness, action reset gate, discovery checkpoint probe, track v3 markers, sync-status ref name, checkpoint-tip signature verification, 3 tests, all local-bare fixtures). Targeted suites green (migrate 29, dashboard 130, projects 36, sync handlers 8, trust 19, hub_source 15, watcher 14); CI-exact clippy + fmt clean. Full bin suite running; PR body staged. Awaiting full-suite verdict then operator push.",
+          "created_at": "2026-07-27T20:17:36.574136Z",
+          "kind": "result"
+        },
         "22b2cb22-deef-48e5-889b-239414cf2507": {
           "display_id": 33,
           "author": "anon-8ea7a055",
@@ -673,11 +680,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 15,
       "timestamp": "2026-07-27T18:26:55.571897Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 16,
+      "timestamp": "2026-07-27T20:17:36.574161Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-27T18:26:55.571897Z",
+    "timestamp": "2026-07-27T20:17:36.574161Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 15
+    "agent_seq": 16
   }
 }
