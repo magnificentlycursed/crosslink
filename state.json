@@ -1,6 +1,6 @@
 {
   "next_display_id": 23,
-  "next_comment_id": 37,
+  "next_comment_id": 38,
   "display_id_map": {
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
@@ -286,7 +286,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T02:17:16.198461Z",
-      "updated_at": "2026-07-21T02:18:18.084992Z",
+      "updated_at": "2026-07-27T21:21:22.001819Z",
       "labels": [
         "hub-v3",
         "upstream"
@@ -308,6 +308,13 @@
           "author": "anon-8ea7a055",
           "content": "Final bundle PR opened: dollspace-gay/crosslink#38 (fix/4-11-to-shared-and-comment-ids, base main per operator decision - depends on PR#6 machinery which develop lacks). Fixes gh#11 and completes gh#4. With #6, #32, #35 merged and #38 pending, ALL SIX retest triggers for the 0.8.0 upgrade hold (gh#4 5 7 8 11 12) are addressed. PR body flags the develop-sync conflict point (restore comment loop: #35 uuid guard + #38 re-key compose; guard first, re-key survivors). Awaiting dollspace workflow approval + review + merge; then the upgrade-hold retest condition is met.",
           "created_at": "2026-07-21T19:17:54.559976Z",
+          "kind": "result"
+        },
+        "29655ebc-e187-49ef-98d4-66b997877944": {
+          "display_id": 37,
+          "author": "anon-8ea7a055",
+          "content": "Final PR opened: dollspace-gay/crosslink#46 (fix/4-45-dashboard-v3-and-finalize-guard, base develop) - fixes gh#45 and closes gh#4's last symptom. When it merges: gh#4 closes, this epic's every member (gh#4 5 7 8 11 12 + discovered gh#31 33 34 45) is resolved upstream, and epic #3 can close. Full suite 2846/2848 (2 known env-dependent bootstrap failures, gh#34).",
+          "created_at": "2026-07-27T21:21:22.001800Z",
           "kind": "result"
         },
         "87f3ef9e-fc33-43ee-b4fa-cb2003f107c3": {
@@ -685,11 +692,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 16,
       "timestamp": "2026-07-27T20:17:36.574161Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 17,
+      "timestamp": "2026-07-27T21:21:22.001819Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-27T20:17:36.574161Z",
+    "timestamp": "2026-07-27T21:21:22.001819Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 16
+    "agent_seq": 17
   }
 }
