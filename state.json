@@ -1,6 +1,6 @@
 {
   "next_display_id": 23,
-  "next_comment_id": 34,
+  "next_comment_id": 35,
   "display_id_map": {
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
@@ -496,7 +496,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-27T18:16:58.654121Z",
-      "updated_at": "2026-07-27T18:18:30.958499Z",
+      "updated_at": "2026-07-27T18:24:53.948572Z",
       "labels": [
         "upstream"
       ],
@@ -507,6 +507,13 @@
           "content": "Plan: bundle branch fix/4-45-dashboard-v3-and-finalize-guard from develop@6f1bb0ed (verified unchanged upstream; gh#4 and gh#45 both OPEN, unclaimed, no competing PRs). Two parallel investigations mapping (a) the dashboard v2-coupling inventory and v3 state-read patterns, (b) HubMeta genesis persistence + watermark-bounded reduce design for the finalize guard. Implementation follows the maps; CI-lint parity gate before each commit; one commit per fix; push gate then single PR to develop.",
           "created_at": "2026-07-27T18:18:30.958477Z",
           "kind": "plan"
+        },
+        "2efcc9d0-cd29-4992-b7a3-0c0fc85ea3f8": {
+          "display_id": 34,
+          "author": "anon-8ea7a055",
+          "content": "gh#45 design (investigation complete): (1) HubMeta gains genesis_checkpoint_commit + seed_agent_tips (BTreeMap agent->sha), both serde-default optional - populated in seed_v3_refs at migrate_hub_v3.rs:1072 from the SHAs commit_blob_to_ref/:1062 and commit_log_bytes/:1047 already return and discard; (2) new RefHubSource::at_tips pinned constructor (hub_source.rs:464 pattern, pure field init); (3) finalize replaces verify_against_files call at :1479 with verify_finalize: v2-frozen check vs the PERSISTED genesis (parse state.json @ genesis_checkpoint_commit), seed-intact via merge-base --is-ancestor per recorded ref (ancestry not byte-prefix - survives REQ-11 prune), bounded AC-6 reduce at the pinned seed tips. Aggravating finding: dispatcher fetch_v3 -> refresh_local_checkpoint rewrites CHECKPOINT_REF pre-verification (cache.rs:525), so the defect fires single-machine. Pre-fix hubs (None fields): old full check as fallback, refuse with remigrate-from-v2 guidance if it fails. Six tests incl. gh#45 regression, prune survival, tamper refusal, pre-fix fallback. Phase A verify at :649 unchanged.",
+          "created_at": "2026-07-27T18:24:53.948555Z",
+          "kind": "decision"
         }
       }
     },
@@ -649,11 +656,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 13,
       "timestamp": "2026-07-27T18:18:30.958499Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 14,
+      "timestamp": "2026-07-27T18:24:53.948572Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-27T18:18:30.958499Z",
+    "timestamp": "2026-07-27T18:24:53.948572Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 13
+    "agent_seq": 14
   }
 }
