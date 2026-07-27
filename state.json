@@ -1,5 +1,5 @@
 {
-  "next_display_id": 22,
+  "next_display_id": 23,
   "next_comment_id": 33,
   "display_id_map": {
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -20,6 +20,7 @@
     "e00178bc-6f75-4207-a84f-ff2b13362379": 15,
     "e75c8af8-d483-40bd-9dbf-0d841edef2ee": 17,
     "e9fa1a15-41d3-48e6-9291-76bffa2e2dec": 16,
+    "eca996dc-d07a-4c56-b360-bb4a6d6af889": 22,
     "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5": 20,
     "f06bd3bc-97ff-40c2-a4f8-da3695d3080f": 4,
     "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b": 2
@@ -487,6 +488,16 @@
         }
       }
     },
+    "eca996dc-d07a-4c56-b360-bb4a6d6af889": {
+      "uuid": "eca996dc-d07a-4c56-b360-bb4a6d6af889",
+      "display_id": 22,
+      "title": "Fix v3 completeness pair: dashboard v3-awareness (gh#4 remnant) + finalize AC-6 guard (gh#45) - bundle branch from develop",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-27T18:16:58.654121Z",
+      "updated_at": "2026-07-27T18:16:58.654121Z"
+    },
     "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5": {
       "uuid": "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5",
       "display_id": 20,
@@ -611,11 +622,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 10,
       "timestamp": "2026-07-26T00:08:38.204739Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 11,
+      "timestamp": "2026-07-27T18:16:58.654121Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-26T00:08:38.204739Z",
+    "timestamp": "2026-07-27T18:16:58.654121Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 10
+    "agent_seq": 11
   }
 }
