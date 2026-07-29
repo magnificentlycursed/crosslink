@@ -521,11 +521,12 @@
       "uuid": "eca996dc-d07a-4c56-b360-bb4a6d6af889",
       "display_id": 22,
       "title": "Fix v3 completeness pair: dashboard v3-awareness (gh#4 remnant) + finalize AC-6 guard (gh#45) - bundle branch from develop",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-27T18:16:58.654121Z",
-      "updated_at": "2026-07-29T00:36:39.862574Z",
+      "updated_at": "2026-07-29T00:36:47.739374Z",
+      "closed_at": "2026-07-29T00:36:47.739362Z",
       "labels": [
         "upstream"
       ],
@@ -781,11 +782,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 25,
       "timestamp": "2026-07-29T00:36:39.862574Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 26,
+      "timestamp": "2026-07-29T00:36:47.739374Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T00:36:39.862574Z",
+    "timestamp": "2026-07-29T00:36:47.739374Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 25
+    "agent_seq": 26
   }
 }
