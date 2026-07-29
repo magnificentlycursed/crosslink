@@ -1,6 +1,6 @@
 {
   "next_display_id": 26,
-  "next_comment_id": 46,
+  "next_comment_id": 47,
   "display_id_map": {
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
@@ -282,10 +282,19 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-29T01:38:34.500342Z",
-      "updated_at": "2026-07-29T01:38:39.468596Z",
+      "updated_at": "2026-07-29T01:52:48.567339Z",
       "labels": [
         "upstream"
-      ]
+      ],
+      "comments": {
+        "7ee73e51-d060-44c9-8f42-7c8569123c38": {
+          "display_id": 46,
+          "author": "anon-8ea7a055",
+          "content": "Filed gh#48 (unreachable_project alert never fires - nothing sets projects.status=error) and gh#49 (v3 reader returns ci_status/agent_requests empty). gh#34 fix implemented on fix/34-dashboard-advisory-network-hang @ 59462745: env-scoped the poll fetch + track-time remote-show (GIT_TERMINAL_PROMPT=0, neutralized GIT_ASKPASS, -c credential.helper=) so a headless dashboard serve never hangs on a credential prompt; made detect_default_branch fixtures hermetic via a recorded local remote HEAD. 2 regression tests; dashboard suites green (27 projects, 5 poll); CI-exact clippy + fmt clean. Full bin suite running, then push gate + PR to develop.",
+          "created_at": "2026-07-29T01:52:48.567316Z",
+          "kind": "result"
+        }
+      }
     },
     "79321b12-8c05-403f-afe7-97f87f50b4c2": {
       "uuid": "79321b12-8c05-403f-afe7-97f87f50b4c2",
@@ -911,11 +920,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 38,
       "timestamp": "2026-07-29T01:38:39.468596Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 39,
+      "timestamp": "2026-07-29T01:52:48.567339Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T01:38:39.468596Z",
+    "timestamp": "2026-07-29T01:52:48.567339Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 38
+    "agent_seq": 39
   }
 }
