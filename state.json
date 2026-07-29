@@ -1,6 +1,6 @@
 {
   "next_display_id": 24,
-  "next_comment_id": 41,
+  "next_comment_id": 42,
   "display_id_map": {
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
@@ -525,7 +525,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-27T18:16:58.654121Z",
-      "updated_at": "2026-07-27T21:21:28.464507Z",
+      "updated_at": "2026-07-29T00:36:39.862574Z",
       "labels": [
         "upstream"
       ],
@@ -550,6 +550,13 @@
           "content": "gh#45 design (investigation complete): (1) HubMeta gains genesis_checkpoint_commit + seed_agent_tips (BTreeMap agent->sha), both serde-default optional - populated in seed_v3_refs at migrate_hub_v3.rs:1072 from the SHAs commit_blob_to_ref/:1062 and commit_log_bytes/:1047 already return and discard; (2) new RefHubSource::at_tips pinned constructor (hub_source.rs:464 pattern, pure field init); (3) finalize replaces verify_against_files call at :1479 with verify_finalize: v2-frozen check vs the PERSISTED genesis (parse state.json @ genesis_checkpoint_commit), seed-intact via merge-base --is-ancestor per recorded ref (ancestry not byte-prefix - survives REQ-11 prune), bounded AC-6 reduce at the pinned seed tips. Aggravating finding: dispatcher fetch_v3 -> refresh_local_checkpoint rewrites CHECKPOINT_REF pre-verification (cache.rs:525), so the defect fires single-machine. Pre-fix hubs (None fields): old full check as fallback, refuse with remigrate-from-v2 guidance if it fails. Six tests incl. gh#45 regression, prune survival, tamper refusal, pre-fix fallback. Phase A verify at :649 unchanged.",
           "created_at": "2026-07-27T18:24:53.948555Z",
           "kind": "decision"
+        },
+        "38c02f06-3aa5-4d24-82ef-94c7276bdaac": {
+          "display_id": 41,
+          "author": "anon-8ea7a055",
+          "content": "Both fixes merged upstream via PR#46 (dollspace-gay/crosslink) into develop @ ef947f7f; verify_finalize and the dashboard glob refspec confirmed present on the merged branch.",
+          "created_at": "2026-07-29T00:36:39.862549Z",
+          "kind": "result"
         },
         "c125c301-8ee9-4db7-9434-4d8d31775610": {
           "display_id": 38,
@@ -769,11 +776,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 24,
       "timestamp": "2026-07-29T00:36:32.502658Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 25,
+      "timestamp": "2026-07-29T00:36:39.862574Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T00:36:32.502658Z",
+    "timestamp": "2026-07-29T00:36:39.862574Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 24
+    "agent_seq": 25
   }
 }
