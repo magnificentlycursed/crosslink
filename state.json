@@ -1,6 +1,6 @@
 {
   "next_display_id": 30,
-  "next_comment_id": 53,
+  "next_comment_id": 54,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -632,11 +632,20 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T16:32:17.474074Z",
-      "updated_at": "2026-07-21T16:32:23.371107Z",
+      "updated_at": "2026-07-29T05:58:48.741487Z",
       "labels": [
         "test-hermeticity",
         "upstream"
-      ]
+      ],
+      "comments": {
+        "7dce272a-3265-4f55-9850-90848769731e": {
+          "display_id": 53,
+          "author": "anon-8ea7a055",
+          "content": "gh#34 resolved: PR#50 (dashboard advisory-network-hang) + PR#51 (bootstrap empty-identity) both merged to develop.",
+          "created_at": "2026-07-29T05:58:48.741464Z",
+          "kind": "result"
+        }
+      }
     },
     "e75c8af8-d483-40bd-9dbf-0d841edef2ee": {
       "uuid": "e75c8af8-d483-40bd-9dbf-0d841edef2ee",
@@ -1123,11 +1132,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 57,
       "timestamp": "2026-07-29T05:56:52.272754Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 58,
+      "timestamp": "2026-07-29T05:58:48.741487Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T05:56:52.272754Z",
+    "timestamp": "2026-07-29T05:58:48.741487Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 57
+    "agent_seq": 58
   }
 }
