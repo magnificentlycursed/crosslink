@@ -1,6 +1,6 @@
 {
   "next_display_id": 30,
-  "next_comment_id": 55,
+  "next_comment_id": 56,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -42,7 +42,7 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-29T05:56:46.446623Z",
-      "updated_at": "2026-07-29T06:03:11.809525Z",
+      "updated_at": "2026-07-29T06:51:32.806505Z",
       "labels": [
         "upstream"
       ],
@@ -53,6 +53,13 @@
           "content": "Scope decided after reading merged-develop code. Bundle (branch fix/48-49-53-dashboard-v3-monitoring): (1) gh#48 - poll_project captures fetch/read outcome and writes projects.status='error' (unreachable: read_snapshot Err = clone gone, or fetch-failed-with-no-hub_sha) vs 'active'; the unreachable_project alert keys on project.status=='error' (alerts.rs:89) which the poll never set. (2) gh#49 agent_requests HALF - new v3 aggregator over agent refs (requests-out/requests-ack blobs paired by ulid), wired into read_snapshot_v3 (currently hardcoded Vec::new). (3) gh#53 - server sync-status last_fetch_at derives from cache-dir mtime, stale on v3; branch on hub_mode, use FETCH_HEAD/checkpoint-ref mtime. SPLIT OUT: gh#49 ci_status half - v2 read meta/ci-status.json from the worktree; v3 has no such file AND no v3 CI-status writer exists, so porting the reader reads nothing - needs a v3 home + writer (design), its own follow-up. Also filed gh#53 this session; closed local #15 (gh#34 merged).",
           "created_at": "2026-07-29T06:03:11.809507Z",
           "kind": "plan"
+        },
+        "d172cde5-501c-4dde-8e30-5d2c7d6be1ed": {
+          "display_id": 55,
+          "author": "anon-8ea7a055",
+          "content": "PR opened: dollspace-gay/crosslink#54 (fix/48-49-53-dashboard-v3-monitoring, base develop). Fixes gh#48 + gh#53; addresses gh#49 agent-requests half (ci_status half split, no v3 writer yet). 3 commits (3d5e87f5 gh#48, f619d43d gh#49, 607303e5 gh#53). Full suite 2853/0 (second clean run); clippy+fmt clean. Also filed gh#53 this session. Awaiting dollspace review/merge.",
+          "created_at": "2026-07-29T06:51:32.806481Z",
+          "kind": "result"
         }
       }
     },
@@ -1157,11 +1164,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 60,
       "timestamp": "2026-07-29T06:03:11.809525Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 61,
+      "timestamp": "2026-07-29T06:51:32.806505Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T06:03:11.809525Z",
+    "timestamp": "2026-07-29T06:51:32.806505Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 60
+    "agent_seq": 61
   }
 }
