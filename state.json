@@ -1,5 +1,5 @@
 {
-  "next_display_id": 31,
+  "next_display_id": 32,
   "next_comment_id": 57,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -21,6 +21,7 @@
     "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0": 10,
     "7f4e1659-55cb-442e-a66a-d7b9aa91621d": 3,
     "89b50e39-951f-4a33-ba60-26460565c4fd": 19,
+    "a3abff8a-7d9a-44fe-9a11-8e75a232d612": 31,
     "d325dfa4-ab05-48bb-8f2d-a59128d6f7cf": 26,
     "d4c17dc3-f1e7-4f56-9573-729bfd0bfed5": 13,
     "da78cc6e-31c6-4805-9e80-75028c248ff0": 12,
@@ -577,6 +578,16 @@
           "kind": "result"
         }
       }
+    },
+    "a3abff8a-7d9a-44fe-9a11-8e75a232d612": {
+      "uuid": "a3abff8a-7d9a-44fe-9a11-8e75a232d612",
+      "display_id": 31,
+      "title": "Fix dashboard serve crash on static assets (forecast-bio#654, unmigrated); refile on dollspace",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-29T06:59:14.613076Z",
+      "updated_at": "2026-07-29T06:59:14.613076Z"
     },
     "d325dfa4-ab05-48bb-8f2d-a59128d6f7cf": {
       "uuid": "d325dfa4-ab05-48bb-8f2d-a59128d6f7cf",
@@ -1219,11 +1230,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 66,
       "timestamp": "2026-07-29T06:56:05.484766Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 67,
+      "timestamp": "2026-07-29T06:59:14.613076Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T06:56:05.484766Z",
+    "timestamp": "2026-07-29T06:59:14.613076Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 66
+    "agent_seq": 67
   }
 }
