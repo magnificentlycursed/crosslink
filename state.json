@@ -1,6 +1,6 @@
 {
   "next_display_id": 31,
-  "next_comment_id": 56,
+  "next_comment_id": 57,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -96,10 +96,19 @@
       "priority": "low",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-29T06:53:54.198495Z",
-      "updated_at": "2026-07-29T06:53:59.459621Z",
+      "updated_at": "2026-07-29T06:55:59.165256Z",
       "labels": [
         "research"
-      ]
+      ],
+      "comments": {
+        "5ce598aa-0497-43a3-b33d-ddb3e3e6cdbc": {
+          "display_id": 56,
+          "author": "anon-8ea7a055",
+          "content": "Findings: (1) v3 CI-status writer is NOT tracked anywhere except as the split-off half of gh#49 - no dedicated issue on dollspace or forecast-bio, no design/roadmap plan. (2) Root reason: the CI-status 'writer' was NEVER a crosslink command - v2 relied on EXTERNAL CI pipelines dropping meta/ci-status.json into the hub worktree (reader.rs:70, alerts.rs:172; crosslink only reads it). v3 has no worktree, so a v3 path needs a NEW ingestion mechanism (a command/event + a ref home) - undesigned surface, not a port. (3) DESIGN-CROSSLINK-DASHBOARD.md predates v3: ci_failure alert keyed on 'crosslink/hub' (v2); notably it specs unreachable_project as 'git fetch failing for > K cycles' - corroborating that gh#48's fetch-failure-threshold follow-up is the DESIGNED behavior (my impl is a correct subset). (4) OLD-HOME FIND (operator hint): forecast-bio/crosslink#654 - 'dashboard serve crashes silently when serving static assets (v0.9.0-beta.1)' - OPEN, NOT migrated to dollspace. Live high-impact bug: the browser dashboard UI may be unusable on current beta, blocking the whole dashboard surface we've been hardening. Higher priority than the CI-status writer.",
+          "created_at": "2026-07-29T06:55:59.165240Z",
+          "kind": "result"
+        }
+      }
     },
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": {
       "uuid": "1ded09e0-6f5c-428d-aa3e-36ca44d0b368",
@@ -1199,11 +1208,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 64,
       "timestamp": "2026-07-29T06:53:59.459621Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 65,
+      "timestamp": "2026-07-29T06:55:59.165256Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T06:53:59.459621Z",
+    "timestamp": "2026-07-29T06:55:59.165256Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 64
+    "agent_seq": 65
   }
 }
