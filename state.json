@@ -1,6 +1,6 @@
 {
   "next_display_id": 33,
-  "next_comment_id": 60,
+  "next_comment_id": 61,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -269,10 +269,19 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-29T09:56:14.063027Z",
-      "updated_at": "2026-07-29T09:56:19.912278Z",
+      "updated_at": "2026-07-29T09:57:36.686219Z",
       "labels": [
         "chore"
-      ]
+      ],
+      "comments": {
+        "b6c43c3c-4480-4d18-9d91-083b9b91b4a3": {
+          "display_id": 60,
+          "author": "anon-8ea7a055",
+          "content": "CORRECTION: PR#54 is NOT merged - verified OPEN (merged=null, mergeCommit=null, no merge commit on develop/main). It IS fully green: mergeable=MERGEABLE, mergeState=CLEAN, all CI passed (Lint, Security Audit, Test ubuntu-latest + macos-latest all SUCCESS), but reviewDecision empty (not yet approved/merged by dollspace). Closeout NOT performed - no rebuild, PR#54 worktree left intact. Nothing destructive done. Will run the closeout (sync/rebuild/remove worktree) once #54 actually merges.",
+          "created_at": "2026-07-29T09:57:36.686195Z",
+          "kind": "observation"
+        }
+      }
     },
     "64034bd7-6b24-4189-b9de-c7c5b6d64775": {
       "uuid": "64034bd7-6b24-4189-b9de-c7c5b6d64775",
@@ -1311,11 +1320,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 74,
       "timestamp": "2026-07-29T09:56:19.912278Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 75,
+      "timestamp": "2026-07-29T09:57:36.686219Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T09:56:19.912278Z",
+    "timestamp": "2026-07-29T09:57:36.686219Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 74
+    "agent_seq": 75
   }
 }
