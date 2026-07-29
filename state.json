@@ -583,11 +583,12 @@
       "uuid": "a3abff8a-7d9a-44fe-9a11-8e75a232d612",
       "display_id": 31,
       "title": "Fix dashboard serve crash on static assets (forecast-bio#654, unmigrated); refile on dollspace",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-29T06:59:14.613076Z",
-      "updated_at": "2026-07-29T07:25:17.828959Z",
+      "updated_at": "2026-07-29T07:25:24.022575Z",
+      "closed_at": "2026-07-29T07:25:24.022564Z",
       "labels": [
         "bug"
       ],
@@ -1281,11 +1282,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 71,
       "timestamp": "2026-07-29T07:25:17.828959Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 72,
+      "timestamp": "2026-07-29T07:25:24.022575Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T07:25:17.828959Z",
+    "timestamp": "2026-07-29T07:25:24.022575Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 71
+    "agent_seq": 72
   }
 }
