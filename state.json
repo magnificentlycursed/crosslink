@@ -1,6 +1,6 @@
 {
   "next_display_id": 24,
-  "next_comment_id": 39,
+  "next_comment_id": 40,
   "display_id_map": {
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
@@ -591,7 +591,7 @@
       "parent_uuid": "7f4e1659-55cb-442e-a66a-d7b9aa91621d",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T02:17:26.807602Z",
-      "updated_at": "2026-07-21T02:17:57.729675Z",
+      "updated_at": "2026-07-29T00:36:14.572434Z",
       "labels": [
         "upstream"
       ],
@@ -600,6 +600,13 @@
           "author": "anon-8ea7a055",
           "content": "gh#4 to-shared half implemented: commit 1e912b00 on fix/4-11-to-shared-and-comment-ids. to_shared branches on hub_mode before v2 worktree writes; v3 path promotes sqlite-only rows via PR#6's import_issues with preserved uuids and carried display ids (new ImportedIssueSpec::display_id honored by the reducer); idempotent. E2e test passes incl. no-op second run. HOLDING for PR#6/PR#35 merge confirmation; branch recreates trivially onto merged develop if needed.",
           "created_at": "2026-07-21T17:47:57.582348Z",
+          "kind": "result"
+        },
+        "c412e18f-4b67-444b-b3e4-f5665c067e83": {
+          "display_id": 39,
+          "author": "anon-8ea7a055",
+          "content": "gh#4 resolved: dashboard v3-awareness merged in PR#46 (last symptom); the import + to-shared halves in #6/#38. Local fleet dashboard now recognizes the three migrated v3 hubs.",
+          "created_at": "2026-07-29T00:36:14.572414Z",
           "kind": "result"
         },
         "edb17fbe-db17-4ad8-bbe2-70beefcc1283": {
@@ -733,11 +740,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 20,
       "timestamp": "2026-07-29T00:33:41.491338Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 21,
+      "timestamp": "2026-07-29T00:36:14.572434Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T00:33:41.491338Z",
+    "timestamp": "2026-07-29T00:36:14.572434Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 20
+    "agent_seq": 21
   }
 }
