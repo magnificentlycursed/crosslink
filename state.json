@@ -1,6 +1,6 @@
 {
   "next_display_id": 24,
-  "next_comment_id": 42,
+  "next_comment_id": 43,
   "display_id_map": {
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
@@ -642,11 +642,18 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T01:45:12.654356Z",
-      "updated_at": "2026-07-21T01:45:14.649280Z",
+      "updated_at": "2026-07-29T00:36:55.176590Z",
       "labels": [
         "bug"
       ],
       "comments": {
+        "67309c12-4c9d-425a-a8a8-b31c524c6e34": {
+          "display_id": 42,
+          "author": "anon-8ea7a055",
+          "content": "gh#31 resolved: hook binary resolution + clap exit-2 fail-open merged via PR#32, now on develop.",
+          "created_at": "2026-07-29T00:36:55.176568Z",
+          "kind": "result"
+        },
         "7952fee1-80c6-493f-a31c-5eecc06a4091": {
           "author": "anon-8ea7a055",
           "content": "Plan: fix all three bare-PATH crosslink invocations in the shipped Claude hooks (work-check check_control_flags, heartbeat Popen, session-start private run_crosslink) to resolve via find_crosslink_binary(); restructure check_control_flags exit-2 handling to fail open unless stdout parses as flag-state JSON with kill/paused/reprioritise actually set. Mirror the fix into the tracked .claude/hooks/work-check.py dogfood copy (kept byte-identical to the resource). Changelog entry under Unreleased/Fixed. Verified with 7-case functional test: clap usage error, garbage stdout, and flagless JSON fail open; pause, kill, reprioritise still block; clean exit 0 passes. Upstream issue: gh#31.",
@@ -787,11 +794,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 26,
       "timestamp": "2026-07-29T00:36:47.739374Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 27,
+      "timestamp": "2026-07-29T00:36:55.176590Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T00:36:47.739374Z",
+    "timestamp": "2026-07-29T00:36:55.176590Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 26
+    "agent_seq": 27
   }
 }
