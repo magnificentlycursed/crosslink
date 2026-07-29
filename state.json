@@ -638,11 +638,12 @@
       "uuid": "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b",
       "display_id": 2,
       "title": "Upstream fix: false AGENT PAUSED when check_control_flags hits older binary (clap exit-2 conflation)",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T01:45:12.654356Z",
-      "updated_at": "2026-07-29T00:36:55.176590Z",
+      "updated_at": "2026-07-29T00:37:02.686343Z",
+      "closed_at": "2026-07-29T00:37:02.686331Z",
       "labels": [
         "bug"
       ],
@@ -799,11 +800,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 27,
       "timestamp": "2026-07-29T00:36:55.176590Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 28,
+      "timestamp": "2026-07-29T00:37:02.686343Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T00:36:55.176590Z",
+    "timestamp": "2026-07-29T00:37:02.686343Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 27
+    "agent_seq": 28
   }
 }
