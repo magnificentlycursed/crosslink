@@ -304,11 +304,12 @@
       "display_id": 3,
       "title": "Epic: hub-v3 correctness - 0.8.0 upgrade-hold retest triggers (gh#4 5 7 8 11 12)",
       "description": "Operator ruling 2026-07-20 (decision on vsdd-cli #597): host binary pinned to crosslink 0.8.0, no migrate hub-v3, for vsdd-cli and mdatron. Lift the hold only when dollspace-gay/crosslink #4 #5 #7 #8 #11 #12 close. This epic tracks fixing those six v3-hub defects upstream.",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T02:17:16.198461Z",
-      "updated_at": "2026-07-29T00:37:21.889862Z",
+      "updated_at": "2026-07-29T00:37:28.504382Z",
+      "closed_at": "2026-07-29T00:37:28.504372Z",
       "labels": [
         "hub-v3",
         "upstream"
@@ -817,11 +818,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 29,
       "timestamp": "2026-07-29T00:37:21.889862Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 30,
+      "timestamp": "2026-07-29T00:37:28.504382Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T00:37:21.889862Z",
+    "timestamp": "2026-07-29T00:37:28.504382Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 29
+    "agent_seq": 30
   }
 }
