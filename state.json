@@ -1,6 +1,6 @@
 {
   "next_display_id": 27,
-  "next_comment_id": 48,
+  "next_comment_id": 49,
   "display_id_map": {
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
@@ -476,10 +476,19 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-29T02:38:46.100332Z",
-      "updated_at": "2026-07-29T02:38:50.762974Z",
+      "updated_at": "2026-07-29T03:08:43.114407Z",
       "labels": [
         "upstream"
-      ]
+      ],
+      "comments": {
+        "78340b44-4803-4997-ac93-27b96afa97d5": {
+          "display_id": 48,
+          "author": "anon-8ea7a055",
+          "content": "Fix committed on fix/34-bootstrap-commit-identity @ 712e1a2b. Root cause was sharper than expected: NOT missing identity but EMPTY-STRING identity - ensure_cache_git_identity guarded on git-config-succeeds, but git config exits 0 for an empty value (this host has empty global user.email/user.name to force per-repo identities), so the empty value skipped the fallback and the commit died with no author; the check also ignored user.name. Fixed: require non-empty user.email AND user.name (git_config_nonempty helper) else fallback. FULL SUITE 2849/0 - first fully-green run of the engagement (the 2 perennial bootstrap failures cleared). sync 58, agent 11, clippy+fmt clean. PR body staged; awaiting operator push.",
+          "created_at": "2026-07-29T03:08:43.114294Z",
+          "kind": "result"
+        }
+      }
     },
     "d4c17dc3-f1e7-4f56-9573-729bfd0bfed5": {
       "uuid": "d4c17dc3-f1e7-4f56-9573-729bfd0bfed5",
@@ -967,11 +976,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 43,
       "timestamp": "2026-07-29T02:38:50.762974Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 44,
+      "timestamp": "2026-07-29T03:08:43.114407Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T02:38:50.762974Z",
+    "timestamp": "2026-07-29T03:08:43.114407Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 43
+    "agent_seq": 44
   }
 }
