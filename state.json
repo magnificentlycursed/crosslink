@@ -38,11 +38,12 @@
       "uuid": "029afced-8d1a-4506-80de-17783effd8fd",
       "display_id": 29,
       "title": "Dashboard v3 monitoring completeness: gh#48 unreachable-alert + gh#49 ci_status/agent_requests + adjacent v3 gaps",
-      "status": "open",
+      "status": "closed",
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-29T05:56:46.446623Z",
-      "updated_at": "2026-07-29T06:51:32.806505Z",
+      "updated_at": "2026-07-29T06:51:40.354664Z",
+      "closed_at": "2026-07-29T06:51:40.354653Z",
       "labels": [
         "upstream"
       ],
@@ -1169,11 +1170,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 61,
       "timestamp": "2026-07-29T06:51:32.806505Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 62,
+      "timestamp": "2026-07-29T06:51:40.354664Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T06:51:32.806505Z",
+    "timestamp": "2026-07-29T06:51:40.354664Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 61
+    "agent_seq": 62
   }
 }
