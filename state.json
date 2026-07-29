@@ -280,11 +280,12 @@
       "uuid": "71d41217-691b-4eae-82f1-258cfab1a69d",
       "display_id": 27,
       "title": "Resolve CHANGELOG conflict on open gh#34 PRs (#50/#51) flagged by dollspace",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-29T03:59:49.765854Z",
-      "updated_at": "2026-07-29T04:10:39.468130Z",
+      "updated_at": "2026-07-29T04:10:45.646444Z",
+      "closed_at": "2026-07-29T04:10:45.646432Z",
       "labels": [
         "upstream"
       ],
@@ -1049,11 +1050,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 50,
       "timestamp": "2026-07-29T04:10:39.468130Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 51,
+      "timestamp": "2026-07-29T04:10:45.646444Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T04:10:39.468130Z",
+    "timestamp": "2026-07-29T04:10:45.646444Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 50
+    "agent_seq": 51
   }
 }
