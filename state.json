@@ -152,11 +152,12 @@
       "uuid": "4e2e6e54-5223-4664-8572-5c180e29431c",
       "display_id": 24,
       "title": "Assess high-value work for vsdd-cli and mdatron (read-only strategic review)",
-      "status": "open",
+      "status": "closed",
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-29T01:28:07.055897Z",
-      "updated_at": "2026-07-29T01:30:59.975957Z",
+      "updated_at": "2026-07-29T01:31:06.397018Z",
+      "closed_at": "2026-07-29T01:31:06.397005Z",
       "labels": [
         "research"
       ],
@@ -881,11 +882,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 35,
       "timestamp": "2026-07-29T01:30:59.975957Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 36,
+      "timestamp": "2026-07-29T01:31:06.397018Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T01:30:59.975957Z",
+    "timestamp": "2026-07-29T01:31:06.397018Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 35
+    "agent_seq": 36
   }
 }
