@@ -90,11 +90,12 @@
       "uuid": "32623ccc-e9c8-410c-b6cd-78c39fbc38ed",
       "display_id": 23,
       "title": "Verify PR#46 merge, close v3 epic and finalize mdatron cutover",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-29T00:33:36.513071Z",
-      "updated_at": "2026-07-29T00:40:18.341926Z",
+      "updated_at": "2026-07-29T00:40:23.876457Z",
+      "closed_at": "2026-07-29T00:40:23.876447Z",
       "labels": [
         "cutover"
       ],
@@ -837,11 +838,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 31,
       "timestamp": "2026-07-29T00:40:18.341926Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 32,
+      "timestamp": "2026-07-29T00:40:23.876457Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T00:40:18.341926Z",
+    "timestamp": "2026-07-29T00:40:23.876457Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 31
+    "agent_seq": 32
   }
 }
