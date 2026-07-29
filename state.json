@@ -1,7 +1,8 @@
 {
-  "next_display_id": 29,
+  "next_display_id": 30,
   "next_comment_id": 53,
   "display_id_map": {
+    "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
     "32623ccc-e9c8-410c-b6cd-78c39fbc38ed": 23,
@@ -33,6 +34,16 @@
   },
   "locks": {},
   "issues": {
+    "029afced-8d1a-4506-80de-17783effd8fd": {
+      "uuid": "029afced-8d1a-4506-80de-17783effd8fd",
+      "display_id": 29,
+      "title": "Dashboard v3 monitoring completeness: gh#48 unreachable-alert + gh#49 ci_status/agent_requests + adjacent v3 gaps",
+      "status": "open",
+      "priority": "medium",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-07-29T05:56:46.446623Z",
+      "updated_at": "2026-07-29T05:56:46.446623Z"
+    },
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": {
       "uuid": "042841eb-595c-4efa-9c20-8c70ca0e8d06",
       "display_id": 9,
@@ -1099,11 +1110,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 55,
       "timestamp": "2026-07-29T05:05:20.003974Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 56,
+      "timestamp": "2026-07-29T05:56:46.446623Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-07-29T05:05:20.003974Z",
+    "timestamp": "2026-07-29T05:56:46.446623Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 55
+    "agent_seq": 56
   }
 }
