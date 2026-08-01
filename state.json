@@ -1,6 +1,6 @@
 {
   "next_display_id": 37,
-  "next_comment_id": 71,
+  "next_comment_id": 72,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -712,7 +712,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-01T20:54:06.530323Z",
-      "updated_at": "2026-08-01T21:10:41.972005Z",
+      "updated_at": "2026-08-01T21:19:11.391668Z",
       "labels": [
         "bug"
       ],
@@ -722,6 +722,13 @@
           "author": "anon-8ea7a055",
           "content": "Both fixed on fix/9-10-container-toolchain-auth: d40526d3 (gh#10: entrypoint parses /host-auth/*.env line-by-line, allowlist CLAUDE_CODE_OAUTH_TOKEN/ANTHROPIC_API_KEY, value verbatim after first '=', quotes/CR stripped, export-prefix accepted, never executed/echoed; env-file resolution only on actual hit; VERIFIED with adversarial fixture - injection payload does not execute, was executing+truncating before) + 39fc021f (gh#9: build-essential added to image apt layer; rustup had no cc/linker counterpart). clippy/fmt/container tests green; full gate running. PR body staged (Fixes #9. Fixes #10.). Epic #2 body updated: #9/#10/#19 folded in (container dispatch section + flow-integrity), #55 triage results recorded, watch list trimmed to #18/#27/#28.",
           "created_at": "2026-08-01T21:04:15.958084Z",
+          "kind": "result"
+        },
+        "d22f9de7-e62e-4f0b-83ef-31c6a473cc9b": {
+          "display_id": 71,
+          "author": "anon-8ea7a055",
+          "content": "PR opened: dollspace-gay/crosslink#64 (fix/9-10-container-toolchain-auth, base develop). Fixes #9 + #10. Full gate 2853/0. Changelog tail-placed; diff3-verified conflict-free against PR#63 in either merge order. DONE pending dollspace merge.",
+          "created_at": "2026-08-01T21:19:11.391649Z",
           "kind": "result"
         },
         "e01130d7-fd36-4940-a5d0-62c4215c012f": {
@@ -1567,11 +1574,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 96,
       "timestamp": "2026-08-01T21:12:30.991759Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 97,
+      "timestamp": "2026-08-01T21:19:11.391668Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-01T21:12:30.991759Z",
+    "timestamp": "2026-08-01T21:19:11.391668Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 96
+    "agent_seq": 97
   }
 }
