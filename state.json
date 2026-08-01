@@ -1,5 +1,5 @@
 {
-  "next_display_id": 35,
+  "next_display_id": 36,
   "next_comment_id": 65,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -35,7 +35,8 @@
     "eca996dc-d07a-4c56-b360-bb4a6d6af889": 22,
     "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5": 20,
     "f06bd3bc-97ff-40c2-a4f8-da3695d3080f": 4,
-    "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b": 2
+    "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b": 2,
+    "fc4f4a98-e11c-4bc9-b415-afb26dc8add9": 35
   },
   "locks": {},
   "issues": {
@@ -1010,6 +1011,16 @@
           "kind": "plan"
         }
       }
+    },
+    "fc4f4a98-e11c-4bc9-b415-afb26dc8add9": {
+      "uuid": "fc4f4a98-e11c-4bc9-b415-afb26dc8add9",
+      "display_id": 35,
+      "title": "New fix epic from magnificentlycursed/crosslink#2 (filed by vsdd-cli) - read + plan",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-08-01T20:09:35.149118Z",
+      "updated_at": "2026-08-01T20:09:35.149118Z"
     }
   },
   "next_milestone_id": 1,
@@ -1443,11 +1454,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 86,
       "timestamp": "2026-08-01T18:56:29.710406Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 87,
+      "timestamp": "2026-08-01T20:09:35.149118Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-01T18:56:29.710406Z",
+    "timestamp": "2026-08-01T20:09:35.149118Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 86
+    "agent_seq": 87
   }
 }
