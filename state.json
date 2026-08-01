@@ -1,6 +1,6 @@
 {
   "next_display_id": 37,
-  "next_comment_id": 68,
+  "next_comment_id": 69,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -712,10 +712,19 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-01T20:54:06.530323Z",
-      "updated_at": "2026-08-01T20:54:11.786607Z",
+      "updated_at": "2026-08-01T21:04:15.958114Z",
       "labels": [
         "bug"
-      ]
+      ],
+      "comments": {
+        "c6208bcf-122a-45f8-8325-99976fcf6204": {
+          "display_id": 68,
+          "author": "anon-8ea7a055",
+          "content": "Both fixed on fix/9-10-container-toolchain-auth: d40526d3 (gh#10: entrypoint parses /host-auth/*.env line-by-line, allowlist CLAUDE_CODE_OAUTH_TOKEN/ANTHROPIC_API_KEY, value verbatim after first '=', quotes/CR stripped, export-prefix accepted, never executed/echoed; env-file resolution only on actual hit; VERIFIED with adversarial fixture - injection payload does not execute, was executing+truncating before) + 39fc021f (gh#9: build-essential added to image apt layer; rustup had no cc/linker counterpart). clippy/fmt/container tests green; full gate running. PR body staged (Fixes #9. Fixes #10.). Epic #2 body updated: #9/#10/#19 folded in (container dispatch section + flow-integrity), #55 triage results recorded, watch list trimmed to #18/#27/#28.",
+          "created_at": "2026-08-01T21:04:15.958084Z",
+          "kind": "result"
+        }
+      }
     },
     "d325dfa4-ab05-48bb-8f2d-a59128d6f7cf": {
       "uuid": "d325dfa4-ab05-48bb-8f2d-a59128d6f7cf",
@@ -1529,11 +1538,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 93,
       "timestamp": "2026-08-01T20:54:11.786607Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 94,
+      "timestamp": "2026-08-01T21:04:15.958114Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-01T20:54:11.786607Z",
+    "timestamp": "2026-08-01T21:04:15.958114Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 93
+    "agent_seq": 94
   }
 }
