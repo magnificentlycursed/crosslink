@@ -1,6 +1,6 @@
 {
   "next_display_id": 36,
-  "next_comment_id": 67,
+  "next_comment_id": 68,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -1020,7 +1020,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-01T20:09:35.149118Z",
-      "updated_at": "2026-08-01T20:15:07.606517Z",
+      "updated_at": "2026-08-01T20:32:43.878642Z",
       "labels": [
         "epic"
       ],
@@ -1031,6 +1031,13 @@
           "content": "Epic read (magnificentlycursed/crosslink#2, the vsdd kickoff bundle): 8 upstream issues dollspace #55-#62 across runtime blocker (#55 stall), flow-integrity (#56 /design --continue resets pipeline.json, #57 swarm phasing doc/code mismatch), enforcement gaps (#58 hook looser than docs, #59 kickoff --container omits no-prompt flag, #60 TIMEOUT sentinel never written), capabilities (#61 effort dial, #62 prompt-injection seam). RE-AUDIT vs develop 6b4f736f: (1) #31 (a #55 contributor) IS fixed on develop [our PR#32]. (2) kickoff_template (#62 partial via PR#44) is on MAIN 26ee1885 only, NOT develop - so #62 seam work is gated on main->develop sync. (3) #59 real: kickoff launch.rs builds permission_flag (skip_permissions/permission_mode, lines 193-197) but need to confirm the ContainerMode branch (229+) applies it to the container's claude invocation - that's the defect. Concrete takeable-now fixes: #56/#57/#58/#59/#60. #55 = investigation (may resolve via #59+#9+#31). #61/#62 = design/gated. Recommend epic's own triage: #59 first (cheap #55 cause), then the defect cluster.",
           "created_at": "2026-08-01T20:12:13.234572Z",
           "kind": "plan"
+        },
+        "50555870-2c8b-4da8-aac8-9bf8f63cc8fa": {
+          "display_id": 67,
+          "author": "anon-8ea7a055",
+          "content": "#59 FIXED: commit f1c98a6d on fix/59-kickoff-container-no-prompt. Extracted shared permission_flag() helper; launch_container now takes + emits skip_permissions/permission_mode; run.rs container call site passes opts. Local path unchanged (same helper, existing 14 build_agent_command tests green). New test_permission_flag_postures. clippy+fmt clean. PR body staged (Fixes #59; likely fixes container-path half of #55). Full suite running, then push gate. EPIC PROGRESS: #59 done (this). Next per triage: #55 has 2 known contributors resolved on develop now (#31 hook, #59 container perms) + #9 (C-toolchain, dollspace's container-image issue) - #55 container-path stall should be substantially addressed once #59 merges. Remaining takeable defects: #56 (/design pipeline reset), #57 (swarm phasing doc/code), #58 (hook enforcement), #60 (TIMEOUT sentinel). #61/#62 capabilities (#62 gated on kickoff_template->develop).",
+          "created_at": "2026-08-01T20:32:43.878621Z",
+          "kind": "result"
         },
         "9c3e131d-b757-49dc-b699-6e351e98d1ec": {
           "display_id": 66,
@@ -1493,11 +1500,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 90,
       "timestamp": "2026-08-01T20:15:07.606517Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 91,
+      "timestamp": "2026-08-01T20:32:43.878642Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-01T20:15:07.606517Z",
+    "timestamp": "2026-08-01T20:32:43.878642Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 90
+    "agent_seq": 91
   }
 }
