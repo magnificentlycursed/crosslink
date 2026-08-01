@@ -1,5 +1,5 @@
 {
-  "next_display_id": 36,
+  "next_display_id": 37,
   "next_comment_id": 68,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -25,6 +25,7 @@
     "7f4e1659-55cb-442e-a66a-d7b9aa91621d": 3,
     "89b50e39-951f-4a33-ba60-26460565c4fd": 19,
     "a3abff8a-7d9a-44fe-9a11-8e75a232d612": 31,
+    "b21ba76e-f322-49ec-9e97-db230081a651": 36,
     "d325dfa4-ab05-48bb-8f2d-a59128d6f7cf": 26,
     "d4c17dc3-f1e7-4f56-9573-729bfd0bfed5": 13,
     "da78cc6e-31c6-4805-9e80-75028c248ff0": 12,
@@ -702,6 +703,16 @@
           "kind": "result"
         }
       }
+    },
+    "b21ba76e-f322-49ec-9e97-db230081a651": {
+      "uuid": "b21ba76e-f322-49ec-9e97-db230081a651",
+      "display_id": 36,
+      "title": "Fix gh#10 (entrypoint sources /host-auth/*.env - credential leak/truncation) + gh#9 (agent image missing C toolchain) - one branch, resources/container/",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-08-01T20:54:06.530323Z",
+      "updated_at": "2026-08-01T20:54:06.530323Z"
     },
     "d325dfa4-ab05-48bb-8f2d-a59128d6f7cf": {
       "uuid": "d325dfa4-ab05-48bb-8f2d-a59128d6f7cf",
@@ -1505,11 +1516,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 91,
       "timestamp": "2026-08-01T20:32:43.878642Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 92,
+      "timestamp": "2026-08-01T20:54:06.530323Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-01T20:32:43.878642Z",
+    "timestamp": "2026-08-01T20:54:06.530323Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 91
+    "agent_seq": 92
   }
 }
