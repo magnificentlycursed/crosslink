@@ -1,5 +1,5 @@
 {
-  "next_display_id": 37,
+  "next_display_id": 38,
   "next_comment_id": 72,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -16,6 +16,7 @@
     "586a0663-b17b-455e-aff4-58795893b52f": 33,
     "64034bd7-6b24-4189-b9de-c7c5b6d64775": 8,
     "68d2e5e5-e021-4906-a8d2-546df21b34ac": 14,
+    "69abdd99-b5f1-44d6-a6ac-10af0b18cb6f": 37,
     "69c17c31-f3a2-4dd7-9d35-7fa7cb6bde9a": 28,
     "6fc8c45a-fbd1-4d70-8978-d9058ff1d884": 18,
     "71d41217-691b-4eae-82f1-258cfab1a69d": 27,
@@ -398,6 +399,16 @@
           "kind": "result"
         }
       }
+    },
+    "69abdd99-b5f1-44d6-a6ac-10af0b18cb6f": {
+      "uuid": "69abdd99-b5f1-44d6-a6ac-10af0b18cb6f",
+      "display_id": 37,
+      "title": "Kickoff/swarm defect cluster: gh#56 design-continue pipeline reset, gh#57 swarm phase parser, gh#58 agent_overrides enforcement, gh#60 TIMEOUT sentinel, gh#19 dry-run side effects",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-08-01T21:20:54.367758Z",
+      "updated_at": "2026-08-01T21:20:54.367758Z"
     },
     "69c17c31-f3a2-4dd7-9d35-7fa7cb6bde9a": {
       "uuid": "69c17c31-f3a2-4dd7-9d35-7fa7cb6bde9a",
@@ -1585,11 +1596,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 98,
       "timestamp": "2026-08-01T21:19:17.396924Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 99,
+      "timestamp": "2026-08-01T21:20:54.367758Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-01T21:19:17.396924Z",
+    "timestamp": "2026-08-01T21:20:54.367758Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 98
+    "agent_seq": 99
   }
 }
