@@ -1,6 +1,6 @@
 {
   "next_display_id": 36,
-  "next_comment_id": 65,
+  "next_comment_id": 66,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -1020,10 +1020,19 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-01T20:09:35.149118Z",
-      "updated_at": "2026-08-01T20:09:40.214523Z",
+      "updated_at": "2026-08-01T20:12:13.234590Z",
       "labels": [
         "epic"
-      ]
+      ],
+      "comments": {
+        "08cdbb68-5f20-4fdc-9e94-5d3815003099": {
+          "display_id": 65,
+          "author": "anon-8ea7a055",
+          "content": "Epic read (magnificentlycursed/crosslink#2, the vsdd kickoff bundle): 8 upstream issues dollspace #55-#62 across runtime blocker (#55 stall), flow-integrity (#56 /design --continue resets pipeline.json, #57 swarm phasing doc/code mismatch), enforcement gaps (#58 hook looser than docs, #59 kickoff --container omits no-prompt flag, #60 TIMEOUT sentinel never written), capabilities (#61 effort dial, #62 prompt-injection seam). RE-AUDIT vs develop 6b4f736f: (1) #31 (a #55 contributor) IS fixed on develop [our PR#32]. (2) kickoff_template (#62 partial via PR#44) is on MAIN 26ee1885 only, NOT develop - so #62 seam work is gated on main->develop sync. (3) #59 real: kickoff launch.rs builds permission_flag (skip_permissions/permission_mode, lines 193-197) but need to confirm the ContainerMode branch (229+) applies it to the container's claude invocation - that's the defect. Concrete takeable-now fixes: #56/#57/#58/#59/#60. #55 = investigation (may resolve via #59+#9+#31). #61/#62 = design/gated. Recommend epic's own triage: #59 first (cheap #55 cause), then the defect cluster.",
+          "created_at": "2026-08-01T20:12:13.234572Z",
+          "kind": "plan"
+        }
+      }
     }
   },
   "next_milestone_id": 1,
@@ -1467,11 +1476,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 88,
       "timestamp": "2026-08-01T20:09:40.214523Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 89,
+      "timestamp": "2026-08-01T20:12:13.234590Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-01T20:09:40.214523Z",
+    "timestamp": "2026-08-01T20:12:13.234590Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 88
+    "agent_seq": 89
   }
 }
