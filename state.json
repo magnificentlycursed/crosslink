@@ -1,6 +1,6 @@
 {
   "next_display_id": 35,
-  "next_comment_id": 64,
+  "next_comment_id": 65,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -100,11 +100,18 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-01T18:49:33.209166Z",
-      "updated_at": "2026-08-01T18:51:56.528813Z",
+      "updated_at": "2026-08-01T18:56:23.773207Z",
       "labels": [
         "chore"
       ],
       "comments": {
+        "07ce1f42-350f-4b68-8c15-fb8fb95a9d01": {
+          "display_id": 64,
+          "author": "anon-8ea7a055",
+          "content": "Closeout done. Global binary rebuilt to 0.9.0-beta.1+6b4f736f (rollback: crosslink-0.9.0-d77a37ba, plus earlier -6f1bb0ed/-ef947f7f/-0.8.0). Fleet DATA-INTEGRITY all-PASS under new binary (schema/counters/hydration/layout x3). mdatron shows locks FAIL = 8 stale locks held by 79Ig (#79-#133) - operational drift from active mdatron development since cutover, NOT corruption and NOT a binary regression; left untouched (not in scope, 79Ig may be active). dashboard-v3-monitoring worktree removed. STILL PENDING (operator): push origin develop + origin main to update the fork mirror (both behind). gh#48/#53 auto-close on dollspace develop->main sync. Open design: gh#49 ci_status half.",
+          "created_at": "2026-08-01T18:56:23.773191Z",
+          "kind": "result"
+        },
         "fac2fe28-388d-4098-a550-9faf10e620ad": {
           "display_id": 63,
           "author": "anon-8ea7a055",
@@ -1425,11 +1432,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 84,
       "timestamp": "2026-08-01T18:51:56.528813Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 85,
+      "timestamp": "2026-08-01T18:56:23.773207Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-01T18:51:56.528813Z",
+    "timestamp": "2026-08-01T18:56:23.773207Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 84
+    "agent_seq": 85
   }
 }
