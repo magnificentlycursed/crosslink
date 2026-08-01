@@ -1,9 +1,10 @@
 {
-  "next_display_id": 38,
+  "next_display_id": 39,
   "next_comment_id": 74,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
+    "0b04abb9-abe6-452b-ba52-f6ad1e54494e": 38,
     "16e822ba-fdb8-4a01-b683-89efdba88526": 34,
     "1a151881-181d-4e06-8c90-e41da1820ad0": 30,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
@@ -94,6 +95,16 @@
           "kind": "result"
         }
       }
+    },
+    "0b04abb9-abe6-452b-ba52-f6ad1e54494e": {
+      "uuid": "0b04abb9-abe6-452b-ba52-f6ad1e54494e",
+      "display_id": 38,
+      "title": "gh#55 local re-test without merges: fixed binary + local image, sandboxed live-fire vs control",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-08-01T23:24:50.149038Z",
+      "updated_at": "2026-08-01T23:24:50.149038Z"
     },
     "16e822ba-fdb8-4a01-b683-89efdba88526": {
       "uuid": "16e822ba-fdb8-4a01-b683-89efdba88526",
@@ -1641,11 +1652,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 103,
       "timestamp": "2026-08-01T23:03:11.953995Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 104,
+      "timestamp": "2026-08-01T23:24:50.149038Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-01T23:03:11.953995Z",
+    "timestamp": "2026-08-01T23:24:50.149038Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 103
+    "agent_seq": 104
   }
 }
