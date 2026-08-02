@@ -1,6 +1,6 @@
 {
   "next_display_id": 51,
-  "next_comment_id": 107,
+  "next_comment_id": 108,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1276,11 +1276,18 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T05:42:41.268194Z",
-      "updated_at": "2026-08-02T09:56:47.399906Z",
+      "updated_at": "2026-08-02T10:02:26.440091Z",
       "labels": [
         "feature"
       ],
       "comments": {
+        "3f1fec83-475e-4d8e-8613-b0b5d7767b54": {
+          "display_id": 107,
+          "author": "anon-8ea7a055",
+          "content": "PR opened: dollspace#77 (feat/61-effort-budget-dispatch-dials, base develop). Implements #61 Slice 1 (effort/budget dials). Full gate green (bin 2870/int 198/smoke 159). DONE - dogfooded via container kickoff, verified on host, PR'd off clean develop.",
+          "created_at": "2026-08-02T10:02:26.440077Z",
+          "kind": "result"
+        },
         "7e7bf970-507e-4914-abc3-d0e1898f91bf": {
           "display_id": 105,
           "author": "anon-8ea7a055",
@@ -2409,11 +2416,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 168,
       "timestamp": "2026-08-02T09:56:47.399906Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 169,
+      "timestamp": "2026-08-02T10:02:26.440091Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T09:56:47.399906Z",
+    "timestamp": "2026-08-02T10:02:26.440091Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 168
+    "agent_seq": 169
   }
 }
