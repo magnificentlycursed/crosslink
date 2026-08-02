@@ -1,5 +1,5 @@
 {
-  "next_display_id": 51,
+  "next_display_id": 52,
   "next_comment_id": 108,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -45,6 +45,7 @@
     "e00178bc-6f75-4207-a84f-ff2b13362379": 15,
     "e4939941-102b-4f1f-be5a-e6f056370d87": 50,
     "e75c8af8-d483-40bd-9dbf-0d841edef2ee": 17,
+    "e77f9fc7-7a1f-4db3-ac1f-b06c44f68159": 51,
     "e9fa1a15-41d3-48e6-9291-76bffa2e2dec": 16,
     "eca996dc-d07a-4c56-b360-bb4a6d6af889": 22,
     "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5": 20,
@@ -1334,6 +1335,16 @@
         }
       }
     },
+    "e77f9fc7-7a1f-4db3-ac1f-b06c44f68159": {
+      "uuid": "e77f9fc7-7a1f-4db3-ac1f-b06c44f68159",
+      "display_id": 51,
+      "title": "Expand a PR body into a feature description (gh#61 dials)",
+      "status": "open",
+      "priority": "low",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-08-02T10:11:16.867457Z",
+      "updated_at": "2026-08-02T10:11:16.867457Z"
+    },
     "e9fa1a15-41d3-48e6-9291-76bffa2e2dec": {
       "uuid": "e9fa1a15-41d3-48e6-9291-76bffa2e2dec",
       "display_id": 16,
@@ -2427,11 +2438,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 170,
       "timestamp": "2026-08-02T10:02:32.506701Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 171,
+      "timestamp": "2026-08-02T10:11:16.867457Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T10:02:32.506701Z",
+    "timestamp": "2026-08-02T10:11:16.867457Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 170
+    "agent_seq": 171
   }
 }
