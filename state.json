@@ -1,6 +1,6 @@
 {
   "next_display_id": 43,
-  "next_comment_id": 86,
+  "next_comment_id": 87,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -888,7 +888,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:52:00.447272Z",
-      "updated_at": "2026-08-02T01:52:24.215392Z",
+      "updated_at": "2026-08-02T02:09:59.096593Z",
       "labels": [
         "bug"
       ],
@@ -899,6 +899,13 @@
           "content": "PR#65 conflict RESOLVED. 3 files reconciled off upstream/develop merge: (1) launch.rs - build_agent_command AUTO-MERGED correctly (permission_flag() from #63 + TIMEOUT trailer from #65, non-overlapping regions); launch_container was the real conflict, resolved to carry BOTH skip_flag + TIMEOUT trailer. (2) kickoff/tests.rs - both appended tests kept (test_normalize_status_timeout_sentinel #65 + test_permission_flag_postures #63). (3) CHANGELOG.md - CAUGHT AN AUTO-MERGE CORRUPTION: git silently dropped the gh#53 entry's opening line (dangling '(gh#53).'), restored it; full Fixed section audited, all entries present once, no other mangling. knowledge/ markers confirmed string-literals (conflict-parser code), not artifacts. Build clean, clippy+fmt clean, 3 merged-code tests green. Full gate running. LESSON REINFORCED: auto-merge on adjacent CHANGELOG insertions can produce clean-but-WRONG results - always read the merged section, not just check for markers.",
           "created_at": "2026-08-02T01:51:37.870261Z",
           "kind": "resolution"
+        },
+        "19584a31-efa0-4b29-be45-5cb256951dde": {
+          "display_id": 86,
+          "author": "anon-8ea7a055",
+          "content": "PR#72 (gh#66) MERGED eba9a1cd - develop advanced past the a85c92e2 my #65 merge targeted. #72 overlaps #65 on plan.rs, cli_integration.rs, CHANGELOG. So #65 needs to catch up to eba9a1cd too. PLAN (no more of our PRs pending after this, so chase ends here): (1) let current #65 gate finish [verifies the a85c92e2 merge]; (2) I commit that merge; (3) operator runs one more 'git merge upstream/develop' to pick up #72's delta; (4) I resolve the plan.rs/cli_integration.rs/CHANGELOG overlap (gh#66's flags-on-plan vs gh#19's dry-run reorder are likely different regions of plan.rs - may partly auto-merge); (5) final gate; (6) push. gh66 worktree removed. Local develop synced to eba9a1cd. Binary rebuild to eba9a1cd deferred until #65 lands to avoid churn.",
+          "created_at": "2026-08-02T02:09:59.096571Z",
+          "kind": "decision"
         },
         "9191ad6e-54c1-45e5-95b3-f63d16cfc792": {
           "display_id": 85,
@@ -1925,11 +1932,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 127,
       "timestamp": "2026-08-02T01:52:24.215392Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 128,
+      "timestamp": "2026-08-02T02:09:59.096593Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T01:52:24.215392Z",
+    "timestamp": "2026-08-02T02:09:59.096593Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 127
+    "agent_seq": 128
   }
 }
