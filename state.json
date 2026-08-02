@@ -1,6 +1,6 @@
 {
   "next_display_id": 46,
-  "next_comment_id": 92,
+  "next_comment_id": 93,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -438,11 +438,18 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T03:29:44.327537Z",
-      "updated_at": "2026-08-02T03:30:30.270188Z",
+      "updated_at": "2026-08-02T03:35:50.533217Z",
       "labels": [
         "chore"
       ],
       "comments": {
+        "7df195db-65fe-4e53-9592-723574f565cb": {
+          "display_id": 92,
+          "author": "anon-8ea7a055",
+          "content": "Bundle closeout DONE: global binary a153c3d2 installed (rollback crosslink-0.9.0-eba9a1cd + earlier tags preserved); crosslink 5/5 + mdatron 5/5 integrity; all bundle worktrees removed (only develop + caches remain). FLAGGED (separate, NOT crosslink/not this session's work): vsdd-cli integrity dropped 5/5 -> 3/5 - counters FAIL (checkpoint next_comment_id 1398, expected >=1401) + hydration FAIL (858 reduced vs 859 sqlite, 1 sqlite-only issue). Looks like a live desync from vsdd-cli's active dev (xqjG). NOT touching vsdd-cli data - surfaced to operator for decision (could be in-flight write; a repair could clobber concurrent work).",
+          "created_at": "2026-08-02T03:35:50.533199Z",
+          "kind": "result"
+        },
         "c6fefa82-b69c-4ee9-a4d7-ebf89f45ae33": {
           "display_id": 91,
           "author": "anon-8ea7a055",
@@ -2081,11 +2088,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 140,
       "timestamp": "2026-08-02T03:30:30.270188Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 141,
+      "timestamp": "2026-08-02T03:35:50.533217Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T03:30:30.270188Z",
+    "timestamp": "2026-08-02T03:35:50.533217Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 140
+    "agent_seq": 141
   }
 }
