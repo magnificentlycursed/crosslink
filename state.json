@@ -1,5 +1,5 @@
 {
-  "next_display_id": 42,
+  "next_display_id": 43,
   "next_comment_id": 82,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -30,6 +30,7 @@
     "89b50e39-951f-4a33-ba60-26460565c4fd": 19,
     "a3abff8a-7d9a-44fe-9a11-8e75a232d612": 31,
     "b21ba76e-f322-49ec-9e97-db230081a651": 36,
+    "c2b216b7-fd04-4392-b5d8-77fb497b10b9": 42,
     "d010597c-9456-4dad-91f5-44274eaf8aae": 39,
     "d325dfa4-ab05-48bb-8f2d-a59128d6f7cf": 26,
     "d4c17dc3-f1e7-4f56-9573-729bfd0bfed5": 13,
@@ -878,6 +879,16 @@
           "kind": "decision"
         }
       }
+    },
+    "c2b216b7-fd04-4392-b5d8-77fb497b10b9": {
+      "uuid": "c2b216b7-fd04-4392-b5d8-77fb497b10b9",
+      "display_id": 42,
+      "title": "gh#66 plan-mode flags fix + retro follow-ups: file #50/#54 debt, correct gh#23, rescope #49",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-08-02T00:52:00.447272Z",
+      "updated_at": "2026-08-02T00:52:00.447272Z"
     },
     "d010597c-9456-4dad-91f5-44274eaf8aae": {
       "uuid": "d010597c-9456-4dad-91f5-44274eaf8aae",
@@ -1851,11 +1862,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 121,
       "timestamp": "2026-08-02T00:48:40.571113Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 122,
+      "timestamp": "2026-08-02T00:52:00.447272Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T00:48:40.571113Z",
+    "timestamp": "2026-08-02T00:52:00.447272Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 121
+    "agent_seq": 122
   }
 }
