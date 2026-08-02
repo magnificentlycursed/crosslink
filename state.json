@@ -1269,7 +1269,10 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T05:42:41.268194Z",
-      "updated_at": "2026-08-02T05:42:41.268194Z"
+      "updated_at": "2026-08-02T05:42:45.973224Z",
+      "labels": [
+        "feature"
+      ]
     },
     "e75c8af8-d483-40bd-9dbf-0d841edef2ee": {
       "uuid": "e75c8af8-d483-40bd-9dbf-0d841edef2ee",
@@ -2351,11 +2354,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 163,
       "timestamp": "2026-08-02T05:42:41.268194Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 164,
+      "timestamp": "2026-08-02T05:42:45.973224Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T05:42:41.268194Z",
+    "timestamp": "2026-08-02T05:42:45.973224Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 163
+    "agent_seq": 164
   }
 }
