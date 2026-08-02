@@ -1272,11 +1272,12 @@
       "uuid": "e4939941-102b-4f1f-be5a-e6f056370d87",
       "display_id": 50,
       "title": "Implement #61/#62 Slice 1 (effort/budget dials, REQ-1-4) from .design/dispatch-dials-and-injection-seam.md; Slice 2 (REQ-5-7 seam) is GATED - skip it",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T05:42:41.268194Z",
-      "updated_at": "2026-08-02T10:02:26.440091Z",
+      "updated_at": "2026-08-02T10:02:32.506701Z",
+      "closed_at": "2026-08-02T10:02:32.506695Z",
       "labels": [
         "feature"
       ],
@@ -2421,11 +2422,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 169,
       "timestamp": "2026-08-02T10:02:26.440091Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 170,
+      "timestamp": "2026-08-02T10:02:32.506701Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T10:02:26.440091Z",
+    "timestamp": "2026-08-02T10:02:32.506701Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 169
+    "agent_seq": 170
   }
 }
