@@ -1,6 +1,6 @@
 {
   "next_display_id": 41,
-  "next_comment_id": 79,
+  "next_comment_id": 80,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -237,11 +237,18 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:24:21.303296Z",
-      "updated_at": "2026-08-02T00:31:45.029114Z",
+      "updated_at": "2026-08-02T00:33:20.269459Z",
       "labels": [
         "research"
       ],
       "comments": {
+        "97b83179-959b-4038-b356-7779af338b3d": {
+          "display_id": 79,
+          "author": "anon-8ea7a055",
+          "content": "Architecture scan complete + registered as knowledge page 'architecture-code-patterns' (tag contributor-reference). Both pages synced to crosslink/knowledge branch. Key load-bearing patterns: git refs = source of truth / SQLite = derived cache (mutations via SharedWriter events, never direct SQLite on shared path); anyhow bail/context doctrine with INTENTIONAL-comment best-effort writes for monitoring only; argv-vector shell safety with shell_escape_arg for the one true shell string; hermetic test harnesses (run_crosslink, SmokeHarness with bare-remote fork_agent). Scan DONE.",
+          "created_at": "2026-08-02T00:33:20.269441Z",
+          "kind": "result"
+        },
         "c06eeb6f-9807-479d-aebb-f954258df68c": {
           "display_id": 78,
           "author": "anon-8ea7a055",
@@ -1777,11 +1784,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 114,
       "timestamp": "2026-08-02T00:31:45.029114Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 115,
+      "timestamp": "2026-08-02T00:33:20.269459Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T00:31:45.029114Z",
+    "timestamp": "2026-08-02T00:33:20.269459Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 114
+    "agent_seq": 115
   }
 }
