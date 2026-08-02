@@ -1,6 +1,6 @@
 {
   "next_display_id": 47,
-  "next_comment_id": 95,
+  "next_comment_id": 96,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -238,7 +238,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T03:38:22.253436Z",
-      "updated_at": "2026-08-02T03:53:42.452526Z",
+      "updated_at": "2026-08-02T03:57:16.821422Z",
       "labels": [
         "testing"
       ],
@@ -248,6 +248,13 @@
           "author": "anon-8ea7a055",
           "content": "#55 EMPIRICAL INVESTIGATION (host claude 2.1.212). (1) OPTION B REFUTED: trust dialog fires for an EMPTY dir with NO settings.json - stripping tool pre-approvals cannot fix it. (2) OPTION A CONFIRMED: accepting folder-trust wrote projects[path].hasTrustDialogAccepted=true; re-run in the trusted path cleared that dialog - pre-grant is the working mechanism. (3) MULTI-LAYERED: after folder-trust clears, --dangerously-skip-permissions triggers a SEPARATE 'Bypass Permissions mode... Yes I accept' gate. So Option A clears folder-trust but a bypass-mode gate remains. (4) DIVERGENCE: on my host --dangerously-skip-permissions does NOT skip folder-trust (contradicts the downstream retest) - local trust behavior differs from downstream, so the gate sequence must be re-verified downstream before finalizing. CONCLUSION: Option A (pre-grant) necessary+confirmed but likely INSUFFICIENT alone; complete fix = pre-grant + bypass-mode pre-acceptance, verified downstream. NOTE: sandbox trust entries (trust-token/trust-test/trust-empty) were written to ~/.claude.json by the test's accept-dialog step; cleanup blocked by classifier - operator to remove or approve.",
           "created_at": "2026-08-02T03:53:42.452507Z",
+          "kind": "observation"
+        },
+        "e109c140-7c7c-4f57-b3e1-aea55fd3aca1": {
+          "display_id": 95,
+          "author": "anon-8ea7a055",
+          "content": "CLAUDE VERSION CHECK for #55: installed 2.1.212, latest 2.1.220. Read full 2.1.213-220 changelog. LATEST DOES NOT FIX #55 - trend is STRICTER trust: (1) 2.1.218 'hooks now require the agent file's own folder to have accepted workspace trust' -> on >=2.1.218 crosslink's own hooks are ALSO gated on worktree trust = an ADDITIONAL gate. (2) 2.1.218 non-interactive managed-settings consent no longer auto-recorded (stricter). (3) 2.1.218 'trust dialogs name the repository root the grant covers' = cosmetic here: a git worktree is its own repo root (rev-parse --show-toplevel returns the worktree), so each kickoff worktree is still a fresh untrusted root -> still prompts. (4) 2.1.219 adds SDK register_repo_root control request (programmatic repo-root registration) but SDK-ONLY; kickoff uses the CLI in tmux/container -> unavailable. No headless trust-grant flag added; nothing makes --dangerously-skip-permissions skip folder-trust. CONCLUSION: upgrading is not a fix; reinforces Option A (headless folder-trust pre-grant) as necessary + adds a hook-trust gate. DEEPER: this is a Claude Code limitation - the SDK path has register_repo_root, the CLI path has no headless trust grant. RECOMMEND an upstream feature request to Anthropic (a --trust-folder / headless trust-grant flag, or CLI-reachable register_repo_root) since every headless-dispatch tool hits this.",
+          "created_at": "2026-08-02T03:57:16.821398Z",
           "kind": "observation"
         },
         "e87e64a5-762d-4c49-96f1-e12b190cab87": {
@@ -2149,11 +2156,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 146,
       "timestamp": "2026-08-02T03:53:42.452526Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 147,
+      "timestamp": "2026-08-02T03:57:16.821422Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T03:53:42.452526Z",
+    "timestamp": "2026-08-02T03:57:16.821422Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 146
+    "agent_seq": 147
   }
 }
