@@ -561,11 +561,12 @@
       "uuid": "68bca661-5338-4ab4-8406-48851cec28aa",
       "display_id": 47,
       "title": "Verify #55 container path (no-TTY): does kickoff --container stall on trust or proceed?",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T04:02:07.488638Z",
-      "updated_at": "2026-08-02T04:11:22.949254Z",
+      "updated_at": "2026-08-02T04:11:28.444169Z",
+      "closed_at": "2026-08-02T04:11:28.444162Z",
       "labels": [
         "testing"
       ],
@@ -2211,11 +2212,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 151,
       "timestamp": "2026-08-02T04:11:22.949254Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 152,
+      "timestamp": "2026-08-02T04:11:28.444169Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T04:11:22.949254Z",
+    "timestamp": "2026-08-02T04:11:28.444169Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 151
+    "agent_seq": 152
   }
 }
