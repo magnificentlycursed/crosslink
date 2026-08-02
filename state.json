@@ -815,7 +815,10 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T02:56:10.715335Z",
-      "updated_at": "2026-08-02T02:56:10.715335Z"
+      "updated_at": "2026-08-02T02:56:16.088237Z",
+      "labels": [
+        "research"
+      ]
     },
     "a3abff8a-7d9a-44fe-9a11-8e75a232d612": {
       "uuid": "a3abff8a-7d9a-44fe-9a11-8e75a232d612",
@@ -1977,11 +1980,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 131,
       "timestamp": "2026-08-02T02:56:10.715335Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 132,
+      "timestamp": "2026-08-02T02:56:16.088237Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T02:56:10.715335Z",
+    "timestamp": "2026-08-02T02:56:16.088237Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 131
+    "agent_seq": 132
   }
 }
