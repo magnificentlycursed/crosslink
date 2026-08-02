@@ -533,11 +533,12 @@
       "uuid": "5fb134c5-be01-43c0-944a-8580dd3ec4c7",
       "display_id": 48,
       "title": "Cleanup ~/.claude.json test entries; investigate container-build failure; publish agent image off fork; sync fork mirror",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T04:19:48.047979Z",
-      "updated_at": "2026-08-02T04:39:42.986016Z",
+      "updated_at": "2026-08-02T04:39:49.712644Z",
+      "closed_at": "2026-08-02T04:39:49.712635Z",
       "labels": [
         "chore"
       ],
@@ -2279,11 +2280,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 157,
       "timestamp": "2026-08-02T04:39:42.986016Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 158,
+      "timestamp": "2026-08-02T04:39:49.712644Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T04:39:42.986016Z",
+    "timestamp": "2026-08-02T04:39:49.712644Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 157
+    "agent_seq": 158
   }
 }
