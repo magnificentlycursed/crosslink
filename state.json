@@ -1,6 +1,6 @@
 {
   "next_display_id": 42,
-  "next_comment_id": 80,
+  "next_comment_id": 81,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -84,10 +84,19 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:38:04.769485Z",
-      "updated_at": "2026-08-02T00:38:09.398439Z",
+      "updated_at": "2026-08-02T00:46:45.711922Z",
       "labels": [
         "research"
-      ]
+      ],
+      "comments": {
+        "1ae5feb7-79b5-42b9-8adb-23051fc70ac7": {
+          "display_id": 80,
+          "author": "anon-8ea7a055",
+          "content": "3 scans registered as knowledge: kickoff-swarm-dispatch-pipeline, server-dashboard-api-surfaces, cli-output-rendering-conventions (all tag contributor-reference; synced). KEY FINDINGS: (1) gh#62 kickoff_template FULLY replaces prompt, main-only not on develop; R1+R2 (interpolation + --template flag) is small PR-shaped, R3 swarm-uniform hazard CONFIRMED, gh#61 model:opus hardcoded lifecycle.rs:734 + no effort field. (2) gh#49 ci_status v3 design: ci-status.json at META_REF root + new 'crosslink ci status set' subcommand + reader mirroring read_all_agent_requests - implementation-ready. (3) CLI cluster #14/#21/#22/#25 batchable into one PR; gh#23 ISSUE TEXT WRONG - repeated -l is a hard clap error (exit 2), not silent last-wins - worth correcting upstream; gh#16 separate refactor. Retrospective agent still running.",
+          "created_at": "2026-08-02T00:46:45.711897Z",
+          "kind": "result"
+        }
+      }
     },
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": {
       "uuid": "042841eb-595c-4efa-9c20-8c70ca0e8d06",
@@ -1819,11 +1828,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 118,
       "timestamp": "2026-08-02T00:38:09.398439Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 119,
+      "timestamp": "2026-08-02T00:46:45.711922Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T00:38:09.398439Z",
+    "timestamp": "2026-08-02T00:46:45.711922Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 118
+    "agent_seq": 119
   }
 }
