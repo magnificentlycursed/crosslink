@@ -1,5 +1,5 @@
 {
-  "next_display_id": 44,
+  "next_display_id": 45,
   "next_comment_id": 90,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -43,6 +43,7 @@
     "eca996dc-d07a-4c56-b360-bb4a6d6af889": 22,
     "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5": 20,
     "f06bd3bc-97ff-40c2-a4f8-da3695d3080f": 4,
+    "f0a5586e-f6bd-4ba7-8a64-6001f069d77b": 44,
     "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b": 2,
     "fc4f4a98-e11c-4bc9-b415-afb26dc8add9": 35
   },
@@ -1261,6 +1262,16 @@
         }
       }
     },
+    "f0a5586e-f6bd-4ba7-8a64-6001f069d77b": {
+      "uuid": "f0a5586e-f6bd-4ba7-8a64-6001f069d77b",
+      "display_id": 44,
+      "title": "Design: kickoff/swarm dispatch dials (gh#61 effort) + injection seam (gh#62) — one design cycle",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-08-02T03:03:12.571009Z",
+      "updated_at": "2026-08-02T03:03:12.571009Z"
+    },
     "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b": {
       "uuid": "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b",
       "display_id": 2,
@@ -2005,11 +2016,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 134,
       "timestamp": "2026-08-02T02:59:31.696065Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 135,
+      "timestamp": "2026-08-02T03:03:12.571009Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T02:59:31.696065Z",
+    "timestamp": "2026-08-02T03:03:12.571009Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 134
+    "agent_seq": 135
   }
 }
