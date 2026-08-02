@@ -1,6 +1,6 @@
 {
   "next_display_id": 43,
-  "next_comment_id": 84,
+  "next_comment_id": 85,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -888,11 +888,18 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:52:00.447272Z",
-      "updated_at": "2026-08-02T01:35:43.173691Z",
+      "updated_at": "2026-08-02T01:51:37.870284Z",
       "labels": [
         "bug"
       ],
       "comments": {
+        "0cde4d44-7511-4c2f-8435-8e4574799be6": {
+          "display_id": 84,
+          "author": "anon-8ea7a055",
+          "content": "PR#65 conflict RESOLVED. 3 files reconciled off upstream/develop merge: (1) launch.rs - build_agent_command AUTO-MERGED correctly (permission_flag() from #63 + TIMEOUT trailer from #65, non-overlapping regions); launch_container was the real conflict, resolved to carry BOTH skip_flag + TIMEOUT trailer. (2) kickoff/tests.rs - both appended tests kept (test_normalize_status_timeout_sentinel #65 + test_permission_flag_postures #63). (3) CHANGELOG.md - CAUGHT AN AUTO-MERGE CORRUPTION: git silently dropped the gh#53 entry's opening line (dangling '(gh#53).'), restored it; full Fixed section audited, all entries present once, no other mangling. knowledge/ markers confirmed string-literals (conflict-parser code), not artifacts. Build clean, clippy+fmt clean, 3 merged-code tests green. Full gate running. LESSON REINFORCED: auto-merge on adjacent CHANGELOG insertions can produce clean-but-WRONG results - always read the merged section, not just check for markers.",
+          "created_at": "2026-08-02T01:51:37.870261Z",
+          "kind": "resolution"
+        },
         "ae58dd02-146e-4b0c-971c-6b5a814a138f": {
           "display_id": 83,
           "author": "anon-8ea7a055",
@@ -1901,11 +1908,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 125,
       "timestamp": "2026-08-02T01:35:43.173691Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 126,
+      "timestamp": "2026-08-02T01:51:37.870284Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T01:35:43.173691Z",
+    "timestamp": "2026-08-02T01:51:37.870284Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 125
+    "agent_seq": 126
   }
 }
