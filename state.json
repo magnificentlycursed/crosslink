@@ -1,6 +1,6 @@
 {
   "next_display_id": 53,
-  "next_comment_id": 109,
+  "next_comment_id": 110,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1357,7 +1357,7 @@
       "priority": "low",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T10:11:16.867457Z",
-      "updated_at": "2026-08-02T10:13:04.096629Z",
+      "updated_at": "2026-08-02T10:22:02.221955Z",
       "closed_at": "2026-08-02T10:13:04.096623Z",
       "labels": [
         "docs"
@@ -1369,6 +1369,13 @@
           "content": "Expanded PR#77 (gh#61 Slice 1 dials) body into a full feature description: motivation (dispatch dials - control+record effort/spend, the R4/R5 gap), design context (Slice 1 of 2, Slice 2 seam out of scope/gated), CLI surface (--effort/--budget-usd on run/plan/swarm config), emission (claude --effort/--max-budget-usd after --model, both paths), recording (KickoffMetadata gains model/effort/budget_usd -> .kickoff-metadata.json), swarm de-hardcode, decisions (D1 per-agent budget), testing, and the dogfooding provenance. (Confirmed PR#77 is the feature; #76 is the merged container fix.)",
           "created_at": "2026-08-02T10:12:57.786932Z",
           "kind": "result"
+        },
+        "f5d5d611-d3fa-4cdb-8e8d-5e4285f1b521": {
+          "display_id": 109,
+          "author": "anon-8ea7a055",
+          "content": "dollspace PR#78 (backport #44/#43 kickoff_template to develop) assessment: CONFIRMED it brings the seam (read_kickoff_template + read_no_template + the run.rs step-5 template check) -> UNBLOCKS #62 Slice 2. #78 is MERGEABLE (base develop, CI running). CONFLICT with our #77 (Slice 1): overlaps 9 shared files (kickoff/{launch,mod,plan,run,tests,types}.rs, main.rs, swarm/lifecycle.rs, sentinel/engine.rs) BUT #78 does NOT touch KickoffOpts struct fields (its types.rs change is elsewhere), so the sharpest field-clash is absent - a manageable merge-resolve, not catastrophic. Likely real conflict regions: main.rs (both add clap surface), run.rs (both edit run() - #78 the prompt build, #77 the launch), KickoffOpts construction sites. PLAN: (1) let #78 merge first (foundational, mergeable); (2) rebase #77 onto it (merge develop into #77, resolve - same flow as #65); (3) then #62 Slice 2 = change #78's full-replacement kickoff_template into interpolation per design REQ-5 (targets the exact run.rs step-5 seam #78 introduces).",
+          "created_at": "2026-08-02T10:22:02.221940Z",
+          "kind": "decision"
         }
       }
     },
@@ -2495,11 +2502,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 176,
       "timestamp": "2026-08-02T10:20:11.469833Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 177,
+      "timestamp": "2026-08-02T10:22:02.221955Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T10:20:11.469833Z",
+    "timestamp": "2026-08-02T10:22:02.221955Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 176
+    "agent_seq": 177
   }
 }
