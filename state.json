@@ -1,6 +1,6 @@
 {
   "next_display_id": 44,
-  "next_comment_id": 89,
+  "next_comment_id": 90,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -815,10 +815,19 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T02:56:10.715335Z",
-      "updated_at": "2026-08-02T02:56:16.088237Z",
+      "updated_at": "2026-08-02T02:59:25.681626Z",
       "labels": [
         "research"
-      ]
+      ],
+      "comments": {
+        "1e7f1ae1-1d38-47b4-b4e0-cde85de3aea7": {
+          "display_id": 89,
+          "author": "anon-8ea7a055",
+          "content": "Imported 5 crosslink-research knowledge pages from vsdd-cli (contributor xqjG preserved, tag from-vsdd-cli, synced to crosslink/knowledge). Relevance to gh#61/#62 design cycle: (1) runtime-harness-surface = Claude Code effort/thinking-budget/model dials verified state (#857 grounding) -> the #61 dial surface. (2) crosslink-cli-surface = exhaustive CLI inventory -> where #61 dials thread. (3) run-record-capability-inventory = the WAS-side oracle / how dispatch is recorded -> #61 dial-recording + R5 audit. (4) crosslink-integration-surfaces = integration beyond the CLI -> #62 seam shapes (exec-hook etc). (5) design-impact-audit-2026-08-02 = the #857 grounding set AGAINST the proposed designs -> direct design-cycle input. Skipped: my own scans already here (architecture/config/cli-output/server-dashboard/dispatch/retro) + vsdd-internal design slices (composition/gate/install/decomposition/thermite/mdatron). Total knowledge now 14 pages.",
+          "created_at": "2026-08-02T02:59:25.681604Z",
+          "kind": "result"
+        }
+      }
     },
     "a3abff8a-7d9a-44fe-9a11-8e75a232d612": {
       "uuid": "a3abff8a-7d9a-44fe-9a11-8e75a232d612",
@@ -1985,11 +1994,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 132,
       "timestamp": "2026-08-02T02:56:16.088237Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 133,
+      "timestamp": "2026-08-02T02:59:25.681626Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T02:56:16.088237Z",
+    "timestamp": "2026-08-02T02:59:25.681626Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 132
+    "agent_seq": 133
   }
 }
