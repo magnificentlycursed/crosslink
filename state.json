@@ -80,11 +80,12 @@
       "uuid": "0335a029-7db2-4095-ba83-7c1ed56e012f",
       "display_id": 41,
       "title": "Knowledge scans 2-4 (dispatch pipeline, server API, CLI output) + merged-PR retrospective; vsdd design notes from epic #2 as input",
-      "status": "open",
+      "status": "closed",
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:38:04.769485Z",
-      "updated_at": "2026-08-02T00:48:34.378060Z",
+      "updated_at": "2026-08-02T00:48:40.571113Z",
+      "closed_at": "2026-08-02T00:48:40.571107Z",
       "labels": [
         "research"
       ],
@@ -1845,11 +1846,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 120,
       "timestamp": "2026-08-02T00:48:34.378060Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 121,
+      "timestamp": "2026-08-02T00:48:40.571113Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T00:48:34.378060Z",
+    "timestamp": "2026-08-02T00:48:40.571113Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 120
+    "agent_seq": 121
   }
 }
