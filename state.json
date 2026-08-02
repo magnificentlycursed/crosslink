@@ -434,11 +434,12 @@
       "uuid": "57601a9d-fc95-44f0-9d97-e607e810a749",
       "display_id": 45,
       "title": "Final kickoff-bundle closeout: PR#65 merged - sync develop, rebuild binary, remove last worktree",
-      "status": "open",
+      "status": "closed",
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T03:29:44.327537Z",
-      "updated_at": "2026-08-02T03:35:50.533217Z",
+      "updated_at": "2026-08-02T03:35:56.751295Z",
+      "closed_at": "2026-08-02T03:35:56.751286Z",
       "labels": [
         "chore"
       ],
@@ -2093,11 +2094,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 141,
       "timestamp": "2026-08-02T03:35:50.533217Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 142,
+      "timestamp": "2026-08-02T03:35:56.751295Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T03:35:50.533217Z",
+    "timestamp": "2026-08-02T03:35:56.751295Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 141
+    "agent_seq": 142
   }
 }
