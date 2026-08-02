@@ -1,5 +1,5 @@
 {
-  "next_display_id": 54,
+  "next_display_id": 55,
   "next_comment_id": 112,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -38,6 +38,7 @@
     "a3abff8a-7d9a-44fe-9a11-8e75a232d612": 31,
     "b21ba76e-f322-49ec-9e97-db230081a651": 36,
     "c2b216b7-fd04-4392-b5d8-77fb497b10b9": 42,
+    "cb8c0488-0ea3-4629-9834-849fd7b330ac": 54,
     "d010597c-9456-4dad-91f5-44274eaf8aae": 39,
     "d325dfa4-ab05-48bb-8f2d-a59128d6f7cf": 26,
     "d4c17dc3-f1e7-4f56-9573-729bfd0bfed5": 13,
@@ -1175,6 +1176,16 @@
           "kind": "result"
         }
       }
+    },
+    "cb8c0488-0ea3-4629-9834-849fd7b330ac": {
+      "uuid": "cb8c0488-0ea3-4629-9834-849fd7b330ac",
+      "display_id": 54,
+      "title": "Implement gh#62 Slice 2: kickoff prompt-injection seam (interpolation + --template flag + swarm per-phase templates)",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-08-02T11:28:30.906492Z",
+      "updated_at": "2026-08-02T11:28:30.906492Z"
     },
     "d010597c-9456-4dad-91f5-44274eaf8aae": {
       "uuid": "d010597c-9456-4dad-91f5-44274eaf8aae",
@@ -2557,11 +2568,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 181,
       "timestamp": "2026-08-02T11:14:24.224049Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 182,
+      "timestamp": "2026-08-02T11:28:30.906492Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T11:14:24.224049Z",
+    "timestamp": "2026-08-02T11:28:30.906492Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 181
+    "agent_seq": 182
   }
 }
