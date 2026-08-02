@@ -1,6 +1,6 @@
 {
   "next_display_id": 43,
-  "next_comment_id": 83,
+  "next_comment_id": 84,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -888,11 +888,18 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:52:00.447272Z",
-      "updated_at": "2026-08-02T01:24:24.770609Z",
+      "updated_at": "2026-08-02T01:35:43.173691Z",
       "labels": [
         "bug"
       ],
       "comments": {
+        "ae58dd02-146e-4b0c-971c-6b5a814a138f": {
+          "display_id": 83,
+          "author": "anon-8ea7a055",
+          "content": "PR#65 CONFLICT diagnosed. merge-tree preview (develop a85c92e2 x #65, base 6b4f736f): ONLY 2 real conflicts - launch.rs + src/commands/kickoff/tests.rs. run.rs and CHANGELOG.md AUTO-MERGE clean. Root: #63 (gh#59) refactored build_agent_command to use the shared permission_flag() helper + added skip_flag to launch_container's container command; #65 (gh#60) added the exit-124 TIMEOUT trailer to BOTH build_agent_command and the container command. Merged form must carry BOTH: develop's permission_flag() call + #65's TIMEOUT trailer, in build_agent_command AND launch_container. tests.rs: reconcile #63's appended test_permission_flag_postures with #65's TIMEOUT assertion updates + appended test_normalize_status_timeout_sentinel. MY MISS: I diff3-verified only CHANGELOG for cross-branch safety, not the shared SOURCE files (#63/#65 both touch launch.rs/run.rs/tests.rs) - lesson: when concurrent branches touch the same source, merge-tree-preview source conflicts too, not just changelog. RESOLUTION PLAN: operator runs 'git merge upstream/develop' in the #65 worktree; I resolve launch.rs+tests.rs (both changes retained); build+full gate; operator commits+pushes. #63/#64 closeout DONE: binary a85c92e2 installed, fleet 5/5, 2 merged worktrees removed.",
+          "created_at": "2026-08-02T01:35:43.173675Z",
+          "kind": "decision"
+        },
         "d69a8279-6669-4641-ba90-a0652aa4c7d2": {
           "display_id": 82,
           "author": "anon-8ea7a055",
@@ -1889,11 +1896,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 124,
       "timestamp": "2026-08-02T01:24:24.770609Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 125,
+      "timestamp": "2026-08-02T01:35:43.173691Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T01:24:24.770609Z",
+    "timestamp": "2026-08-02T01:35:43.173691Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 124
+    "agent_seq": 125
   }
 }
