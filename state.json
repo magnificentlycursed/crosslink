@@ -1,6 +1,6 @@
 {
   "next_display_id": 54,
-  "next_comment_id": 111,
+  "next_comment_id": 112,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -615,7 +615,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T10:20:06.443437Z",
-      "updated_at": "2026-08-02T10:29:16.296892Z",
+      "updated_at": "2026-08-02T11:14:24.224049Z",
       "labels": [
         "research"
       ],
@@ -626,6 +626,13 @@
           "content": "#78 MERGED (develop 581f6599) -> #62 Slice 2 UNBLOCKED (kickoff_template on develop). #77 CONFLICTING/DIRTY. merge-tree preview: 6 conflicts - kickoff/{launch,mod,tests,types}.rs + sentinel/engine.rs + swarm/lifecycle.rs (run.rs/plan.rs/main.rs auto-merge). #78 template mechanism vs #77 dials are largely orthogonal (prompt-build vs launch-flags) -> resolve = keep both. AWAITING operator merge of upstream/develop into slice1-dials worktree, then I resolve + re-gate + hand push. Then #62 Slice 2 (interpolation seam) off post-#78 develop.",
           "created_at": "2026-08-02T10:29:16.296871Z",
           "kind": "decision"
+        },
+        "b66b6b0c-9323-499d-95f0-78b5e945ceff": {
+          "display_id": 111,
+          "author": "anon-8ea7a055",
+          "content": "Merge of upstream develop into the slice1-dials worktree resolved. All 20 conflicts were field unions (KickoffOpts/PlanOpts construction sites + their tests): kept both #77 effort/budget_usd and #78 agent_binary. build_agent_command now takes agent_binary first (#78) + effort/budget_usd last (#77); updated #77's five dial test call-sites and the dialed_opts helper to pass agent_binary. Removed a stale iCloud conflict-copy (tests 2.rs). Full CI gate green: bin 2837 / integration 198 / proptest 37, clippy -D warnings + fmt clean. Merge commit bcb641be; tree 0 behind / 2 ahead of upstream develop. Awaiting operator to publish the branch, then PR #77 refreshes.",
+          "created_at": "2026-08-02T11:14:24.224036Z",
+          "kind": "resolution"
         }
       }
     },
@@ -2545,11 +2552,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 180,
       "timestamp": "2026-08-02T10:29:16.296892Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 181,
+      "timestamp": "2026-08-02T11:14:24.224049Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T10:29:16.296892Z",
+    "timestamp": "2026-08-02T11:14:24.224049Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 180
+    "agent_seq": 181
   }
 }
