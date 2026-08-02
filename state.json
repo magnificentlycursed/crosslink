@@ -1,6 +1,6 @@
 {
   "next_display_id": 48,
-  "next_comment_id": 96,
+  "next_comment_id": 97,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -565,10 +565,19 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T04:02:07.488638Z",
-      "updated_at": "2026-08-02T04:02:13.337812Z",
+      "updated_at": "2026-08-02T04:06:12.614197Z",
       "labels": [
         "testing"
-      ]
+      ],
+      "comments": {
+        "ed848292-5574-4319-ba4c-39160c16601f": {
+          "display_id": 96,
+          "author": "anon-8ea7a055",
+          "content": "#55 CONTAINER PATH VERIFIED = WORKS. Faithful no-TTY test (forecast-bio agent image, entrypoint handles auth/PATH/gosu, docker run WITHOUT -t, claude --dangerously-skip-permissions in an untrusted /workspaces/repo whose container claude config was fresh): claude PROCEEDED, output CONTAINERHI, LAUNCHEXIT=0, NO trust dialog. ROOT DISTINCTION: the trust-dialog stall is TTY-dependent. tmux path gives claude an interactive PTY -> the folder-trust dialog RENDERS -> headless park (STILL BROKEN, #55 tmux/plan half). container path = docker run -d, NO PTY -> claude runs non-interactively -> the interactive trust dialog cannot render -> --dangerously-skip-permissions proceeds -> WORKS. So #59's container fix + no-TTY = container dispatch is fine. #55 is now precisely: the TMUX/plan path only. IMPLICATION for the fix: headless dispatch's robust vehicle is --container (works today); the tmux fix is either (a) run claude non-interactively/-p in the tmux path so it behaves like the container (no PTY dialog), (b) trust pre-grant (Option A), or (c) route headless plan through a container. NOTE: 'crosslink container build' (merged image) FAILED - separate issue, docker-desktop swallowed the error; DEFAULT_AGENT_IMAGE ghcr.io/dollspace-gay/crosslink-agent:latest is unpublished (forecast-bio#576). Used the local forecast-bio image for this test.",
+          "created_at": "2026-08-02T04:06:12.614179Z",
+          "kind": "result"
+        }
+      }
     },
     "68d2e5e5-e021-4906-a8d2-546df21b34ac": {
       "uuid": "68d2e5e5-e021-4906-a8d2-546df21b34ac",
@@ -2185,11 +2194,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 149,
       "timestamp": "2026-08-02T04:02:13.337812Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 150,
+      "timestamp": "2026-08-02T04:06:12.614197Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T04:02:13.337812Z",
+    "timestamp": "2026-08-02T04:06:12.614197Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 149
+    "agent_seq": 150
   }
 }
