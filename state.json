@@ -1,6 +1,6 @@
 {
   "next_display_id": 50,
-  "next_comment_id": 101,
+  "next_comment_id": 102,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -342,10 +342,19 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T04:45:56.152733Z",
-      "updated_at": "2026-08-02T04:46:01.070366Z",
+      "updated_at": "2026-08-02T05:03:28.052671Z",
       "labels": [
         "bug"
-      ]
+      ],
+      "comments": {
+        "3dc886c0-1224-4fa9-b403-459df8128406": {
+          "display_id": 101,
+          "author": "anon-8ea7a055",
+          "content": "gh#75 fix DONE (commit 9315102a on fix/75-container-build-and-publish): container.rs build() stages crosslink-<arch> + --build-arg TARGETARCH + linux-host guard (verified clear macOS error); workflow IMAGE_NAME -> ${{github.repository_owner}}/crosslink-agent + workflow_dispatch trigger. clippy+fmt clean, guard verified, full gate running. PR body staged. Fork Actions ENABLED. PUBLISH-FRICTION FOUND: fork default branch = main, so workflow_dispatch needs the trigger on main to dispatch; and the reliable develop-push publish needs IMAGE_NAME on develop -> either way, publishing NOW = a temporary 1-line fork divergence. CLEAN alternative: PR merges upstream -> fork develop re-syncs -> fork CI auto-publishes ghcr.io/magnificentlycursed/crosslink-agent:nightly (no divergence, waits on dollspace). Kickoff #61/#62 follows the publish. Operator to push fix/75 (for PR), then decide publish-now vs wait.",
+          "created_at": "2026-08-02T05:03:28.052321Z",
+          "kind": "result"
+        }
+      }
     },
     "32623ccc-e9c8-410c-b6cd-78c39fbc38ed": {
       "uuid": "32623ccc-e9c8-410c-b6cd-78c39fbc38ed",
@@ -2309,11 +2318,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 160,
       "timestamp": "2026-08-02T04:46:01.070366Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 161,
+      "timestamp": "2026-08-02T05:03:28.052671Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T04:46:01.070366Z",
+    "timestamp": "2026-08-02T05:03:28.052671Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 160
+    "agent_seq": 161
   }
 }
