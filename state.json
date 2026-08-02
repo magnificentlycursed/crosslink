@@ -1,5 +1,5 @@
 {
-  "next_display_id": 50,
+  "next_display_id": 51,
   "next_comment_id": 103,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -43,6 +43,7 @@
     "da78cc6e-31c6-4805-9e80-75028c248ff0": 12,
     "df19144c-bfa8-4056-ac54-44f6db40c21a": 1,
     "e00178bc-6f75-4207-a84f-ff2b13362379": 15,
+    "e4939941-102b-4f1f-be5a-e6f056370d87": 50,
     "e75c8af8-d483-40bd-9dbf-0d841edef2ee": 17,
     "e9fa1a15-41d3-48e6-9291-76bffa2e2dec": 16,
     "eca996dc-d07a-4c56-b360-bb4a6d6af889": 22,
@@ -1260,6 +1261,16 @@
         }
       }
     },
+    "e4939941-102b-4f1f-be5a-e6f056370d87": {
+      "uuid": "e4939941-102b-4f1f-be5a-e6f056370d87",
+      "display_id": 50,
+      "title": "Implement #61/#62 Slice 1 (effort/budget dials, REQ-1-4) from .design/dispatch-dials-and-injection-seam.md; Slice 2 (REQ-5-7 seam) is GATED - skip it",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-8ea7a055",
+      "created_at": "2026-08-02T05:42:41.268194Z",
+      "updated_at": "2026-08-02T05:42:41.268194Z"
+    },
     "e75c8af8-d483-40bd-9dbf-0d841edef2ee": {
       "uuid": "e75c8af8-d483-40bd-9dbf-0d841edef2ee",
       "display_id": 17,
@@ -2335,11 +2346,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 162,
       "timestamp": "2026-08-02T05:31:43.844442Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 163,
+      "timestamp": "2026-08-02T05:42:41.268194Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T05:31:43.844442Z",
+    "timestamp": "2026-08-02T05:42:41.268194Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 162
+    "agent_seq": 163
   }
 }
