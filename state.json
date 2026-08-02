@@ -1,6 +1,6 @@
 {
   "next_display_id": 47,
-  "next_comment_id": 93,
+  "next_comment_id": 94,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -238,10 +238,19 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T03:38:22.253436Z",
-      "updated_at": "2026-08-02T03:38:27.008761Z",
+      "updated_at": "2026-08-02T03:41:46.448219Z",
       "labels": [
         "testing"
-      ]
+      ],
+      "comments": {
+        "e87e64a5-762d-4c49-96f1-e12b190cab87": {
+          "display_id": 93,
+          "author": "anon-8ea7a055",
+          "content": "#55 RETEST VERDICT: HALF-FIXED. PR#72 (gh#66) clears Dialog 1 (workspace-trust/bypass-perms accept) but NOT Dialog 2 - the settings-pre-approval project-trust prompt ('This folder pre-approves N tool permissions in .claude/settings.json ... trust this folder'). MECHANISM: crosslink init writes allowedTools into .claude/settings.json (merge.rs:217); the tracked file rides into every fresh kickoff worktree; claude's settings-trust gate (v2.1.196+) fires on the untrusted worktree path; --skip-permissions does NOT clear it. Re-raises every launch = structural park. This FALSIFIES PR#72's premise for any crosslink-init'd repo (they all ship tracked tool pre-approvals). INVESTIGATED: no CLI flag/mode clears Dialog 2 ('--settings without trust prompt' = doctor-only; --dangerously-skip-permissions = Dialog 1 + perm checks only). FIX OPTIONS: (A) headless trust pre-grant ~/.claude.json hasTrustDialogAccepted per worktree - the ORIGINALLY-REJECTED #66 approach, now arguably NECESSARY since flags provably don't cover Dialog 2; clears both dialogs; convention cost = crosslink writing ~/.claude (no precedent). (B) strip allowedTools/permissions from the minted worktree's settings.json (keep hooks); agent still gets tools via CLI --allowedTools (launch.rs:226); no ~/.claude write but per-worktree mutation of a tracked file + settings.local.json is ALSO trust-gated (v2.1.207). (C) repo-keyed trust = claude-side, not ours. The retest VINDICATES the original folder-trust pre-grant idea. Design call (revisits convention + is dollspace's kickoff): recommend surfacing to operator+dollspace before implementing.",
+          "created_at": "2026-08-02T03:41:46.448205Z",
+          "kind": "observation"
+        }
+      }
     },
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": {
       "uuid": "1ded09e0-6f5c-428d-aa3e-36ca44d0b368",
@@ -2123,11 +2132,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 144,
       "timestamp": "2026-08-02T03:38:27.008761Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 145,
+      "timestamp": "2026-08-02T03:41:46.448219Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T03:38:27.008761Z",
+    "timestamp": "2026-08-02T03:41:46.448219Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 144
+    "agent_seq": 145
   }
 }
