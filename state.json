@@ -1,6 +1,6 @@
 {
   "next_display_id": 42,
-  "next_comment_id": 81,
+  "next_comment_id": 82,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -84,7 +84,7 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:38:04.769485Z",
-      "updated_at": "2026-08-02T00:46:45.711922Z",
+      "updated_at": "2026-08-02T00:48:34.378060Z",
       "labels": [
         "research"
       ],
@@ -94,6 +94,13 @@
           "author": "anon-8ea7a055",
           "content": "3 scans registered as knowledge: kickoff-swarm-dispatch-pipeline, server-dashboard-api-surfaces, cli-output-rendering-conventions (all tag contributor-reference; synced). KEY FINDINGS: (1) gh#62 kickoff_template FULLY replaces prompt, main-only not on develop; R1+R2 (interpolation + --template flag) is small PR-shaped, R3 swarm-uniform hazard CONFIRMED, gh#61 model:opus hardcoded lifecycle.rs:734 + no effort field. (2) gh#49 ci_status v3 design: ci-status.json at META_REF root + new 'crosslink ci status set' subcommand + reader mirroring read_all_agent_requests - implementation-ready. (3) CLI cluster #14/#21/#22/#25 batchable into one PR; gh#23 ISSUE TEXT WRONG - repeated -l is a hard clap error (exit 2), not silent last-wins - worth correcting upstream; gh#16 separate refactor. Retrospective agent still running.",
           "created_at": "2026-08-02T00:46:45.711897Z",
+          "kind": "result"
+        },
+        "54c0aa5d-dca0-4a8e-b946-556a290085cd": {
+          "display_id": 81,
+          "author": "anon-8ea7a055",
+          "content": "Retrospective registered (knowledge: retro-2026-08-02-merged-prs-direction). CORRECTIVE ACTIONS TAKEN: (1) posted revised-fix comment on upstream #66 superseding the ~/.claude.json pre-seed proposal with the convention-consistent flags approach (issuecomment-5154263476). (2) posted #55-scope-clarification comments on PR #63 + #64 cross-referencing #66 so dollspace does not manually close #55 on merge (5154263559/5154263645). Verified: NO mechanical Fixes-autoclose risk (base=develop, autoclose only on default-branch main merge; #63 closes only #59, #64 only #9/#10, #65 only #19/56/57/58/60). RECOMMENDATIONS FOR USER: file follow-up issues for #50 clone-hardening + #54 flap-threshold (unfiled debt); correct gh#23 issue text upstream (repeated -l = hard clap error, not last-wins); gh#61+#62 = one design cycle two slices (R1+R2 small PR first, dial+injection designed together, dial lands first); re-scope local view of #49 to ci_status remainder only.",
+          "created_at": "2026-08-02T00:48:34.378042Z",
           "kind": "result"
         }
       }
@@ -1833,11 +1840,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 119,
       "timestamp": "2026-08-02T00:46:45.711922Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 120,
+      "timestamp": "2026-08-02T00:48:34.378060Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T00:46:45.711922Z",
+    "timestamp": "2026-08-02T00:48:34.378060Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 119
+    "agent_seq": 120
   }
 }
