@@ -1,6 +1,6 @@
 {
   "next_display_id": 50,
-  "next_comment_id": 102,
+  "next_comment_id": 103,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -342,7 +342,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T04:45:56.152733Z",
-      "updated_at": "2026-08-02T05:03:28.052671Z",
+      "updated_at": "2026-08-02T05:31:43.844442Z",
       "labels": [
         "bug"
       ],
@@ -352,6 +352,13 @@
           "author": "anon-8ea7a055",
           "content": "gh#75 fix DONE (commit 9315102a on fix/75-container-build-and-publish): container.rs build() stages crosslink-<arch> + --build-arg TARGETARCH + linux-host guard (verified clear macOS error); workflow IMAGE_NAME -> ${{github.repository_owner}}/crosslink-agent + workflow_dispatch trigger. clippy+fmt clean, guard verified, full gate running. PR body staged. Fork Actions ENABLED. PUBLISH-FRICTION FOUND: fork default branch = main, so workflow_dispatch needs the trigger on main to dispatch; and the reliable develop-push publish needs IMAGE_NAME on develop -> either way, publishing NOW = a temporary 1-line fork divergence. CLEAN alternative: PR merges upstream -> fork develop re-syncs -> fork CI auto-publishes ghcr.io/magnificentlycursed/crosslink-agent:nightly (no divergence, waits on dollspace). Kickoff #61/#62 follows the publish. Operator to push fix/75 (for PR), then decide publish-now vs wait.",
           "created_at": "2026-08-02T05:03:28.052321Z",
+          "kind": "result"
+        },
+        "6346b5bc-a98e-40c6-897e-b5af635cbb9d": {
+          "display_id": 102,
+          "author": "anon-8ea7a055",
+          "content": "gh#75 PR opened: dollspace#76 (gate 2857/0 bin + 195 int + 159 smoke). Develop pushed (4e8ad314, temp 1-line IMAGE_NAME divergence - resolves on #76 merge). Fork Container Image workflow TRIGGERED + in_progress (run 30734261538) -> will publish ghcr.io/magnificentlycursed/crosslink-agent:nightly (working image w/ build-essential). Watching build; then kickoff #61/#62 Slice 1 via kickoff --container --image <nightly> (container path = no trust stall, toolchain-complete). NOTE: .design/dispatch-dials-and-injection-seam.md is untracked but kickoff embeds doc content into the agent prompt, so worktree doesn't need the file.",
+          "created_at": "2026-08-02T05:31:43.844431Z",
           "kind": "result"
         }
       }
@@ -2323,11 +2330,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 161,
       "timestamp": "2026-08-02T05:03:28.052671Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 162,
+      "timestamp": "2026-08-02T05:31:43.844442Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T05:03:28.052671Z",
+    "timestamp": "2026-08-02T05:31:43.844442Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 161
+    "agent_seq": 162
   }
 }
