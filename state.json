@@ -1339,11 +1339,12 @@
       "uuid": "e77f9fc7-7a1f-4db3-ac1f-b06c44f68159",
       "display_id": 51,
       "title": "Expand a PR body into a feature description (gh#61 dials)",
-      "status": "open",
+      "status": "closed",
       "priority": "low",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T10:11:16.867457Z",
-      "updated_at": "2026-08-02T10:12:57.786948Z",
+      "updated_at": "2026-08-02T10:13:04.096629Z",
+      "closed_at": "2026-08-02T10:13:04.096623Z",
       "labels": [
         "docs"
       ],
@@ -2465,11 +2466,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 173,
       "timestamp": "2026-08-02T10:12:57.786948Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 174,
+      "timestamp": "2026-08-02T10:13:04.096629Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T10:12:57.786948Z",
+    "timestamp": "2026-08-02T10:13:04.096629Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 173
+    "agent_seq": 174
   }
 }
