@@ -1,6 +1,6 @@
 {
   "next_display_id": 41,
-  "next_comment_id": 78,
+  "next_comment_id": 79,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "042841eb-595c-4efa-9c20-8c70ca0e8d06": 9,
@@ -237,10 +237,19 @@
       "priority": "medium",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:24:21.303296Z",
-      "updated_at": "2026-08-02T00:24:26.386646Z",
+      "updated_at": "2026-08-02T00:31:45.029114Z",
       "labels": [
         "research"
-      ]
+      ],
+      "comments": {
+        "c06eeb6f-9807-479d-aebb-f954258df68c": {
+          "display_id": 78,
+          "author": "anon-8ea7a055",
+          "content": "Config-conventions scan complete + registered as knowledge page 'config-filesystem-conventions' (tag contributor-reference). DECISION-CRITICAL VERDICT for gh#66: crosslink has ZERO precedent for writing ~/.claude.json or anything under ~/.claude - those are strictly READ-ONLY inputs (container mounts credentials :ro at container.rs:325-334; no .claude.json reference exists in src/ at all). /Users/claire.celesterra writes exist only for crosslink's OWN ~/.crosslink/ state + opt-in shell rc. Option 1 (pre-seed trust into ~/.claude.json) would be a convention-breaking first: writing ANOTHER tool's user-global config. The convention-consistent fix for gh#66 is instead: give kickoff plan the same --skip-permissions/--permission-mode flags kickoff run already has (currently hardcoded false/None at plan.rs:248-250) - matches existing CLI surface, keeps fail-closed default (interactive users keep the trust dialog), lets headless dispatchers (vsdd) pass the flag that documentedly skips the trust dialog. Recommending pivot from option 1 to this. Architecture scan still running.",
+          "created_at": "2026-08-02T00:31:45.029096Z",
+          "kind": "decision"
+        }
+      }
     },
     "32623ccc-e9c8-410c-b6cd-78c39fbc38ed": {
       "uuid": "32623ccc-e9c8-410c-b6cd-78c39fbc38ed",
@@ -1763,11 +1772,16 @@
       "agent_id": "anon-8ea7a055",
       "agent_seq": 113,
       "timestamp": "2026-08-02T00:24:26.386646Z"
+    },
+    {
+      "agent_id": "anon-8ea7a055",
+      "agent_seq": 114,
+      "timestamp": "2026-08-02T00:31:45.029114Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-02T00:24:26.386646Z",
+    "timestamp": "2026-08-02T00:31:45.029114Z",
     "agent_id": "anon-8ea7a055",
-    "agent_seq": 113
+    "agent_seq": 114
   }
 }
