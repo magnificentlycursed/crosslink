@@ -1,6 +1,6 @@
 {
   "next_display_id": 57,
-  "next_comment_id": 129,
+  "next_comment_id": 130,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1797,7 +1797,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-01T20:09:35.149118Z",
-      "updated_at": "2026-08-01T21:12:30.991759Z",
+      "updated_at": "2026-08-03T15:28:44.261684Z",
       "labels": [
         "epic"
       ],
@@ -1808,6 +1808,13 @@
           "content": "Epic read (magnificentlycursed/crosslink#2, the vsdd kickoff bundle): 8 upstream issues dollspace #55-#62 across runtime blocker (#55 stall), flow-integrity (#56 /design --continue resets pipeline.json, #57 swarm phasing doc/code mismatch), enforcement gaps (#58 hook looser than docs, #59 kickoff --container omits no-prompt flag, #60 TIMEOUT sentinel never written), capabilities (#61 effort dial, #62 prompt-injection seam). RE-AUDIT vs develop 6b4f736f: (1) #31 (a #55 contributor) IS fixed on develop [our PR#32]. (2) kickoff_template (#62 partial via PR#44) is on MAIN 26ee1885 only, NOT develop - so #62 seam work is gated on main->develop sync. (3) #59 real: kickoff launch.rs builds permission_flag (skip_permissions/permission_mode, lines 193-197) but need to confirm the ContainerMode branch (229+) applies it to the container's claude invocation - that's the defect. Concrete takeable-now fixes: #56/#57/#58/#59/#60. #55 = investigation (may resolve via #59+#9+#31). #61/#62 = design/gated. Recommend epic's own triage: #59 first (cheap #55 cause), then the defect cluster.",
           "created_at": "2026-08-01T20:12:13.234572Z",
           "kind": "plan"
+        },
+        "0e03734b-fb46-4531-8ca2-8873b5b4a511": {
+          "display_id": 129,
+          "author": "anon-d38ea320",
+          "content": "Epic read+plan complete and executed across sessions: gh#56/#57/#58/#59/#60 fixed and merged (PRs #63/#64/#65/#72), gh#61/#62 designed and delivered (PRs #77/#80). Sole residual: gh#55 plan-mode trust stall, tracked in #39.",
+          "created_at": "2026-08-03T15:28:44.261665Z",
+          "kind": "resolution"
         },
         "36766d3a-ea37-456f-993d-167070088f8a": {
           "display_id": 70,
@@ -2899,11 +2906,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 24,
       "timestamp": "2026-08-03T15:28:37.926883Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 25,
+      "timestamp": "2026-08-03T15:28:44.261684Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:28:37.926883Z",
+    "timestamp": "2026-08-03T15:28:44.261684Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 24
+    "agent_seq": 25
   }
 }
