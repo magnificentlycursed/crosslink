@@ -1,6 +1,6 @@
 {
   "next_display_id": 57,
-  "next_comment_id": 124,
+  "next_comment_id": 125,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -349,11 +349,18 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T04:45:56.152733Z",
-      "updated_at": "2026-08-02T05:45:35.088217Z",
+      "updated_at": "2026-08-03T15:27:29.288253Z",
       "labels": [
         "bug"
       ],
       "comments": {
+        "1d906432-8b27-4608-9f31-6d3fb2c39529": {
+          "display_id": 124,
+          "author": "anon-d38ea320",
+          "content": "gh#75 complete: PR #76 merged (f2a642f4), fork image published and used for Slice 1 kickoff. Final cleanup item (re-sync fork develop to upstream, dropping the now-redundant 4e8ad314 -- verified upstream's container-image.yml is a strict superset) is executing under #56.",
+          "created_at": "2026-08-03T15:27:29.288239Z",
+          "kind": "resolution"
+        },
         "3dc886c0-1224-4fa9-b403-459df8128406": {
           "display_id": 101,
           "author": "anon-8ea7a055",
@@ -2809,11 +2816,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 14,
       "timestamp": "2026-08-03T15:27:23.674102Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 15,
+      "timestamp": "2026-08-03T15:27:29.288253Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:27:23.674102Z",
+    "timestamp": "2026-08-03T15:27:29.288253Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 14
+    "agent_seq": 15
   }
 }
