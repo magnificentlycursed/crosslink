@@ -1387,12 +1387,13 @@
       "uuid": "d4c17dc3-f1e7-4f56-9573-729bfd0bfed5",
       "display_id": 13,
       "title": "gh#30: v2 hub 0.8.0 - archive add reports success but membership wiped by subsequent invocations",
-      "status": "open",
+      "status": "closed",
       "priority": "medium",
       "parent_uuid": "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T02:17:51.926341Z",
-      "updated_at": "2026-08-03T15:29:28.303441Z",
+      "updated_at": "2026-08-03T15:29:34.132181Z",
+      "closed_at": "2026-08-03T15:29:34.132174Z",
       "labels": [
         "upstream"
       ],
@@ -2951,11 +2952,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 29,
       "timestamp": "2026-08-03T15:29:28.303441Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 30,
+      "timestamp": "2026-08-03T15:29:34.132181Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:29:28.303441Z",
+    "timestamp": "2026-08-03T15:29:34.132181Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 29
+    "agent_seq": 30
   }
 }
