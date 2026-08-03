@@ -252,11 +252,12 @@
       "uuid": "1a43ad1e-63e4-411d-9dd9-d09962e545c0",
       "display_id": 46,
       "title": "Analyze #55 live-fire retest results",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T03:38:22.253436Z",
-      "updated_at": "2026-08-03T15:28:32.099712Z",
+      "updated_at": "2026-08-03T15:28:37.926883Z",
+      "closed_at": "2026-08-03T15:28:37.926876Z",
       "labels": [
         "testing"
       ],
@@ -2893,11 +2894,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 23,
       "timestamp": "2026-08-03T15:28:32.099712Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 24,
+      "timestamp": "2026-08-03T15:28:37.926883Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:28:32.099712Z",
+    "timestamp": "2026-08-03T15:28:37.926883Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 23
+    "agent_seq": 24
   }
 }
