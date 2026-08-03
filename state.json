@@ -961,11 +961,12 @@
       "display_id": 10,
       "title": "Epic: v2 persistence lies at 0.8.0 - success reported without persisting (gh#29 30 + unfiled promotion stranding)",
       "description": "Live data-integrity defects on the 0.8.0 daily-driver hubs (vsdd-cli, mdatron). Operational guard until fixed: re-read state after issue close / archive add; never trust the success message. Third member: sync ID-promotion strands session work binding and locks (forecast-bio#653-era defect, live at 0.8.0) - NO dollspace-gay issue filed yet, needs filing.",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T02:17:40.223084Z",
-      "updated_at": "2026-08-03T15:29:40.220485Z",
+      "updated_at": "2026-08-03T15:29:46.099343Z",
+      "closed_at": "2026-08-03T15:29:46.099336Z",
       "labels": [
         "persistence",
         "upstream"
@@ -2971,11 +2972,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 31,
       "timestamp": "2026-08-03T15:29:40.220485Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 32,
+      "timestamp": "2026-08-03T15:29:46.099343Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:29:40.220485Z",
+    "timestamp": "2026-08-03T15:29:46.099343Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 31
+    "agent_seq": 32
   }
 }
