@@ -1,6 +1,6 @@
 {
   "next_display_id": 57,
-  "next_comment_id": 131,
+  "next_comment_id": 132,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1392,10 +1392,19 @@
       "parent_uuid": "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T02:17:51.926341Z",
-      "updated_at": "2026-07-21T02:18:14.436266Z",
+      "updated_at": "2026-08-03T15:29:28.303441Z",
       "labels": [
         "upstream"
-      ]
+      ],
+      "comments": {
+        "bd5aeabd-bdc1-43b8-86c6-4d2db2c97162": {
+          "display_id": 131,
+          "author": "anon-d38ea320",
+          "content": "v2 hub retired locally 2026-07-22 (fleet on 0.9 v3 hubs); upstream tracker dollspace-gay/crosslink#30 remains OPEN for the v2 codepath.",
+          "created_at": "2026-08-03T15:29:28.303425Z",
+          "kind": "resolution"
+        }
+      }
     },
     "da78cc6e-31c6-4805-9e80-75028c248ff0": {
       "uuid": "da78cc6e-31c6-4805-9e80-75028c248ff0",
@@ -2937,11 +2946,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 28,
       "timestamp": "2026-08-03T15:29:22.115769Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 29,
+      "timestamp": "2026-08-03T15:29:28.303441Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:29:22.115769Z",
+    "timestamp": "2026-08-03T15:29:28.303441Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 28
+    "agent_seq": 29
   }
 }
