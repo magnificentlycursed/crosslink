@@ -1,6 +1,6 @@
 {
   "next_display_id": 57,
-  "next_comment_id": 134,
+  "next_comment_id": 135,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -605,11 +605,18 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-03T15:22:50.839591Z",
-      "updated_at": "2026-08-03T15:24:29.730121Z",
+      "updated_at": "2026-08-03T15:42:43.255861Z",
       "labels": [
         "maintenance"
       ],
       "comments": {
+        "57ada8d6-fd82-405d-8905-dfe5708c94e7": {
+          "display_id": 134,
+          "author": "anon-d38ea320",
+          "content": "Complete. (1) Fork develop reset to upstream fe653b40 and force-pushed by operator -- clean mirror restored, redundant 4e8ad314 dropped (verified upstream container-image.yml is a strict superset). (2) Issue cleanup: closed #10 #12 #13 #35 #38 #42 #44 #46 #49 #52 #53; kept #11 #14 (live upstream trackers) and #39 (gh#55 plan-mode fix). (3) Global + hooks binaries rebuilt: 0.9.0-beta.1+fe653b40 (cargo install also re-registered the package path from Source/ to Source.nosync/). -dirty suffix = untracked files only.",
+          "created_at": "2026-08-03T15:42:43.255835Z",
+          "kind": "result"
+        },
         "dd66d337-0f36-4818-abb3-2c517c98c3c9": {
           "display_id": 121,
           "author": "anon-d38ea320",
@@ -2991,11 +2998,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 33,
       "timestamp": "2026-08-03T15:29:51.939814Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 34,
+      "timestamp": "2026-08-03T15:42:43.255861Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:29:51.939814Z",
+    "timestamp": "2026-08-03T15:42:43.255861Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 33
+    "agent_seq": 34
   }
 }
