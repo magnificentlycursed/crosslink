@@ -1,6 +1,6 @@
 {
   "next_display_id": 57,
-  "next_comment_id": 121,
+  "next_comment_id": 122,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -581,10 +581,21 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-03T15:22:50.839591Z",
-      "updated_at": "2026-08-03T15:22:56.562806Z",
+      "updated_at": "2026-08-03T15:24:29.730121Z",
       "labels": [
         "maintenance"
-      ]
+      ],
+      "comments": {
+        "dd66d337-0f36-4818-abb3-2c517c98c3c9": {
+          "display_id": 121,
+          "author": "anon-d38ea320",
+          "content": "Attempted: git merge --no-ff upstream/develop",
+          "created_at": "2026-08-03T15:24:29.730097Z",
+          "kind": "intervention",
+          "trigger_type": "tool_blocked",
+          "intervention_context": "Syncing fork develop with upstream post-#80; hook reserves git mutations for the human"
+        }
+      }
     },
     "5fb134c5-be01-43c0-944a-8580dd3ec4c7": {
       "uuid": "5fb134c5-be01-43c0-944a-8580dd3ec4c7",
@@ -2755,11 +2766,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 9,
       "timestamp": "2026-08-03T15:22:56.562806Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 10,
+      "timestamp": "2026-08-03T15:24:29.730121Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:22:56.562806Z",
+    "timestamp": "2026-08-03T15:24:29.730121Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 9
+    "agent_seq": 10
   }
 }
