@@ -1,6 +1,6 @@
 {
   "next_display_id": 57,
-  "next_comment_id": 130,
+  "next_comment_id": 131,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1406,10 +1406,19 @@
       "parent_uuid": "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T02:17:49.976967Z",
-      "updated_at": "2026-07-21T02:18:12.505397Z",
+      "updated_at": "2026-08-03T15:29:16.306303Z",
       "labels": [
         "upstream"
-      ]
+      ],
+      "comments": {
+        "dc76ce45-71e5-4d59-be10-4c6938b899f5": {
+          "display_id": 130,
+          "author": "anon-d38ea320",
+          "content": "v2 hub retired locally 2026-07-22 (fleet on 0.9 v3 hubs), so this defect can no longer bite here; upstream tracker dollspace-gay/crosslink#29 remains OPEN for the v2 codepath.",
+          "created_at": "2026-08-03T15:29:16.306279Z",
+          "kind": "resolution"
+        }
+      }
     },
     "df19144c-bfa8-4056-ac54-44f6db40c21a": {
       "uuid": "df19144c-bfa8-4056-ac54-44f6db40c21a",
@@ -2917,11 +2926,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 26,
       "timestamp": "2026-08-03T15:28:51.254624Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 27,
+      "timestamp": "2026-08-03T15:29:16.306303Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:28:51.254624Z",
+    "timestamp": "2026-08-03T15:29:16.306303Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 26
+    "agent_seq": 27
   }
 }
