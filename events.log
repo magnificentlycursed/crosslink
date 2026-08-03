@@ -1,1 +1,2 @@
 {"agent_id":"anon-d38ea320","agent_seq":1,"timestamp":"2026-08-03T15:11:58.859190Z","event":{"type":"IssueCreated","uuid":"aae267ff-d956-48ef-91fe-d83751e2e8bf","title":"Verify session/repo integrity after Source -> Source.nosync rename + symlink","priority":"high","created_by":"anon-d38ea320"}}
+{"agent_id":"anon-d38ea320","agent_seq":2,"timestamp":"2026-08-03T15:12:04.017096Z","event":{"type":"LabelAdded","issue_uuid":"aae267ff-d956-48ef-91fe-d83751e2e8bf","label":"infra"}}
