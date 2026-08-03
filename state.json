@@ -1,6 +1,6 @@
 {
   "next_display_id": 57,
-  "next_comment_id": 132,
+  "next_comment_id": 133,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -965,11 +965,20 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T02:17:40.223084Z",
-      "updated_at": "2026-07-21T02:18:19.888218Z",
+      "updated_at": "2026-08-03T15:29:40.220485Z",
       "labels": [
         "persistence",
         "upstream"
-      ]
+      ],
+      "comments": {
+        "18905ef6-1a21-405b-aaa6-daa518697d4d": {
+          "display_id": 132,
+          "author": "anon-d38ea320",
+          "content": "Epic premise obsolete: no 0.8.0 daily-driver hubs remain (v3 cutover finalized 2026-07-22). gh#29/gh#30 children closed as locally moot (upstream trackers stay open). gh#33 (#14) stays open standalone -- promotion logic persists in hub_v3.rs/shared_writer, upstream still OPEN.",
+          "created_at": "2026-08-03T15:29:40.220468Z",
+          "kind": "resolution"
+        }
+      }
     },
     "7f4e1659-55cb-442e-a66a-d7b9aa91621d": {
       "uuid": "7f4e1659-55cb-442e-a66a-d7b9aa91621d",
@@ -2957,11 +2966,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 30,
       "timestamp": "2026-08-03T15:29:34.132181Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 31,
+      "timestamp": "2026-08-03T15:29:40.220485Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:29:34.132181Z",
+    "timestamp": "2026-08-03T15:29:40.220485Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 30
+    "agent_seq": 31
   }
 }
