@@ -1189,11 +1189,12 @@
       "uuid": "c2b216b7-fd04-4392-b5d8-77fb497b10b9",
       "display_id": 42,
       "title": "gh#66 plan-mode flags fix + retro follow-ups: file #50/#54 debt, correct gh#23, rescope #49",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:52:00.447272Z",
-      "updated_at": "2026-08-03T15:28:08.566588Z",
+      "updated_at": "2026-08-03T15:28:14.218281Z",
+      "closed_at": "2026-08-03T15:28:14.218274Z",
       "labels": [
         "bug"
       ],
@@ -2857,11 +2858,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 19,
       "timestamp": "2026-08-03T15:28:08.566588Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 20,
+      "timestamp": "2026-08-03T15:28:14.218281Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:28:08.566588Z",
+    "timestamp": "2026-08-03T15:28:14.218281Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 19
+    "agent_seq": 20
   }
 }
