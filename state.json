@@ -1,5 +1,5 @@
 {
-  "next_display_id": 56,
+  "next_display_id": 57,
   "next_comment_id": 121,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -20,6 +20,7 @@
     "56231058-8b10-40e4-8dba-5c4003e50941": 32,
     "57601a9d-fc95-44f0-9d97-e607e810a749": 45,
     "586a0663-b17b-455e-aff4-58795893b52f": 33,
+    "5e560afb-4ceb-4cc5-b8d1-a447d7b0cd27": 56,
     "5fb134c5-be01-43c0-944a-8580dd3ec4c7": 48,
     "61b9ef9f-521b-46ca-a661-e2c930212475": 52,
     "64034bd7-6b24-4189-b9de-c7c5b6d64775": 8,
@@ -571,6 +572,16 @@
           "kind": "result"
         }
       }
+    },
+    "5e560afb-4ceb-4cc5-b8d1-a447d7b0cd27": {
+      "uuid": "5e560afb-4ceb-4cc5-b8d1-a447d7b0cd27",
+      "display_id": 56,
+      "title": "Sync develop with upstream post-#80 merge + close overtaken crosslink issues",
+      "status": "open",
+      "priority": "medium",
+      "created_by": "anon-d38ea320",
+      "created_at": "2026-08-03T15:22:50.839591Z",
+      "updated_at": "2026-08-03T15:22:50.839591Z"
     },
     "5fb134c5-be01-43c0-944a-8580dd3ec4c7": {
       "uuid": "5fb134c5-be01-43c0-944a-8580dd3ec4c7",
@@ -2731,11 +2742,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 7,
       "timestamp": "2026-08-03T15:18:29.387885Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 8,
+      "timestamp": "2026-08-03T15:22:50.839591Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:18:29.387885Z",
+    "timestamp": "2026-08-03T15:22:50.839591Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 7
+    "agent_seq": 8
   }
 }
