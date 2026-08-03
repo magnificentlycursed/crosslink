@@ -1212,11 +1212,12 @@
       "uuid": "cb8c0488-0ea3-4629-9834-849fd7b330ac",
       "display_id": 54,
       "title": "Implement gh#62 Slice 2: kickoff prompt-injection seam (interpolation + --template flag + swarm per-phase templates)",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T11:28:30.906492Z",
-      "updated_at": "2026-08-03T15:18:21.754039Z",
+      "updated_at": "2026-08-03T15:18:29.387885Z",
+      "closed_at": "2026-08-03T15:18:29.387878Z",
       "labels": [
         "feature"
       ],
@@ -2725,11 +2726,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 6,
       "timestamp": "2026-08-03T15:18:21.754039Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 7,
+      "timestamp": "2026-08-03T15:18:29.387885Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:18:21.754039Z",
+    "timestamp": "2026-08-03T15:18:29.387885Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 6
+    "agent_seq": 7
   }
 }
