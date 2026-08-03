@@ -345,11 +345,12 @@
       "uuid": "259bdaa4-c569-49ca-aff1-34198975bdb8",
       "display_id": 49,
       "title": "PR for gh#75: fix crosslink container build (COPY name mismatch) + repo-owner image publishing",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T04:45:56.152733Z",
-      "updated_at": "2026-08-03T15:27:29.288253Z",
+      "updated_at": "2026-08-03T15:27:34.813903Z",
+      "closed_at": "2026-08-03T15:27:34.813897Z",
       "labels": [
         "bug"
       ],
@@ -2821,11 +2822,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 15,
       "timestamp": "2026-08-03T15:27:29.288253Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 16,
+      "timestamp": "2026-08-03T15:27:34.813903Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-03T15:27:29.288253Z",
+    "timestamp": "2026-08-03T15:27:34.813903Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 15
+    "agent_seq": 16
   }
 }
