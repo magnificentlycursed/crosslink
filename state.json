@@ -1,6 +1,6 @@
 {
   "next_display_id": 62,
-  "next_comment_id": 140,
+  "next_comment_id": 141,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1808,10 +1808,19 @@
       "parent_uuid": "de2745c3-4db7-4d93-a072-dc6a412da7ad",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T22:02:23.896255Z",
-      "updated_at": "2026-08-05T22:03:21.208413Z",
+      "updated_at": "2026-08-05T22:07:25.623449Z",
       "labels": [
         "bug"
-      ]
+      ],
+      "comments": {
+        "e389ec47-f44c-41e1-8168-77e4f2d5c283": {
+          "display_id": 140,
+          "author": "anon-d38ea320",
+          "content": "ROOT CAUSE: check_hydration --repair on v3 (integrity_cmd.rs:335) early-returns with hydrate_from_state only -- re_emit is never called on v3, and re_emit never handled sqlite_only_issues in any case (integrity_drift.rs:362 explicitly skips them, 'populated for reporting only'). So an outage-born sqlite-only issue is preserved LOCALLY by the #427 pass but never published; every hub write for it fails 'not found in v3 state' forever. PLAN: (1) new re_emit_issues() in integrity_drift.rs -- for each sqlite_only_issue load full row+labels+comments+blockers from SQLite, build ImportedIssueSpec (uuid preserved; display_id Some(id) if id>0 else None so the reducer's assign_issue_display_id allocates fresh for negative/collision ids), publish via SharedWriter::import_issues (v3-native single-commit event batch, GH#4 promotion machinery). Returns (old_id,new_id) remap pairs. (2) check_hydration v3 branch: construct SharedWriter BEFORE the v3 early-return; publish issues + run existing re_emit for label/dep/relation/milestone drift; re-read reduced state post-publish; then hydrate_from_state; report published remaps. No writer + drift present + no --accept-data-loss = refuse (mirrors v2 refusal). (3) Extend ImportedIssueSpec with scheduled_at/due_at (IssueCreated event already carries them; import call sites updated) so repair does not silently drop scheduling fields. Comments/time-entries on JSON-known issues remain snapshot-only (unchanged semantics). v2 path unchanged (SharedWriter mutations are refused on v2 by design).",
+          "created_at": "2026-08-05T22:07:25.623429Z",
+          "kind": "plan"
+        }
+      }
     },
     "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5": {
       "uuid": "ee3065c4-b7dd-4371-b44d-b7dd7ad6bae5",
@@ -3227,11 +3236,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 55,
       "timestamp": "2026-08-05T22:03:21.208413Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 56,
+      "timestamp": "2026-08-05T22:07:25.623449Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-05T22:03:21.208413Z",
+    "timestamp": "2026-08-05T22:07:25.623449Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 55
+    "agent_seq": 56
   }
 }
