@@ -1,6 +1,6 @@
 {
   "next_display_id": 62,
-  "next_comment_id": 142,
+  "next_comment_id": 143,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1808,11 +1808,18 @@
       "parent_uuid": "de2745c3-4db7-4d93-a072-dc6a412da7ad",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T22:02:23.896255Z",
-      "updated_at": "2026-08-05T22:27:44.139238Z",
+      "updated_at": "2026-08-05T22:30:16.672659Z",
       "labels": [
         "bug"
       ],
       "comments": {
+        "6d3de622-93cf-45a2-814d-4f3b45036544": {
+          "display_id": 142,
+          "author": "anon-d38ea320",
+          "content": "[action] gh#74 fix implemented on fix/74-hydration-repair-publish-sqlite-only: v3 repair publishes sqlite-only issues via GH#4 promotion; clippy+fmt clean; full suite running",
+          "created_at": "2026-08-05T22:30:16.672624Z",
+          "kind": "note"
+        },
         "bf713cfa-b21d-4d04-b658-e56b88653916": {
           "display_id": 141,
           "author": "anon-d38ea320",
@@ -3253,11 +3260,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 57,
       "timestamp": "2026-08-05T22:27:44.139238Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 58,
+      "timestamp": "2026-08-05T22:30:16.672659Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-05T22:27:44.139238Z",
+    "timestamp": "2026-08-05T22:30:16.672659Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 57
+    "agent_seq": 58
   }
 }
