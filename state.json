@@ -1,6 +1,6 @@
 {
   "next_display_id": 61,
-  "next_comment_id": 139,
+  "next_comment_id": 140,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1540,7 +1540,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T21:54:08.586161Z",
-      "updated_at": "2026-08-05T21:54:36.417042Z",
+      "updated_at": "2026-08-05T22:01:37.298788Z",
       "labels": [
         "epic"
       ],
@@ -1551,6 +1551,13 @@
           "content": "Triage observations at registration: (a) gh#71 corroborated first-hand 2026-08-03 -- the shipped work-check hook told this agent to run 'crosslink intervene', which errors (real command: crosslink issue intervene); we hit the exact dead-end vsdd reports hitting daily. (b) Overlap with our open trackers: gh#14 = our #11 (Epic 1), gh#33 = our #14 (Epic 3), gh#66/#55 residual = our #39 (Epic 2, fix shape already confirmed: folder-trust pre-grant + bypass pre-acceptance; vsdd's preferred shape is different -- make plan non-interactive or give it --container -- which sidesteps the trust dialog entirely and matches their adopted container vehicle; the two shapes are compatible, plan-container may be the cheaper first land). (c) Epic 3's frozen negative-id casualty matches vsdd #858's known hydration ghost (id -1); gh#74 repair-leg fix is what un-freezes it. (d) Their exclusion list is consistent with our cleanup (v2 0.8.0 issues gh#29/#30 = our closed #12/#13). Awaiting operator prioritization before any implementation.",
           "created_at": "2026-08-05T21:54:36.415967Z",
           "kind": "plan"
+        },
+        "f67a5fa8-ca42-4ec6-96c2-72dfd529fa1f": {
+          "display_id": 139,
+          "author": "anon-d38ea320",
+          "content": "OPERATOR DECISION 2026-08-05: follow vsdd's suggested sequence. Immediate tier: gh#74 (hydration repair re-emit leg -- defect, direct fix flow) + gh#52 (bulk tracker query -- feature, design->kickoff flow). Working gh#74 first (unfreezes vsdd's live casualty), then the gh#52 design cycle.",
+          "created_at": "2026-08-05T22:01:37.298766Z",
+          "kind": "decision"
         }
       }
     },
@@ -3180,11 +3187,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 50,
       "timestamp": "2026-08-05T21:54:58.743763Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 51,
+      "timestamp": "2026-08-05T22:01:37.298788Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-05T21:54:58.743763Z",
+    "timestamp": "2026-08-05T22:01:37.298788Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 50
+    "agent_seq": 51
   }
 }
