@@ -1802,13 +1802,13 @@
     "edc2b97a-f3b6-4a6e-9bfa-d66c9c21ad48": {
       "uuid": "edc2b97a-f3b6-4a6e-9bfa-d66c9c21ad48",
       "display_id": 61,
-      "title": "gh#74: integrity hydration --repair re-emit leg must publish sqlite-only issues to the hub ref",
+      "title": "Fix integrity hydration --repair to actually publish SQLite-only issues to the hub (gh#74)",
       "status": "open",
       "priority": "high",
       "parent_uuid": "de2745c3-4db7-4d93-a072-dc6a412da7ad",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T22:02:23.896255Z",
-      "updated_at": "2026-08-05T22:02:43.648247Z",
+      "updated_at": "2026-08-05T22:03:21.208413Z",
       "labels": [
         "bug"
       ]
@@ -3222,11 +3222,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 54,
       "timestamp": "2026-08-05T22:02:43.648247Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 55,
+      "timestamp": "2026-08-05T22:03:21.208413Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-05T22:02:43.648247Z",
+    "timestamp": "2026-08-05T22:03:21.208413Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 54
+    "agent_seq": 55
   }
 }
