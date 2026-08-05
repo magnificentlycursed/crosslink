@@ -493,11 +493,12 @@
       "uuid": "3d34f0e6-b880-4c9d-ae97-92459e45f5b2",
       "display_id": 59,
       "title": "Review vsdd-cli roadmap feedback (new GitHub issue)",
-      "status": "open",
+      "status": "closed",
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T21:52:54.602431Z",
-      "updated_at": "2026-08-05T21:54:52.266573Z",
+      "updated_at": "2026-08-05T21:54:58.743763Z",
+      "closed_at": "2026-08-05T21:54:58.743751Z",
       "labels": [
         "chore"
       ],
@@ -3174,11 +3175,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 49,
       "timestamp": "2026-08-05T21:54:52.266573Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 50,
+      "timestamp": "2026-08-05T21:54:58.743763Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-05T21:54:52.266573Z",
+    "timestamp": "2026-08-05T21:54:58.743763Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 49
+    "agent_seq": 50
   }
 }
