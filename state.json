@@ -1,5 +1,5 @@
 {
-  "next_display_id": 62,
+  "next_display_id": 63,
   "next_comment_id": 143,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -54,6 +54,7 @@
     "e4939941-102b-4f1f-be5a-e6f056370d87": 50,
     "e75c8af8-d483-40bd-9dbf-0d841edef2ee": 17,
     "e77f9fc7-7a1f-4db3-ac1f-b06c44f68159": 51,
+    "e8051dec-1258-46e3-b7c5-d4cdef028430": 62,
     "e9fa1a15-41d3-48e6-9291-76bffa2e2dec": 16,
     "eca996dc-d07a-4c56-b360-bb4a6d6af889": 22,
     "edc2b97a-f3b6-4a6e-9bfa-d66c9c21ad48": 61,
@@ -1711,6 +1712,16 @@
         }
       }
     },
+    "e8051dec-1258-46e3-b7c5-d4cdef028430": {
+      "uuid": "e8051dec-1258-46e3-b7c5-d4cdef028430",
+      "display_id": 62,
+      "title": "crosslink init in an already-initialized workspace skips missing managed files: a fresh kickoff worktree carries tracked hook wiring (.claude/settings.json) without the gitignored hook scripts, so every prompt fails closed (vsdd-cli #878 pilot)",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-d38ea320",
+      "created_at": "2026-09-24T23:01:14.860845Z",
+      "updated_at": "2026-09-24T23:01:14.860845Z"
+    },
     "e9fa1a15-41d3-48e6-9291-76bffa2e2dec": {
       "uuid": "e9fa1a15-41d3-48e6-9291-76bffa2e2dec",
       "display_id": 16,
@@ -3265,11 +3276,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 58,
       "timestamp": "2026-08-05T22:30:16.672659Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 59,
+      "timestamp": "2026-09-24T23:01:14.860845Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-08-05T22:30:16.672659Z",
+    "timestamp": "2026-09-24T23:01:14.860845Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 58
+    "agent_seq": 59
   }
 }
