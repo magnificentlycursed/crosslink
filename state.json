@@ -1,6 +1,6 @@
 {
   "next_display_id": 64,
-  "next_comment_id": 144,
+  "next_comment_id": 145,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -439,10 +439,19 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-24T23:20:10.005107Z",
-      "updated_at": "2026-09-24T23:20:15.921099Z",
+      "updated_at": "2026-09-24T23:50:45.413737Z",
       "labels": [
         "bug"
-      ]
+      ],
+      "comments": {
+        "fe683410-be21-42b8-b45e-1b2f68b62fc2": {
+          "display_id": 144,
+          "author": "anon-d38ea320",
+          "content": "Fix at f37147f05 on fix/container-auth-image-override, magnificentlycursed/crosslink PR #5 against develop. --image on login/status/refresh plus CROSSLINK_CONTAINER_IMAGE fallback; pure resolver with a unit test; hint repeats the chosen image. Build/test/clippy/fmt clean; status probe against the fork nightly runs and reports not-logged-in correctly. Merge is the operator's act; the login itself is interactive (operator's act). Upstream candidate after a full pilot proves it.",
+          "created_at": "2026-09-24T23:50:45.413718Z",
+          "kind": "result"
+        }
+      }
     },
     "32623ccc-e9c8-410c-b6cd-78c39fbc38ed": {
       "uuid": "32623ccc-e9c8-410c-b6cd-78c39fbc38ed",
@@ -3333,11 +3342,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 64,
       "timestamp": "2026-09-24T23:20:15.921099Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 65,
+      "timestamp": "2026-09-24T23:50:45.413737Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-09-24T23:20:15.921099Z",
+    "timestamp": "2026-09-24T23:50:45.413737Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 64
+    "agent_seq": 65
   }
 }
