@@ -1,6 +1,6 @@
 {
   "next_display_id": 63,
-  "next_comment_id": 143,
+  "next_comment_id": 144,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1720,10 +1720,19 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-24T23:01:14.860845Z",
-      "updated_at": "2026-09-24T23:01:20.266203Z",
+      "updated_at": "2026-09-24T23:08:09.723272Z",
       "labels": [
         "bug"
-      ]
+      ],
+      "comments": {
+        "2261f3b3-9ab2-403b-8b83-193c6bc20fb7": {
+          "display_id": 143,
+          "author": "anon-d38ea320",
+          "content": "Resolved upstream before this fork's fix started: dd0b7173 (Codex provider support) added the integrations_complete check so init fills missing managed files instead of skipping; verified with the develop-built binary in a fresh vsdd-cli worktree (eight hooks deployed, settings.json rewired). No fork change needed; the local branch fix/init-restore-missing-managed-files carries no commits.",
+          "created_at": "2026-09-24T23:08:09.723251Z",
+          "kind": "result"
+        }
+      }
     },
     "e9fa1a15-41d3-48e6-9291-76bffa2e2dec": {
       "uuid": "e9fa1a15-41d3-48e6-9291-76bffa2e2dec",
@@ -3289,11 +3298,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 60,
       "timestamp": "2026-09-24T23:01:20.266203Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 61,
+      "timestamp": "2026-09-24T23:08:09.723272Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-09-24T23:01:20.266203Z",
+    "timestamp": "2026-09-24T23:08:09.723272Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 60
+    "agent_seq": 61
   }
 }
