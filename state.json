@@ -8,14 +8,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 70,
-        "tip_oid": "a604a8fd20d70117ec7061a98fa3f7ef75ad482d",
-        "prefix_sha256": "8f9303e044959794c6f7a3f1f7e2a7924da255b866f4e73edb4b908e3d414ac6"
+        "sequence": 71,
+        "tip_oid": "0bca0f0997358f9f46e74f72f57119b93dcbce98",
+        "prefix_sha256": "0e21ac30fc305cb924825539595ad73001af214438be5e453506396fd888f447"
       }
     }
   },
   "next_display_id": 65,
-  "next_comment_id": 147,
+  "next_comment_id": 148,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1210,10 +1210,19 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-25T01:25:58.606855Z",
-      "updated_at": "2026-09-25T01:26:10.292923Z",
+      "updated_at": "2026-09-25T01:40:03.878604Z",
       "labels": [
         "bug"
-      ]
+      ],
+      "comments": {
+        "c2502764-37f5-4ef8-acde-acab02308a01": {
+          "display_id": 147,
+          "author": "anon-d38ea320",
+          "content": "Fix committed on fix/kickoff-worktree-readiness (PR opened against develop) with the root cause analysis pinned to upstream 0a2ac7013: the readiness gate became per-checkout; run.rs was updated for the driver's checkout, launch.rs::init_worktree_agent was not, so sync/session start fail closed in the new worktree. Fix: daemon::ensure(worktree .crosslink, wait_ready) after init. Adjacent design findings (120 s ensure deadline vs per-event signature verification; one daemon per worktree) recorded in the PR for upstream.",
+          "created_at": "2026-09-25T01:40:03.845257Z",
+          "kind": "result"
+        }
+      }
     },
     "89b50e39-951f-4a33-ba60-26460565c4fd": {
       "uuid": "89b50e39-951f-4a33-ba60-26460565c4fd",
@@ -3420,6 +3429,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 70,
       "timestamp": "2026-09-25T01:26:21.963941Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 71,
+      "timestamp": "2026-09-25T01:40:03.878604Z"
     }
   ],
   "watermark": {
