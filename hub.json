@@ -1,6 +1,11 @@
 {
+  "finalized_at": "2026-07-22T15:42:39.303964Z",
+  "genesis_checkpoint_commit": "e7c550e0c0bfd0bb40c2cc978726d7133f82d653",
   "hub_version": 3,
-  "migrated_from_commit": "a6bc3520212f2fe575c5977b6d4b0c6b8c39d5bf",
   "migrated_at": "2026-07-22T15:42:27.710133Z",
-  "finalized_at": "2026-07-22T15:42:39.303964Z"
+  "migrated_from_commit": "a6bc3520212f2fe575c5977b6d4b0c6b8c39d5bf",
+  "seed_agent_tips": {
+    "anon-8ea7a055": "4cfa76dcdbc00adc9a084eae99e63398fdb4eeb4",
+    "anon-d38ea320": "acbcf79814910d8b0a4f6e94fa27d26aa6e2cd98"
+  }
 }
