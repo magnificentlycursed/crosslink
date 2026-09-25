@@ -1,4 +1,19 @@
 {
+  "checkpoint_schema_version": 2,
+  "frontier": {
+    "agents": {
+      "anon-8ea7a055": {
+        "sequence": 189,
+        "tip_oid": "4cfa76dcdbc00adc9a084eae99e63398fdb4eeb4",
+        "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
+      },
+      "anon-d38ea320": {
+        "sequence": 67,
+        "tip_oid": "acbcf79814910d8b0a4f6e94fa27d26aa6e2cd98",
+        "prefix_sha256": "127ae1c99e6fcafbec0fdd7c2763186ccac34b0644bc5cdf390f49b544b2a091"
+      }
+    }
+  },
   "next_display_id": 64,
   "next_comment_id": 147,
   "display_id_map": {
@@ -439,7 +454,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-24T23:20:10.005107Z",
-      "updated_at": "2026-09-25T00:23:17.294427Z",
+      "updated_at": "2026-09-24T23:20:15.921099Z",
       "labels": [
         "bug"
       ],
@@ -1478,7 +1493,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:11:31.386113Z",
-      "updated_at": "2026-08-03T15:29:51.939814Z",
+      "updated_at": "2026-08-02T00:11:36.342020Z",
       "labels": [
         "bug"
       ],
@@ -1579,7 +1594,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T21:54:08.586161Z",
-      "updated_at": "2026-08-05T22:01:37.298788Z",
+      "updated_at": "2026-08-05T21:54:29.421119Z",
       "labels": [
         "epic"
       ],
@@ -1727,7 +1742,7 @@
       "priority": "low",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T10:11:16.867457Z",
-      "updated_at": "2026-08-02T10:22:02.221955Z",
+      "updated_at": "2026-08-02T10:13:04.096629Z",
       "closed_at": "2026-08-02T10:13:04.096623Z",
       "labels": [
         "docs"
@@ -1869,7 +1884,7 @@
       "parent_uuid": "de2745c3-4db7-4d93-a072-dc6a412da7ad",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T22:02:23.896255Z",
-      "updated_at": "2026-08-05T22:30:16.672659Z",
+      "updated_at": "2026-08-05T22:03:21.208413Z",
       "labels": [
         "bug"
       ],
@@ -3374,8 +3389,6 @@
     }
   ],
   "watermark": {
-    "timestamp": "2026-09-25T00:23:17.294427Z",
-    "agent_id": "anon-d38ea320",
-    "agent_seq": 67
+    "unsupported_checkpoint_schema": 2
   }
 }
