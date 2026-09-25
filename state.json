@@ -8,13 +8,13 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 67,
-        "tip_oid": "acbcf79814910d8b0a4f6e94fa27d26aa6e2cd98",
-        "prefix_sha256": "127ae1c99e6fcafbec0fdd7c2763186ccac34b0644bc5cdf390f49b544b2a091"
+        "sequence": 68,
+        "tip_oid": "5cc4e31ead47a85f33a88706bcb73cc7a5d57dfd",
+        "prefix_sha256": "370274789f6627622c8344c0bf7c4443522ad13a62626457bc6be23a86da172f"
       }
     }
   },
-  "next_display_id": 64,
+  "next_display_id": 65,
   "next_comment_id": 147,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -53,6 +53,7 @@
     "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0": 10,
     "7eaef634-a0a4-4751-a1d3-35c352641e66": 57,
     "7f4e1659-55cb-442e-a66a-d7b9aa91621d": 3,
+    "8414c517-2b10-4966-a48f-61f79e3669f4": 64,
     "89b50e39-951f-4a33-ba60-26460565c4fd": 19,
     "9eb2c672-a048-4819-9102-4c6609c0d630": 43,
     "a3abff8a-7d9a-44fe-9a11-8e75a232d612": 31,
@@ -1195,6 +1196,16 @@
           "kind": "decision"
         }
       }
+    },
+    "8414c517-2b10-4966-a48f-61f79e3669f4": {
+      "uuid": "8414c517-2b10-4966-a48f-61f79e3669f4",
+      "display_id": 64,
+      "title": "kickoff run never establishes repository readiness in the worktree it creates: init/sync/session start fail with 'repository readiness is missing' on every container and tmux launch since the readiness gate landed (vsdd-cli #878 pilot run 3)",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-d38ea320",
+      "created_at": "2026-09-25T01:25:58.606855Z",
+      "updated_at": "2026-09-25T01:25:58.606855Z"
     },
     "89b50e39-951f-4a33-ba60-26460565c4fd": {
       "uuid": "89b50e39-951f-4a33-ba60-26460565c4fd",
@@ -3386,6 +3397,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 67,
       "timestamp": "2026-09-25T00:23:17.294427Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 68,
+      "timestamp": "2026-09-25T01:25:58.606855Z"
     }
   ],
   "watermark": {
