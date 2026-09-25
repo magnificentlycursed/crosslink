@@ -607,6 +607,21 @@ pub(super) fn init_worktree_agent(
     let agent_id = compact_name.to_string();
 
     let wt_crosslink = worktree_dir.join(".crosslink");
+
+    // Repository readiness is per checkout: a fresh worktree carries no
+    // readiness record, so every crosslink command below (`sync`, `session
+    // start`, the agent's own commands) fails closed with "repository
+    // readiness is missing" until a daemon has reconciled it. The hub is
+    // already reconciled by the driver's checkout, so this only creates the
+    // worktree's local projection — seconds, not the first migration.
+    if wt_crosslink.is_dir() {
+        crate::daemon::ensure(&wt_crosslink, true).with_context(|| {
+            format!(
+                "Failed to establish repository readiness in kickoff worktree {}",
+                worktree_dir.display()
+            )
+        })?;
+    }
     if wt_crosslink.exists() && AgentConfig::load(&wt_crosslink)?.is_none() {
         if let Err(e) = super::super::agent::init(
             &wt_crosslink,
