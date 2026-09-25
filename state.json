@@ -1,6 +1,6 @@
 {
   "next_display_id": 64,
-  "next_comment_id": 146,
+  "next_comment_id": 147,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -439,7 +439,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-24T23:20:10.005107Z",
-      "updated_at": "2026-09-25T00:20:17.507052Z",
+      "updated_at": "2026-09-25T00:23:17.294427Z",
       "labels": [
         "bug"
       ],
@@ -449,6 +449,13 @@
           "author": "anon-d38ea320",
           "content": "Second commit 2fd150359 on the PR branch: Windows readiness partition lists daemon_recovers_hot_rollback_journal_before_reconciliation (convergence shard); rustls 0.23.40 -> 0.23.45 for RUSTSEC-2026-0285. Both failures pre-dated the PR (red on develop after the sync; red upstream too, unfiled there).",
           "created_at": "2026-09-25T00:20:17.507030Z",
+          "kind": "result"
+        },
+        "af3dfadc-2e61-4f9b-a1f2-6c019bb5b474": {
+          "display_id": 146,
+          "author": "anon-d38ea320",
+          "content": "Upstream: Corvidae-Coding-Projects/crosslink#100 filed for the two CI defects (readiness partition + rustls advisory), citing 2fd150359.",
+          "created_at": "2026-09-25T00:23:17.294409Z",
           "kind": "result"
         },
         "fe683410-be21-42b8-b45e-1b2f68b62fc2": {
@@ -3359,11 +3366,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 66,
       "timestamp": "2026-09-25T00:20:17.507052Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 67,
+      "timestamp": "2026-09-25T00:23:17.294427Z"
     }
   ],
   "watermark": {
-    "timestamp": "2026-09-25T00:20:17.507052Z",
+    "timestamp": "2026-09-25T00:23:17.294427Z",
     "agent_id": "anon-d38ea320",
-    "agent_seq": 66
+    "agent_seq": 67
   }
 }
