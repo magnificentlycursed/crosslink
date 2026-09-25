@@ -615,7 +615,7 @@ pub(super) fn init_worktree_agent(
     // already reconciled by the driver's checkout, so this only creates the
     // worktree's local projection — seconds, not the first migration.
     if wt_crosslink.is_dir() {
-        crate::daemon::ensure(&wt_crosslink, true).with_context(|| {
+        crate::daemon::ensure_and_wait(&wt_crosslink).with_context(|| {
             format!(
                 "Failed to establish repository readiness in kickoff worktree {}",
                 worktree_dir.display()
@@ -855,6 +855,25 @@ pub(super) fn launch_container(
         let git_path = host_git_dir.to_string_lossy();
         args.push("-v".to_string());
         args.push(format!("{git_path}:{git_path}:rw"));
+    }
+
+    // The host's hub and knowledge caches are git worktrees registered in
+    // the shared .git mounted above. Inside the container, readiness
+    // observes the authority cache at the host path and, finding no
+    // checkout there, tries `git worktree add --orphan -b
+    // crosslink/hub-v3-host` — which the shared .git refuses because the
+    // branch is already checked out by the host's cache worktree, leaving
+    // the workspace `blocked_corrupt` and every agent command hook-blocked.
+    // Mount the caches at their host paths so the container sees the
+    // checkouts the registry already describes (the direct `container
+    // start` path has always mounted the hub cache).
+    for cache in [".hub-cache", ".knowledge-cache"] {
+        let host_cache = host_repo_root.join(".crosslink").join(cache);
+        if host_cache.is_dir() {
+            let cache_path = host_cache.to_string_lossy();
+            args.push("-v".to_string());
+            args.push(format!("{cache_path}:{cache_path}:rw"));
+        }
     }
 
     if let Some((uid, gid)) = &uid_gid {

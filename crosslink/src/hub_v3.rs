@@ -755,19 +755,61 @@ pub fn read_all_agent_requests(
     Ok(out)
 }
 
+/// The highest `agent_seq` the verified authority already knows for this
+/// agent — the ceiling a new event must exceed.
+///
+/// Two copies of an agent's history exist and can disagree: the agent's own
+/// ref (`refs/heads/crosslink/agents/<id>`, the file the writer appends to)
+/// and the checkpoint's compacted copy (`agents/<id>/events.log` on
+/// `CHECKPOINT_REF`, the one the causal frontier and `event_prefix_sha256`
+/// are computed over). A ref migrated across numbering epochs (the pre-v3
+/// commit-per-event scheme reached seq 1169 on one hub; the v3 log then
+/// restarted at 1) carries the low numbering on its tip while the
+/// checkpoint's copy carries the high one. Seeding from the tip alone
+/// produced `agent_seq` 178 under a frontier at 1169: `take_while(agent_seq
+/// <= 1169)` then folded the new event into the frozen prefix and every
+/// reduce refused the agent's chain as "forged or rewritten". The ceiling
+/// is therefore the maximum over BOTH copies.
 pub fn read_max_event_seq_from_ref(repo_dir: &Path, agent_id: &str) -> Result<u64> {
     validate_agent_id(agent_id)?;
     let ref_name = format!("{AGENT_REF_PREFIX}{agent_id}");
-    let Some(tip) = git_rev_parse_optional(repo_dir, &ref_name)? else {
-        return Ok(0);
+    let tip_max = match git_rev_parse_optional(repo_dir, &ref_name)? {
+        Some(tip) => {
+            let spec = format!("{tip}:events.log");
+            match git_cat_file_blob_optional(repo_dir, &spec)? {
+                Some(bytes) => read_events_from_bytes(&bytes)
+                    .with_context(|| {
+                        format!("failed to parse events.log on '{ref_name}' for seq init")
+                    })?
+                    .iter()
+                    .map(|e| e.agent_seq)
+                    .max()
+                    .unwrap_or(0),
+                None => 0,
+            }
+        }
+        None => 0,
     };
-    let spec = format!("{tip}:events.log");
-    let Some(bytes) = git_cat_file_blob_optional(repo_dir, &spec)? else {
-        return Ok(0);
+    let checkpoint_max = match git_rev_parse_optional(repo_dir, CHECKPOINT_REF)? {
+        Some(checkpoint) => {
+            let spec = format!("{checkpoint}:agents/{agent_id}/events.log");
+            match git_cat_file_blob_optional(repo_dir, &spec)? {
+                Some(bytes) => read_events_from_bytes(&bytes)
+                    .with_context(|| {
+                        format!(
+                            "failed to parse the checkpoint's agents/{agent_id}/events.log for seq init"
+                        )
+                    })?
+                    .iter()
+                    .map(|e| e.agent_seq)
+                    .max()
+                    .unwrap_or(0),
+                None => 0,
+            }
+        }
+        None => 0,
     };
-    let events = read_events_from_bytes(&bytes)
-        .with_context(|| format!("failed to parse events.log on '{ref_name}' for seq init"))?;
-    Ok(events.iter().map(|e| e.agent_seq).max().unwrap_or(0))
+    Ok(tip_max.max(checkpoint_max))
 }
 
 fn for_each_agent_ref(repo_dir: &Path) -> Result<Vec<String>> {
@@ -3331,6 +3373,80 @@ mod tests {
         let state_bytes = cat_blob(&repo, &format!("{cp_tip}:state.json")).unwrap();
         let state = crate::checkpoint::CheckpointState::from_slice(&state_bytes).unwrap();
         assert_eq!(state.issues.len(), 3);
+    }
+
+    #[test]
+    fn seq_init_takes_the_max_over_the_agent_ref_and_the_checkpoint_copy() {
+        // An agent ref migrated across numbering epochs: its tip's events.log
+        // carries the restarted (low) numbering while the checkpoint's
+        // compacted copy — the one the causal frontier hashes — carries the
+        // old (high) numbering. The next event must exceed both, or the
+        // frontier check folds it into the frozen prefix.
+        let dir = tempfile::tempdir().unwrap();
+        git_init(dir.path());
+        let line = |seq: u64| {
+            format!(
+                "{{\"agent_id\":\"agt1\",\"agent_seq\":{seq},\"timestamp\":\"2026-09-25T00:00:00Z\",\"event\":{{\"type\":\"LockReleased\",\"issue_display_id\":1}}}}\n"
+            )
+        };
+        let tip_log: String = (1..=3).map(line).collect();
+        commit_blob_to_ref(
+            dir.path(),
+            &format!("{AGENT_REF_PREFIX}agt1"),
+            "events.log",
+            tip_log.as_bytes(),
+            "tip",
+        )
+        .unwrap();
+        assert_eq!(
+            read_max_event_seq_from_ref(dir.path(), "agt1").unwrap(),
+            3,
+            "no checkpoint copy: the tip's max"
+        );
+
+        // The checkpoint's copy lives two levels deep (agents/<id>/events.log),
+        // past what commit_blob_to_ref expresses, so build it with plumbing.
+        let checkpoint_log: String = (1..=1169).map(line).collect();
+        let log_path = dir.path().join("checkpoint-agt1-events.log");
+        std::fs::write(&log_path, checkpoint_log.as_bytes()).unwrap();
+        let blob = run_git_output(
+            dir.path(),
+            &["hash-object", "-w", log_path.to_str().unwrap()],
+        );
+        let index = dir.path().join("checkpoint-index");
+        let with_index = |args: &[&str]| -> String {
+            let out = std::process::Command::new("git")
+                .current_dir(dir.path())
+                .env("GIT_INDEX_FILE", &index)
+                .args(args)
+                .output()
+                .unwrap();
+            assert!(
+                out.status.success(),
+                "{}",
+                String::from_utf8_lossy(&out.stderr)
+            );
+            String::from_utf8_lossy(&out.stdout).trim().to_string()
+        };
+        with_index(&[
+            "update-index",
+            "--add",
+            "--cacheinfo",
+            &format!("100644,{blob},agents/agt1/events.log"),
+        ]);
+        let tree = with_index(&["write-tree"]);
+        let commit = run_git_output(dir.path(), &["commit-tree", &tree, "-m", "checkpoint"]);
+        run_git(dir.path(), &["update-ref", CHECKPOINT_REF, &commit]);
+        assert_eq!(
+            read_max_event_seq_from_ref(dir.path(), "agt1").unwrap(),
+            1169,
+            "the checkpoint's copy carries the higher numbering: it is the ceiling"
+        );
+        assert_eq!(
+            read_max_event_seq_from_ref(dir.path(), "absent").unwrap(),
+            0,
+            "an agent with neither copy starts at 0"
+        );
     }
 
     #[test]
