@@ -8,14 +8,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 72,
-        "tip_oid": "5be74a72b636805eb08f82278b9ada79fd4063a1",
-        "prefix_sha256": "09d163df4b5c15bffadcb75ea9ddf74287a2badd1e2c4641aaf801df0ca2458f"
+        "sequence": 73,
+        "tip_oid": "3cc52bc57ccad12d9e2120fefa16138e58d4f4a9",
+        "prefix_sha256": "db1fea8a25648b5481a6b291a6feaa65b9dff25a2958f9d7fa6d69f9253d008f"
       }
     }
   },
   "next_display_id": 65,
-  "next_comment_id": 149,
+  "next_comment_id": 150,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1210,11 +1210,18 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-25T01:25:58.606855Z",
-      "updated_at": "2026-09-25T02:05:40.174710Z",
+      "updated_at": "2026-09-25T10:56:21.408564Z",
       "labels": [
         "bug"
       ],
       "comments": {
+        "671822d4-8b9a-4975-9b06-3970d68fa7c1": {
+          "display_id": 149,
+          "author": "anon-d38ea320",
+          "content": "Third commit on PR #6: hub-cache/knowledge-cache mounts for kickoff containers; writer agent_seq ceiling over both history copies (the hub-poisoning defect); ensure_and_wait (30 min) for wait-ready callers. All tests green on a quiet machine. Observed: daemons self-exit with 'readiness record is stale' on both repos — for the upstream report.",
+          "created_at": "2026-09-25T10:56:21.378104Z",
+          "kind": "result"
+        },
         "7bf0ca9d-5cec-48ef-b8e1-d02859888e8d": {
           "display_id": 148,
           "author": "anon-d38ea320",
@@ -3446,6 +3453,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 72,
       "timestamp": "2026-09-25T02:05:40.174710Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 73,
+      "timestamp": "2026-09-25T10:56:21.408564Z"
     }
   ],
   "watermark": {
