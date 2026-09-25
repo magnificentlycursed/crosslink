@@ -876,6 +876,34 @@ pub(super) fn launch_container(
         }
     }
 
+    // Hub publication from inside the container pushes the agent's ref to
+    // origin over HTTPS. The host's credential helper (keychain, manager)
+    // is not in the container, so every `crosslink issue comment` there
+    // ended in "could not read Username for 'https://github.com'" and the
+    // event stayed local. When the host environment carries a GitHub
+    // token (GH_TOKEN, or GITHUB_TOKEN as gh itself accepts), hand it to
+    // the container and bind it to github.com through git's environment
+    // configuration — no image change, no file holding the secret, the
+    // same x-access-token form GitHub Actions uses. Absent a token, the
+    // run proceeds as before and publication fails loudly at push time.
+    if let Some(token) = std::env::var("GH_TOKEN")
+        .ok()
+        .or_else(|| std::env::var("GITHUB_TOKEN").ok())
+        .filter(|value| !value.trim().is_empty())
+    {
+        args.extend([
+            "-e".to_string(),
+            format!("GH_TOKEN={token}"),
+            "-e".to_string(),
+            "GIT_CONFIG_COUNT=1".to_string(),
+            "-e".to_string(),
+            "GIT_CONFIG_KEY_0=credential.https://github.com.helper".to_string(),
+            "-e".to_string(),
+            "GIT_CONFIG_VALUE_0=!f() { echo username=x-access-token; echo \"password=$GH_TOKEN\"; }; f"
+                .to_string(),
+        ]);
+    }
+
     if let Some((uid, gid)) = &uid_gid {
         args.extend([
             "-e".to_string(),
