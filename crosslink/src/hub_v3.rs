@@ -809,7 +809,32 @@ pub fn read_max_event_seq_from_ref(repo_dir: &Path, agent_id: &str) -> Result<u6
         }
         None => 0,
     };
-    Ok(tip_max.max(checkpoint_max))
+    // The verifier compares against the checkpoint's recorded causal
+    // frontier (state.json → frontier.agents.<id>.sequence), which the
+    // reconciliation seeds from the pinned pre-v3 agent tips; on this hub
+    // that is 1169 while both events.log copies stop at 177. The frontier
+    // is therefore the authoritative ceiling wherever it exists.
+    let frontier_max = match git_rev_parse_optional(repo_dir, CHECKPOINT_REF)? {
+        Some(checkpoint) => {
+            let mut sequence = 0;
+            for path in ["state.json", "checkpoint/state.json"] {
+                let spec = format!("{checkpoint}:{path}");
+                if let Some(bytes) = git_cat_file_blob_optional(repo_dir, &spec)? {
+                    let state = crate::checkpoint::CheckpointState::from_slice(&bytes)
+                        .with_context(|| {
+                            format!("failed to parse the checkpoint's {path} for seq init")
+                        })?;
+                    if let Some(frontier) = state.frontier.agents.get(agent_id) {
+                        sequence = sequence.max(frontier.sequence);
+                    }
+                    break;
+                }
+            }
+            sequence
+        }
+        None => 0,
+    };
+    Ok(tip_max.max(checkpoint_max).max(frontier_max))
 }
 
 fn for_each_agent_ref(repo_dir: &Path) -> Result<Vec<String>> {
@@ -3406,7 +3431,7 @@ mod tests {
 
         // The checkpoint's copy lives two levels deep (agents/<id>/events.log),
         // past what commit_blob_to_ref expresses, so build it with plumbing.
-        let checkpoint_log: String = (1..=1169).map(line).collect();
+        let checkpoint_log: String = (1..=500).map(line).collect();
         let log_path = dir.path().join("checkpoint-agt1-events.log");
         std::fs::write(&log_path, checkpoint_log.as_bytes()).unwrap();
         let blob = run_git_output(
@@ -3434,13 +3459,36 @@ mod tests {
             "--cacheinfo",
             &format!("100644,{blob},agents/agt1/events.log"),
         ]);
+        // The recorded causal frontier is what the verifier hashes against:
+        // higher than either events.log copy, it must win.
+        let mut state = crate::checkpoint::CheckpointState::default();
+        state.frontier.agents.insert(
+            "agt1".to_string(),
+            crate::checkpoint::AgentFrontier {
+                sequence: 1169,
+                tip_oid: "0000000000000000000000000000000000000000".to_string(),
+                prefix_sha256: "unused".to_string(),
+            },
+        );
+        let state_path = dir.path().join("checkpoint-state.json");
+        std::fs::write(&state_path, serde_json::to_vec(&state).unwrap()).unwrap();
+        let state_blob = run_git_output(
+            dir.path(),
+            &["hash-object", "-w", state_path.to_str().unwrap()],
+        );
+        with_index(&[
+            "update-index",
+            "--add",
+            "--cacheinfo",
+            &format!("100644,{state_blob},state.json"),
+        ]);
         let tree = with_index(&["write-tree"]);
         let commit = run_git_output(dir.path(), &["commit-tree", &tree, "-m", "checkpoint"]);
         run_git(dir.path(), &["update-ref", CHECKPOINT_REF, &commit]);
         assert_eq!(
             read_max_event_seq_from_ref(dir.path(), "agt1").unwrap(),
             1169,
-            "the checkpoint's copy carries the higher numbering: it is the ceiling"
+            "the checkpoint's recorded frontier (1169) outranks both events.log copies (3, 500)"
         );
         assert_eq!(
             read_max_event_seq_from_ref(dir.path(), "absent").unwrap(),
