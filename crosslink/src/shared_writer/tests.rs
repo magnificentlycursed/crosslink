@@ -270,7 +270,10 @@ fn test_v2_intervention_comment_file_construction() {
 
 #[test]
 fn test_lock_confirm_timeout_constant() {
-    assert_eq!(LOCK_CONFIRM_TIMEOUT_SECS, 30);
+    // 30 -> 120: verified v3 authority re-hydrates with per-event signature
+    // checks on every confirmation; a cold kickoff worktree on a ~3,600-event
+    // hub took 34 s (fork tracker #64).
+    assert_eq!(LOCK_CONFIRM_TIMEOUT_SECS, 120);
 }
 
 mod lock_v2_tests {

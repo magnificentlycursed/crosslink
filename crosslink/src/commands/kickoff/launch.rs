@@ -607,6 +607,21 @@ pub(super) fn init_worktree_agent(
     let agent_id = compact_name.to_string();
 
     let wt_crosslink = worktree_dir.join(".crosslink");
+
+    // Repository readiness is per checkout: a fresh worktree carries no
+    // readiness record, so every crosslink command below (`sync`, `session
+    // start`, the agent's own commands) fails closed with "repository
+    // readiness is missing" until a daemon has reconciled it. The hub is
+    // already reconciled by the driver's checkout, so this only creates the
+    // worktree's local projection — seconds, not the first migration.
+    if wt_crosslink.is_dir() {
+        crate::daemon::ensure_and_wait(&wt_crosslink).with_context(|| {
+            format!(
+                "Failed to establish repository readiness in kickoff worktree {}",
+                worktree_dir.display()
+            )
+        })?;
+    }
     if wt_crosslink.exists() && AgentConfig::load(&wt_crosslink)?.is_none() {
         if let Err(e) = super::super::agent::init(
             &wt_crosslink,
@@ -840,6 +855,53 @@ pub(super) fn launch_container(
         let git_path = host_git_dir.to_string_lossy();
         args.push("-v".to_string());
         args.push(format!("{git_path}:{git_path}:rw"));
+    }
+
+    // The host's hub and knowledge caches are git worktrees registered in
+    // the shared .git mounted above. Inside the container, readiness
+    // observes the authority cache at the host path and, finding no
+    // checkout there, tries `git worktree add --orphan -b
+    // crosslink/hub-v3-host` — which the shared .git refuses because the
+    // branch is already checked out by the host's cache worktree, leaving
+    // the workspace `blocked_corrupt` and every agent command hook-blocked.
+    // Mount the caches at their host paths so the container sees the
+    // checkouts the registry already describes (the direct `container
+    // start` path has always mounted the hub cache).
+    for cache in [".hub-cache", ".knowledge-cache"] {
+        let host_cache = host_repo_root.join(".crosslink").join(cache);
+        if host_cache.is_dir() {
+            let cache_path = host_cache.to_string_lossy();
+            args.push("-v".to_string());
+            args.push(format!("{cache_path}:{cache_path}:rw"));
+        }
+    }
+
+    // Hub publication from inside the container pushes the agent's ref to
+    // origin over HTTPS. The host's credential helper (keychain, manager)
+    // is not in the container, so every `crosslink issue comment` there
+    // ended in "could not read Username for 'https://github.com'" and the
+    // event stayed local. When the host environment carries a GitHub
+    // token (GH_TOKEN, or GITHUB_TOKEN as gh itself accepts), hand it to
+    // the container and bind it to github.com through git's environment
+    // configuration — no image change, no file holding the secret, the
+    // same x-access-token form GitHub Actions uses. Absent a token, the
+    // run proceeds as before and publication fails loudly at push time.
+    if let Some(token) = std::env::var("GH_TOKEN")
+        .ok()
+        .or_else(|| std::env::var("GITHUB_TOKEN").ok())
+        .filter(|value| !value.trim().is_empty())
+    {
+        args.extend([
+            "-e".to_string(),
+            format!("GH_TOKEN={token}"),
+            "-e".to_string(),
+            "GIT_CONFIG_COUNT=1".to_string(),
+            "-e".to_string(),
+            "GIT_CONFIG_KEY_0=credential.https://github.com.helper".to_string(),
+            "-e".to_string(),
+            "GIT_CONFIG_VALUE_0=!f() { echo username=x-access-token; echo \"password=$GH_TOKEN\"; }; f"
+                .to_string(),
+        ]);
     }
 
     if let Some((uid, gid)) = &uid_gid {

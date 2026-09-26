@@ -19,7 +19,16 @@ pub(super) struct WriteSet {
 
 pub(super) const V2_WRITE_REFUSAL: &str = "this hub uses the legacy v2 layout; run `crosslink migrate hub-v3` to reconcile it into verified v3 authority";
 
-pub(super) const LOCK_CONFIRM_TIMEOUT_SECS: u64 = 30;
+/// Upper bound on a lock claim's push-and-confirm round trip before the
+/// compaction result is refused as possibly stale. 30 s dated from the
+/// v2 era (GH-113) when confirmation was a cheap re-read; under verified
+/// v3 authority every confirmation re-hydrates the hub with a per-event
+/// signature check, and a cold checkout (a fresh kickoff worktree) on a
+/// hub of ~3,600 signed events took 34 s — so every kickoff lock claim
+/// tripped the old bound. 120 s covers the cold path on hubs of that
+/// size; the durable fix is to cache verified event signatures per
+/// hub cache (an event's signature never changes).
+pub(super) const LOCK_CONFIRM_TIMEOUT_SECS: u64 = 120;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum PushOutcome {
