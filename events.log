@@ -74,3 +74,4 @@
 {"agent_id":"anon-d38ea320","agent_seq":74,"timestamp":"2026-09-29T00:52:45.705736Z","event":{"type":"LockReleased","issue_display_id":64}}
 {"agent_id":"anon-d38ea320","agent_seq":75,"timestamp":"2026-09-29T00:54:05.725128Z","event":{"type":"IssueCreated","uuid":"6f6ad32b-04ec-4164-a36e-ea5b319d73db","title":"Scope the 30-minute readiness wait to kickoff's bootstrap; daemon ensure --wait-ready returns to 120 s","priority":"medium","created_by":"anon-d38ea320"}}
 {"agent_id":"anon-d38ea320","agent_seq":76,"timestamp":"2026-09-29T00:54:21.175362Z","event":{"type":"LabelAdded","issue_uuid":"6f6ad32b-04ec-4164-a36e-ea5b319d73db","label":"bug"}}
+{"agent_id":"anon-d38ea320","agent_seq":77,"timestamp":"2026-09-29T00:54:36.612736Z","event":{"type":"LockClaimed","issue_display_id":65}}
