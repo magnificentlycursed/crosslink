@@ -8,14 +8,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 86,
-        "tip_oid": "727f16f58f6274fdbf7def574e30eea4dfaf6bd4",
-        "prefix_sha256": "4cc1b0949fa2232a87f84035cbb0e2fa76abb599865ea377d73eb95c0e4c5a41"
+        "sequence": 87,
+        "tip_oid": "37706af7ccb99869bca232d02691817773d3881c",
+        "prefix_sha256": "81507198ba4141db26475b53ee18183bd74e78f62b5a1b97f6a8ca2f77bdfa06"
       }
     }
   },
   "next_display_id": 68,
-  "next_comment_id": 152,
+  "next_comment_id": 153,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1316,10 +1316,19 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-29T02:05:29.826767Z",
-      "updated_at": "2026-09-29T02:05:46.660487Z",
+      "updated_at": "2026-09-29T02:06:46.744195Z",
       "labels": [
         "bug"
-      ]
+      ],
+      "comments": {
+        "02f0622d-d956-4f0c-9bda-47147afed2dc": {
+          "display_id": 152,
+          "author": "anon-d38ea320",
+          "content": "Reproduced on a clean detached worktree at 973e395dc (no local changes), each group run alone on an idle machine: daemon_readiness 4/7 fail (fresh_hook_initialized_local_repository_bootstraps_to_ready, daemon_survives_launcher_process_group_cleanup, daemon_recovers_hot_rollback_journal_before_reconciliation, concurrent_ensure_converges_and_offline_exit_is_structured — each crosslink child killed at the 15 s cap with empty stdout/stderr); provider_hooks 2-3/21 (heartbeat_runs_once_for_one_logical_provider_event, work_check_readiness_diagnostics_match_cli_access_for_both_providers, intermittently work_check_allows_only_the_explicit_init_recovery_in_a_blocked_repository — the fake crosslink call log is never written, ENOENT); lib reconcile::migration::tests::production_ready_observer_completes_fallback_pointer_window ('fallback pointer hook was not reached'). Not caused by #65.",
+          "created_at": "2026-09-29T02:06:46.693932Z",
+          "kind": "observation"
+        }
+      }
     },
     "9eb2c672-a048-4819-9102-4c6609c0d630": {
       "uuid": "9eb2c672-a048-4819-9102-4c6609c0d630",
@@ -3583,6 +3592,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 86,
       "timestamp": "2026-09-29T02:05:59.351837Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 87,
+      "timestamp": "2026-09-29T02:06:46.744195Z"
     }
   ],
   "watermark": {
