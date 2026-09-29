@@ -8,14 +8,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 89,
-        "tip_oid": "2270897069564ba343f69364483f4c0ec521ae8f",
-        "prefix_sha256": "2c54e8edea973f33d927f8b6c35643bbe761786b20ed8d49f499a173a69be718"
+        "sequence": 90,
+        "tip_oid": "eef390c725de3389d0eba00ae7f77f49efd92b3f",
+        "prefix_sha256": "3d626abc25df1fb5659d479a755d8afda849837c090aa9e84a2fbc989b7839ed"
       }
     }
   },
   "next_display_id": 68,
-  "next_comment_id": 153,
+  "next_comment_id": 154,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1320,7 +1320,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-29T02:05:29.826767Z",
-      "updated_at": "2026-09-29T04:03:54.053824Z",
+      "updated_at": "2026-09-29T04:04:25.479248Z",
       "labels": [
         "bug"
       ],
@@ -1330,6 +1330,13 @@
           "author": "anon-d38ea320",
           "content": "Reproduced on a clean detached worktree at 973e395dc (no local changes), each group run alone on an idle machine: daemon_readiness 4/7 fail (fresh_hook_initialized_local_repository_bootstraps_to_ready, daemon_survives_launcher_process_group_cleanup, daemon_recovers_hot_rollback_journal_before_reconciliation, concurrent_ensure_converges_and_offline_exit_is_structured — each crosslink child killed at the 15 s cap with empty stdout/stderr); provider_hooks 2-3/21 (heartbeat_runs_once_for_one_logical_provider_event, work_check_readiness_diagnostics_match_cli_access_for_both_providers, intermittently work_check_allows_only_the_explicit_init_recovery_in_a_blocked_repository — the fake crosslink call log is never written, ENOENT); lib reconcile::migration::tests::production_ready_observer_completes_fallback_pointer_window ('fallback pointer hook was not reached'). Not caused by #65.",
           "created_at": "2026-09-29T02:06:46.693932Z",
+          "kind": "observation"
+        },
+        "a24599fd-d3a5-4b5e-bd79-f7e9c5a9297d": {
+          "display_id": 153,
+          "author": "anon-d38ea320",
+          "content": "Root cause located 2026-09-29. The failures are not sandbox-related (reproduced unsandboxed) and not caused by #65 (identical on a clean 973e395dc worktree). Bootstrapping a fresh one-commit repository with 'daemon ensure --wait-ready' runs 615 git subprocesses: 226 'cat-file -t', 155 'rev-parse --verify', 25 'remote', 22 for-each-ref, 20 'cat-file blob', 14 'ls-remote .', 13 'fetch --no-tags', and others. A stack sample during the stall sits in reconcile::publication::validate_source_objects -> validate_object_type (publication.rs:2554, one 'git cat-file -t' per object, re-run on every pin_source). On this machine /usr/bin/git is Apple's xcrun shim at ~38 ms per spawn: bootstrap takes 27 s through the shim and 16 s calling /Library/Developer/CommandLineTools/usr/bin/git directly, both over daemon_readiness's 15 s DAEMON_PROCESS_TIMEOUT. CI's macOS runner passes, most likely because of faster git spawns there. The durable fix is batching object validation (one 'git cat-file --batch-check' per pass) and memoizing validated OIDs across pin_source calls; the same per-object spawn pattern explains the ~5-minute first reconciliation on large hubs that motivated ENSURE_WAIT_READY_DEADLINE_SECS.",
+          "created_at": "2026-09-29T04:04:25.423209Z",
           "kind": "observation"
         }
       }
@@ -3611,6 +3618,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 89,
       "timestamp": "2026-09-29T04:03:54.053824Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 90,
+      "timestamp": "2026-09-29T04:04:25.479248Z"
     }
   ],
   "watermark": {
