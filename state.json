@@ -8,13 +8,13 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 73,
-        "tip_oid": "3cc52bc57ccad12d9e2120fefa16138e58d4f4a9",
-        "prefix_sha256": "db1fea8a25648b5481a6b291a6feaa65b9dff25a2958f9d7fa6d69f9253d008f"
+        "sequence": 75,
+        "tip_oid": "92e496615e949557d50311a843fac53b3f2f4dc0",
+        "prefix_sha256": "6ed268600f02c05a782119506f03a8a35a6912c9306f6e799afea7f31bb0425a"
       }
     }
   },
-  "next_display_id": 65,
+  "next_display_id": 66,
   "next_comment_id": 150,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -46,6 +46,7 @@
     "68d2e5e5-e021-4906-a8d2-546df21b34ac": 14,
     "69abdd99-b5f1-44d6-a6ac-10af0b18cb6f": 37,
     "69c17c31-f3a2-4dd7-9d35-7fa7cb6bde9a": 28,
+    "6f6ad32b-04ec-4164-a36e-ea5b319d73db": 65,
     "6fc8c45a-fbd1-4d70-8978-d9058ff1d884": 18,
     "71d41217-691b-4eae-82f1-258cfab1a69d": 27,
     "75e9caf2-3e8c-4b2f-ad97-6c9f018c5b92": 25,
@@ -82,12 +83,7 @@
     "fbd77b9d-d5bc-435a-a50d-cf5aceb6a00b": 2,
     "fc4f4a98-e11c-4bc9-b415-afb26dc8add9": 35
   },
-  "locks": {
-    "64": {
-      "agent_id": "anon-d38ea320",
-      "claimed_at": "2026-09-25T01:26:21.963941Z"
-    }
-  },
+  "locks": {},
   "issues": {
     "029afced-8d1a-4506-80de-17783effd8fd": {
       "uuid": "029afced-8d1a-4506-80de-17783effd8fd",
@@ -946,6 +942,16 @@
           "kind": "result"
         }
       }
+    },
+    "6f6ad32b-04ec-4164-a36e-ea5b319d73db": {
+      "uuid": "6f6ad32b-04ec-4164-a36e-ea5b319d73db",
+      "display_id": 65,
+      "title": "Scope the 30-minute readiness wait to kickoff's bootstrap; daemon ensure --wait-ready returns to 120 s",
+      "status": "open",
+      "priority": "medium",
+      "created_by": "anon-d38ea320",
+      "created_at": "2026-09-29T00:54:05.725128Z",
+      "updated_at": "2026-09-29T00:54:05.725128Z"
     },
     "6fc8c45a-fbd1-4d70-8978-d9058ff1d884": {
       "uuid": "6fc8c45a-fbd1-4d70-8978-d9058ff1d884",
@@ -3458,6 +3464,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 73,
       "timestamp": "2026-09-25T10:56:21.408564Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 74,
+      "timestamp": "2026-09-29T00:52:45.705736Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 75,
+      "timestamp": "2026-09-29T00:54:05.725128Z"
     }
   ],
   "watermark": {
