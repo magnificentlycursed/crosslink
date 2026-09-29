@@ -8,13 +8,13 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 77,
-        "tip_oid": "576a9160ccad40b805e425f48fd8643091bc42ef",
-        "prefix_sha256": "f7f2876c0b4387b8047b4e53a7abaccfffefdb8b58f35a7488c388a71dc49b32"
+        "sequence": 78,
+        "tip_oid": "8d3632e18b7a5ebf77a2e600220d9cddc9a8d067",
+        "prefix_sha256": "290a1c02ed672e7c738b1a3c23f24e488da3092e5cdbc9bb475c87f3c7ee86a4"
       }
     }
   },
-  "next_display_id": 66,
+  "next_display_id": 67,
   "next_comment_id": 150,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -33,6 +33,7 @@
     "34964a88-4547-4c86-8e43-b299623b1bc7": 11,
     "39c1a88a-4b2a-4027-8297-4b62859dbdf8": 6,
     "3d34f0e6-b880-4c9d-ae97-92459e45f5b2": 59,
+    "40dfc878-9eb3-453e-bf15-664efcf84381": 66,
     "4e2e6e54-5223-4664-8572-5c180e29431c": 24,
     "5325f968-4d13-46f9-b6f7-ceb63eb68f21": 5,
     "56231058-8b10-40e4-8dba-5c4003e50941": 32,
@@ -572,6 +573,16 @@
           "kind": "result"
         }
       }
+    },
+    "40dfc878-9eb3-453e-bf15-664efcf84381": {
+      "uuid": "40dfc878-9eb3-453e-bf15-664efcf84381",
+      "display_id": 66,
+      "title": "Move this repo's Claude wiring to the readiness-era hooks under .crosslink/integrations",
+      "status": "open",
+      "priority": "medium",
+      "created_by": "anon-d38ea320",
+      "created_at": "2026-09-29T00:55:01.210657Z",
+      "updated_at": "2026-09-29T00:55:01.210657Z"
     },
     "4e2e6e54-5223-4664-8572-5c180e29431c": {
       "uuid": "4e2e6e54-5223-4664-8572-5c180e29431c",
@@ -3492,6 +3503,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 77,
       "timestamp": "2026-09-29T00:54:36.612736Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 78,
+      "timestamp": "2026-09-29T00:55:01.210657Z"
     }
   ],
   "watermark": {
