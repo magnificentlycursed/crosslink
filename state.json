@@ -8,9 +8,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 88,
-        "tip_oid": "a2deffe9b086951d01b49af8c3553343722d18f7",
-        "prefix_sha256": "a5c0ac68f606b889bc1975914cfbe17fa7610d30b9e88c34a1af13604c2ed4df"
+        "sequence": 89,
+        "tip_oid": "2270897069564ba343f69364483f4c0ec521ae8f",
+        "prefix_sha256": "2c54e8edea973f33d927f8b6c35643bbe761786b20ed8d49f499a173a69be718"
       }
     }
   },
@@ -1315,12 +1315,12 @@
     "98fe06cc-c504-468b-b59c-47700cf9c077": {
       "uuid": "98fe06cc-c504-468b-b59c-47700cf9c077",
       "display_id": 67,
-      "title": "Eight tests fail on develop 973e395dc on macOS: daemon_readiness 15 s process cap (4), provider_hooks fake-binary call log missing (2-3), migration fallback pointer window (1)",
+      "title": "Daemon bootstrap spawns ~615 git processes on an empty repo; on macOS with /usr/bin/git that takes 16-27 s and fails the 15 s daemon_readiness cap",
       "status": "open",
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-29T02:05:29.826767Z",
-      "updated_at": "2026-09-29T02:06:46.744195Z",
+      "updated_at": "2026-09-29T04:03:54.053824Z",
       "labels": [
         "bug"
       ],
@@ -3606,6 +3606,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 88,
       "timestamp": "2026-09-29T02:07:06.883876Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 89,
+      "timestamp": "2026-09-29T04:03:54.053824Z"
     }
   ],
   "watermark": {
