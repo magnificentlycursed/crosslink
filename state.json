@@ -8,14 +8,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 81,
-        "tip_oid": "96f6ca86ff826b60e4f0133ef9c363b04eb34c8b",
-        "prefix_sha256": "0368fe015f63702633d8b4058cd55736622966b1735e17569640c4cf0af9ce12"
+        "sequence": 83,
+        "tip_oid": "941434e733b42c4429aa2b3d280dcba4c75c21cc",
+        "prefix_sha256": "a5cef16989e71fbb57adfbf3e4aea6e5662264fad61b8e11d16666ca3bb5c7af"
       }
     }
   },
   "next_display_id": 67,
-  "next_comment_id": 151,
+  "next_comment_id": 152,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -85,10 +85,6 @@
     "fc4f4a98-e11c-4bc9-b415-afb26dc8add9": 35
   },
   "locks": {
-    "65": {
-      "agent_id": "anon-d38ea320",
-      "claimed_at": "2026-09-29T00:54:36.612736Z"
-    },
     "66": {
       "agent_id": "anon-d38ea320",
       "claimed_at": "2026-09-29T00:55:30.769414Z"
@@ -1242,7 +1238,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-25T01:25:58.606855Z",
-      "updated_at": "2026-09-29T00:56:09.858444Z",
+      "updated_at": "2026-09-29T01:57:47.377491Z",
       "labels": [
         "bug"
       ],
@@ -1259,6 +1255,13 @@
           "author": "anon-d38ea320",
           "content": "Observed 2026-09-28 in the crosslink checkout after rewiring to .crosslink/integrations hooks: the SessionStart hook on resume left readiness at 'readiness record projection frontier is stale' while daemon.log said 'hub reconciliation already current at generation aadb155f270078baccf5d905bcf969a3'. A manual 'crosslink daemon ensure --wait-ready --json' then returned ready_current at the same generation. The session-start path does not repair a stale projection frontier that ensure repairs.",
           "created_at": "2026-09-29T00:56:09.805299Z",
+          "kind": "observation"
+        },
+        "6ee1b8cc-8b08-41a7-b36b-dafe2814f28f": {
+          "display_id": 151,
+          "author": "anon-d38ea320",
+          "content": "Reproduced a second time on the next resume (2026-09-29 ~01:55 UTC): SessionStart again left 'readiness record projection frontier is stale'; manual 'daemon ensure --wait-ready --json' again returned ready_current at generation aadb155f270078baccf5d905bcf969a3 (new daemon_epoch 352603d1). Deterministic, not a one-off.",
+          "created_at": "2026-09-29T01:57:47.339798Z",
           "kind": "observation"
         },
         "7bf0ca9d-5cec-48ef-b8e1-d02859888e8d": {
@@ -3537,6 +3540,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 81,
       "timestamp": "2026-09-29T00:56:09.858444Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 82,
+      "timestamp": "2026-09-29T01:44:04.283057Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 83,
+      "timestamp": "2026-09-29T01:57:47.377491Z"
     }
   ],
   "watermark": {
