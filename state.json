@@ -13,13 +13,13 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 99,
-        "tip_oid": "f04fa0fab9c8a9d8c8d81ac6abb5693de168a67f",
-        "prefix_sha256": "8a1b24bd1a02a40d1cbfd5c42b8e4e3ae5a66a4b81bc22a38ab2557e0065d8fd"
+        "sequence": 100,
+        "tip_oid": "e891bc287bce0cda494bc75f5f938fb3b4e18b75",
+        "prefix_sha256": "c579ad11cc9eb513035b2c4333c20046ce742c0e9f15c06e58954bc9c1935b26"
       }
     }
   },
-  "next_display_id": 69,
+  "next_display_id": 70,
   "next_comment_id": 159,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -58,6 +58,7 @@
     "75e9caf2-3e8c-4b2f-ad97-6c9f018c5b92": 25,
     "79321b12-8c05-403f-afe7-97f87f50b4c2": 21,
     "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0": 10,
+    "7c480920-649e-44fa-bf38-2a1788982af6": 69,
     "7eaef634-a0a4-4751-a1d3-35c352641e66": 57,
     "7f4e1659-55cb-442e-a66a-d7b9aa91621d": 3,
     "8414c517-2b10-4966-a48f-61f79e3669f4": 64,
@@ -1173,6 +1174,17 @@
           "kind": "resolution"
         }
       }
+    },
+    "7c480920-649e-44fa-bf38-2a1788982af6": {
+      "uuid": "7c480920-649e-44fa-bf38-2a1788982af6",
+      "display_id": 69,
+      "title": "Daemon exits when its readiness record is more than 90 s old, so any suspend (laptop sleep, SIGSTOP) kills it and blocks all work until a manual ensure",
+      "description": "Reproduced 2026-10-01 on build 973e395dc. The daemon refreshes its readiness record every ~35 s (FLUSH_INTERVAL_SECS=30 plus work). readiness.rs MAX_RECORD_AGE_SECONDS=90. In daemon.rs run_normal_loop, each tick calls acquire_housekeeping_operation, which validates the existing record first; if the record is older than 90 s the tick returns 'readiness record is stale' through '?' and the daemon process exits. The daemon is the only refresher, so any stall longer than 90 s is fatal. Repro: SIGSTOP the daemon mid-wait for 100 s, SIGCONT; it exits within 4 s with 'Error: readiness record is stale' in .crosslink/daemon.log. Real-world trigger: macOS sleep. pmset log shows Idle Sleep 15:01:46 to wake 15:04:24 PDT; last record 15:01:37; daemon.log error written 15:04. Also matches the 13:46 wake today and the 18:43 wake on 2026-09-28. After the daemon exits, work-check blocks every Bash/Edit call with 'readiness is unknown' until someone runs 'crosslink daemon ensure --wait-ready --json'. No test or code path handles suspend (grep for suspend finds nothing). Expected: the daemon re-validates and refreshes (or re-reconciles) after a stall instead of exiting; or hooks start the daemon automatically.",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-d38ea320",
+      "created_at": "2026-10-01T22:31:47.734587Z",
+      "updated_at": "2026-10-01T22:31:47.734587Z"
     },
     "7eaef634-a0a4-4751-a1d3-35c352641e66": {
       "uuid": "7eaef634-a0a4-4751-a1d3-35c352641e66",
@@ -3730,6 +3742,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 99,
       "timestamp": "2026-10-01T21:45:04.733222Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 100,
+      "timestamp": "2026-10-01T22:31:47.734587Z"
     }
   ],
   "watermark": {
