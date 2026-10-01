@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 98,
-        "tip_oid": "6d2384f08b5a97c02ca687299d7bd3a6d7ae80b8",
-        "prefix_sha256": "76cf134efc9a779b7fea0149d9328f33ca0eb88ae4a77824fed276fb31086132"
+        "sequence": 99,
+        "tip_oid": "f04fa0fab9c8a9d8c8d81ac6abb5693de168a67f",
+        "prefix_sha256": "8a1b24bd1a02a40d1cbfd5c42b8e4e3ae5a66a4b81bc22a38ab2557e0065d8fd"
       }
     }
   },
   "next_display_id": 69,
-  "next_comment_id": 158,
+  "next_comment_id": 159,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -985,7 +985,7 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-29T00:54:05.725128Z",
-      "updated_at": "2026-10-01T21:43:47.506846Z",
+      "updated_at": "2026-10-01T21:45:04.733222Z",
       "labels": [
         "bug"
       ],
@@ -1004,6 +1004,13 @@
           "author": "anon-d38ea320",
           "content": "[action] Committed #65 (66ee272bd); awaiting push + PR. Next: test kickoff run, then #67.",
           "created_at": "2026-10-01T21:15:06.010053Z",
+          "kind": "note"
+        },
+        "a52f2659-d671-4cc6-a6ec-f6eac4a2397d": {
+          "display_id": 158,
+          "author": "anon-d38ea320",
+          "content": "[action] Reset done: global crosslink = clean 973e395dc, override removed, daemons restarted on it; kickoff leftovers cleaned (branches + #68 lock remain). Review verdicts: agent_seq seeding = real upstream bug (compact prunes own ref, writer reseeds at 1); GH token = real gap; timeouts = workarounds.",
+          "created_at": "2026-10-01T21:45:04.704078Z",
           "kind": "note"
         },
         "f621fbce-842b-4ff4-91f3-bbeb276e96b4": {
@@ -3718,6 +3725,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 98,
       "timestamp": "2026-10-01T21:44:29.759341Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 99,
+      "timestamp": "2026-10-01T21:45:04.733222Z"
     }
   ],
   "watermark": {
