@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 105,
-        "tip_oid": "41268321f6f44e23ac6357c1caea884e20ca4555",
-        "prefix_sha256": "2d6fa31a82394501380a6977b4050dd04512587647b27e1a5346d39b2652848c"
+        "sequence": 106,
+        "tip_oid": "37a43198ffdc784efb0ea50858967d82715bce26",
+        "prefix_sha256": "8f667c12636cb1eb7cfcff354cd8bb843b4a0cf5b64badd009e13af7f67ce430"
       }
     }
   },
   "next_display_id": 70,
-  "next_comment_id": 161,
+  "next_comment_id": 162,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1191,10 +1191,19 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-01T22:31:47.734587Z",
-      "updated_at": "2026-10-01T22:32:00.136256Z",
+      "updated_at": "2026-10-01T22:34:05.013033Z",
       "labels": [
         "bug"
-      ]
+      ],
+      "comments": {
+        "a573c4a4-7c6b-4348-9886-c34ae1761e86": {
+          "display_id": 161,
+          "author": "anon-d38ea320",
+          "content": "[action] Readiness investigation: #69 confirmed and filed; session restarted on the golden path.",
+          "created_at": "2026-10-01T22:34:04.984853Z",
+          "kind": "note"
+        }
+      }
     },
     "7eaef634-a0a4-4751-a1d3-35c352641e66": {
       "uuid": "7eaef634-a0a4-4751-a1d3-35c352641e66",
@@ -3789,6 +3798,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 105,
       "timestamp": "2026-10-01T22:33:17.777769Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 106,
+      "timestamp": "2026-10-01T22:34:05.013033Z"
     }
   ],
   "watermark": {
