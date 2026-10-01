@@ -13,9 +13,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 104,
-        "tip_oid": "b0b625482caf98d261ed6d8a9923cd34a24e4a32",
-        "prefix_sha256": "29d9041a16dfc231e3945c1df478e50da13bddc3ff7eac9560b71652054da532"
+        "sequence": 105,
+        "tip_oid": "41268321f6f44e23ac6357c1caea884e20ca4555",
+        "prefix_sha256": "2d6fa31a82394501380a6977b4050dd04512587647b27e1a5346d39b2652848c"
       }
     }
   },
@@ -100,6 +100,10 @@
     "68": {
       "agent_id": "Lvh2",
       "claimed_at": "2026-10-01T21:19:04.357702Z"
+    },
+    "69": {
+      "agent_id": "anon-d38ea320",
+      "claimed_at": "2026-10-01T22:33:17.777769Z"
     }
   },
   "issues": {
@@ -3780,6 +3784,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 104,
       "timestamp": "2026-10-01T22:32:59.032688Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 105,
+      "timestamp": "2026-10-01T22:33:17.777769Z"
     }
   ],
   "watermark": {
