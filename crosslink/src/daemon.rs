@@ -25,14 +25,13 @@ const FLUSH_INTERVAL_SECS: u64 = 30;
 /// when the daemon process dies, so this only bounds a live, working daemon.
 const ENSURE_DEADLINE_SECS: u64 = 120;
 
-/// Bound for callers that have explicitly chosen to wait for readiness
-/// ([`ensure_and_wait`]: `daemon ensure --wait-ready`, kickoff's worktree
-/// bootstrap). A first reconciliation verifies every hub event signature
-/// through a spawned process per event — ~5 minutes on a hub of ~3,600
-/// events — and the 120 s default made `--wait-ready` report a timeout
-/// while the daemon went on to publish `ready_migrated` minutes later, so
-/// callers had to poll `daemon status` themselves. 30 minutes covers any
-/// hub this process has seen; the durable fix is to cache verified
+/// Bound for kickoff's worktree bootstrap ([`ensure_and_wait`]), which runs
+/// unattended and has nothing to do until the worktree is ready. A first
+/// reconciliation verifies every hub event signature through a spawned
+/// process per event — ~5 minutes on a hub of ~3,600 events — so the 120 s
+/// default would fail the bootstrap while the daemon was still making
+/// progress. Interactive callers, including `daemon ensure --wait-ready`,
+/// keep [`ENSURE_DEADLINE_SECS`]. The durable fix is to cache verified
 /// signatures per hub cache.
 pub const ENSURE_WAIT_READY_DEADLINE_SECS: u64 = 1800;
 const START_LOCK_DEADLINE_SECS: u64 = 5;
@@ -83,8 +82,8 @@ pub fn ensure(crosslink_dir: &Path, wait_ready: bool) -> Result<ReadinessRecord>
     )
 }
 
-/// [`ensure`] with `wait_ready` and the long bound: for callers that must
-/// have a ready checkout before continuing and can afford a first
+/// [`ensure`] with `wait_ready` and the long bound. Kickoff's worktree
+/// bootstrap is the only caller: it runs unattended and can afford a first
 /// reconciliation's full signature verification.
 pub fn ensure_and_wait(crosslink_dir: &Path) -> Result<ReadinessRecord> {
     ensure_with_deadline(
