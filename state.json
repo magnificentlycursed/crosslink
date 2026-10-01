@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 103,
-        "tip_oid": "26b0d6665a7f1959a5a6c977ab28026490814432",
-        "prefix_sha256": "bb8a1e99fec7ffa8b099cad2f226046c5dfa1d86a720dde31e38572bc217c46d"
+        "sequence": 104,
+        "tip_oid": "b0b625482caf98d261ed6d8a9923cd34a24e4a32",
+        "prefix_sha256": "29d9041a16dfc231e3945c1df478e50da13bddc3ff7eac9560b71652054da532"
       }
     }
   },
   "next_display_id": 70,
-  "next_comment_id": 160,
+  "next_comment_id": 161,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -982,11 +982,18 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-29T00:54:05.725128Z",
-      "updated_at": "2026-10-01T21:45:04.733222Z",
+      "updated_at": "2026-10-01T22:32:59.032688Z",
       "labels": [
         "bug"
       ],
       "comments": {
+        "0550edd0-681b-45ae-b7e2-ebff284fb1a0": {
+          "display_id": 160,
+          "author": "anon-d38ea320",
+          "content": "Investigated readiness on build 973e395dc. Confirmed #69 (daemon exits after any stall over 90 s; macOS sleep triggers it; reproducible with SIGSTOP). Install verified current: workflow diff and init --update --dry-run show hooks match the build; doctor and integrity pass except stale locks. Open: fork PR #8 (#65) decision, #66 hook rewiring PR, #67 slow git spawns, timeout reverts, upstream report for #69. Two empty kickoff branches still need deleting by the user.",
+          "created_at": "2026-10-01T22:32:59.003369Z",
+          "kind": "handoff"
+        },
         "56d8c9c5-ee2c-43f5-88b2-cd6637cc1a3e": {
           "display_id": 156,
           "author": "anon-d38ea320",
@@ -3768,6 +3775,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 103,
       "timestamp": "2026-10-01T22:32:45.108113Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 104,
+      "timestamp": "2026-10-01T22:32:59.032688Z"
     }
   ],
   "watermark": {
