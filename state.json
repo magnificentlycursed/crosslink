@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 111,
-        "tip_oid": "b766d574961bccc9ad1295951458417da4ac583a",
-        "prefix_sha256": "93294884ed27559a030ad839f3ef244130d1688edcf366a890287dddeb3de9f9"
+        "sequence": 112,
+        "tip_oid": "6af46db175135b3252486b03fb9cc5f1e1a3363b",
+        "prefix_sha256": "1cc1e5e0769ce3155ec9ab64efb94750346eceb66279984eb8928e9703e62cbc"
       }
     }
   },
   "next_display_id": 70,
-  "next_comment_id": 167,
+  "next_comment_id": 168,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1191,7 +1191,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-01T22:31:47.734587Z",
-      "updated_at": "2026-10-01T23:05:37.558022Z",
+      "updated_at": "2026-10-01T23:17:25.828440Z",
       "labels": [
         "bug"
       ],
@@ -1202,6 +1202,13 @@
           "content": "[action] Profiling one write to see where its time goes.",
           "created_at": "2026-10-01T22:34:45.098077Z",
           "kind": "note"
+        },
+        "3a146b70-5a6a-4a04-a58e-8e3f8f7176a1": {
+          "display_id": 167,
+          "author": "anon-d38ea320",
+          "content": "Second trigger reproduced 2026-10-01 (build 973e395dc). Method: a PATH shim delayed one 'crosslink issue comment' for 100 s immediately after its agent-ref push; the daemon was not touched. Variant A (write then finishes): the daemon wrote no readiness record for 114 s, 'daemon status' reported 'readiness record projection frontier is stale' and then 'readiness record is stale' for the whole period (all other work in the checkout blocked), and the daemon survived because the finishing write refreshed the record. Variant B (write killed with SIGKILL after the 100 s): the daemon exited 15 s later with 'Error: readiness record is stale'. Mechanism: while a mutation permit is active the daemon's refresh is skipped once the frontier has moved (refresh_ready_record_with returns false when validate_record fails); if the writer never completes its own refresh, the next tick's acquire_housekeeping_operation finds the record over 90 s old and the daemon exits. So #69 has two triggers: daemon suspended over 90 s, and a write that fails or is killed more than about 90 s after publishing. Evidence log: session scratchpad trigger2/result.log.",
+          "created_at": "2026-10-01T23:17:25.801396Z",
+          "kind": "result"
         },
         "639b0021-e78c-4edb-bce8-3ec76213c8fe": {
           "display_id": 164,
@@ -3863,6 +3870,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 111,
       "timestamp": "2026-10-01T23:05:37.558022Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 112,
+      "timestamp": "2026-10-01T23:17:25.828440Z"
     }
   ],
   "watermark": {
