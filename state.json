@@ -13,13 +13,13 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 112,
-        "tip_oid": "6af46db175135b3252486b03fb9cc5f1e1a3363b",
-        "prefix_sha256": "1cc1e5e0769ce3155ec9ab64efb94750346eceb66279984eb8928e9703e62cbc"
+        "sequence": 113,
+        "tip_oid": "2f9bd6c1ccdd32c68265ccefeda80aa732ed62a7",
+        "prefix_sha256": "899c04019159877d9276c9608fc8ef5cd745053bd81fb4d4c364ae151e2cd1f2"
       }
     }
   },
-  "next_display_id": 70,
+  "next_display_id": 71,
   "next_comment_id": 168,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -30,6 +30,7 @@
     "16e822ba-fdb8-4a01-b683-89efdba88526": 34,
     "1a151881-181d-4e06-8c90-e41da1820ad0": 30,
     "1a43ad1e-63e4-411d-9dd9-d09962e545c0": 46,
+    "1ad8dcf4-51a7-406b-8c3d-65b875a6732b": 70,
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
     "2038d7ff-f85a-451b-9ba8-a65a52b925a5": 40,
     "259bdaa4-c569-49ca-aff1-34198975bdb8": 49,
@@ -360,6 +361,17 @@
           "kind": "observation"
         }
       }
+    },
+    "1ad8dcf4-51a7-406b-8c3d-65b875a6732b": {
+      "uuid": "1ad8dcf4-51a7-406b-8c3d-65b875a6732b",
+      "display_id": 70,
+      "title": "Return mdatron and vsdd-cli to stock crosslink hook wiring and rule files; drop the fork's 30-minute readiness wait",
+      "description": "Operator decision 2026-10-01: no custom crosslink setup. (1) mdatron and vsdd-cli .claude/settings.json: restore the stock hook commands (skip when the hook file is missing) in place of the fail-closed 'payload missing' guard, which blocks every tool call in a plain git worktree. (2) Empty the rule files that only retain the old bundled 0.8 text (stock is zero bytes); vsdd-cli rules/project.md is operator-authored project rules in the designed extension point and stays. (3) Fork: remove ensure_and_wait / the 1800 s bound entirely (fork PR #8 becomes that revert). Prepared from the crosslink session as branches for the operator to push.",
+      "status": "open",
+      "priority": "medium",
+      "created_by": "anon-d38ea320",
+      "created_at": "2026-10-01T23:26:03.484024Z",
+      "updated_at": "2026-10-01T23:26:03.484024Z"
     },
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": {
       "uuid": "1ded09e0-6f5c-428d-aa3e-36ca44d0b368",
@@ -3875,6 +3887,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 112,
       "timestamp": "2026-10-01T23:17:25.828440Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 113,
+      "timestamp": "2026-10-01T23:26:03.484024Z"
     }
   ],
   "watermark": {
