@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 110,
-        "tip_oid": "8d3f90c6915935d5b5b864b2be562e61e89055cc",
-        "prefix_sha256": "4b20a1d37ca27a05d38f5313a81a69deda79dc89b67988907391212c686bdeca"
+        "sequence": 111,
+        "tip_oid": "b766d574961bccc9ad1295951458417da4ac583a",
+        "prefix_sha256": "93294884ed27559a030ad839f3ef244130d1688edcf366a890287dddeb3de9f9"
       }
     }
   },
   "next_display_id": 70,
-  "next_comment_id": 166,
+  "next_comment_id": 167,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1191,7 +1191,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-01T22:31:47.734587Z",
-      "updated_at": "2026-10-01T23:01:49.309756Z",
+      "updated_at": "2026-10-01T23:05:37.558022Z",
       "labels": [
         "bug"
       ],
@@ -1229,6 +1229,13 @@
           "author": "anon-d38ea320",
           "content": "Second-trigger test, variant A: this write was held for 100 s after publishing its event, then allowed to finish, to see whether the daemon survives a slow successful write.",
           "created_at": "2026-10-01T23:01:49.293402Z",
+          "kind": "observation"
+        },
+        "a6be6805-2bdc-4e42-ad21-0666bbffffe9": {
+          "display_id": 166,
+          "author": "anon-d38ea320",
+          "content": "Second-trigger test, variant B: this write was held for 100 s after publishing its event and then killed, to see whether the daemon survives a slow write that never finishes.",
+          "created_at": "2026-10-01T23:05:37.541048Z",
           "kind": "observation"
         }
       }
@@ -3851,6 +3858,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 110,
       "timestamp": "2026-10-01T23:01:49.309756Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 111,
+      "timestamp": "2026-10-01T23:05:37.558022Z"
     }
   ],
   "watermark": {
