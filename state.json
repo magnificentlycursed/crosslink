@@ -8,14 +8,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 90,
-        "tip_oid": "eef390c725de3389d0eba00ae7f77f49efd92b3f",
-        "prefix_sha256": "3d626abc25df1fb5659d479a755d8afda849837c090aa9e84a2fbc989b7839ed"
+        "sequence": 92,
+        "tip_oid": "4ebf31143162b875d7ded811c8b9ddc532bda974",
+        "prefix_sha256": "9179ae117485343aea9b13d08d95579f9f44127176b534dbb764ca114eb87e73"
       }
     }
   },
   "next_display_id": 68,
-  "next_comment_id": 154,
+  "next_comment_id": 155,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -93,10 +93,6 @@
     "66": {
       "agent_id": "anon-d38ea320",
       "claimed_at": "2026-09-29T00:55:30.769414Z"
-    },
-    "67": {
-      "agent_id": "anon-d38ea320",
-      "claimed_at": "2026-09-29T02:05:59.351837Z"
     }
   },
   "issues": {
@@ -979,10 +975,19 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-29T00:54:05.725128Z",
-      "updated_at": "2026-09-29T00:54:21.175362Z",
+      "updated_at": "2026-10-01T21:14:49.545263Z",
       "labels": [
         "bug"
-      ]
+      ],
+      "comments": {
+        "f621fbce-842b-4ff4-91f3-bbeb276e96b4": {
+          "display_id": 154,
+          "author": "anon-d38ea320",
+          "content": "Committed 66ee272bd on fix/scope-wait-ready-to-kickoff. CI fmt and clippy gates pass. The local full suite has many failures on this Mac (daemon_readiness, provider_hooks, smoke, a few cli_integration and lib/bin tests). They come from slow daemon bootstrap (#67): for example, the smoke harness kills processes at 20 s, before either readiness bound applies. CI on develop is green.",
+          "created_at": "2026-10-01T21:14:49.516530Z",
+          "kind": "observation"
+        }
+      }
     },
     "6fc8c45a-fbd1-4d70-8978-d9058ff1d884": {
       "uuid": "6fc8c45a-fbd1-4d70-8978-d9058ff1d884",
@@ -3623,6 +3628,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 90,
       "timestamp": "2026-09-29T04:04:25.479248Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 91,
+      "timestamp": "2026-10-01T18:48:02.995272Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 92,
+      "timestamp": "2026-10-01T21:14:49.545263Z"
     }
   ],
   "watermark": {
