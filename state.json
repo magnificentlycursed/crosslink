@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 101,
-        "tip_oid": "96db9777727ef45c3482f7bc523a9edac86daea3",
-        "prefix_sha256": "28560882ec83fd9220f18b87d315dc0d37319f796b3f490e6332cf67b9367a1b"
+        "sequence": 102,
+        "tip_oid": "0516f335bd2d9153fcca1c622e822063ecbdcd11",
+        "prefix_sha256": "b55e59b9fbb77f71cca1e384803a6a1bd501179537ad1f883018880a4ee62fa2"
       }
     }
   },
   "next_display_id": 70,
-  "next_comment_id": 159,
+  "next_comment_id": 160,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1300,7 +1300,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-25T01:25:58.606855Z",
-      "updated_at": "2026-09-29T01:57:47.377491Z",
+      "updated_at": "2026-10-01T22:32:28.967322Z",
       "labels": [
         "bug"
       ],
@@ -1317,6 +1317,13 @@
           "author": "anon-d38ea320",
           "content": "Observed 2026-09-28 in the crosslink checkout after rewiring to .crosslink/integrations hooks: the SessionStart hook on resume left readiness at 'readiness record projection frontier is stale' while daemon.log said 'hub reconciliation already current at generation aadb155f270078baccf5d905bcf969a3'. A manual 'crosslink daemon ensure --wait-ready --json' then returned ready_current at the same generation. The session-start path does not repair a stale projection frontier that ensure repairs.",
           "created_at": "2026-09-29T00:56:09.805299Z",
+          "kind": "observation"
+        },
+        "6d9e5f2a-d844-4522-9f65-87251043b279": {
+          "display_id": 159,
+          "author": "anon-d38ea320",
+          "content": "Correction to the 2026-09-29 and 2026-10-01 observations on this issue. The 'readiness unknown / daemon stopped' drops are explained by #69: the daemon exits when its record is over 90 s old, and this Mac idle-sleeps after 1 minute (pmset sleep=1). SessionStart does not fail to repair anything; the daemon was already dead or about to die after a wake. Separate, transient case: 'readiness record projection frontier is stale' with a live daemon appears for up to ~35 s after another checkout sharing this .git (a kickoff worktree) writes hub refs; the daemon's next tick re-hydrates and refreshes (seen 2026-10-01 14:20 PDT: same daemon epoch 7cfdcc6f reported ready again with no restart). The earlier 'mixed builds' theory was wrong (both builds had identical source).",
+          "created_at": "2026-10-01T22:32:28.937808Z",
           "kind": "observation"
         },
         "6ee1b8cc-8b08-41a7-b36b-dafe2814f28f": {
@@ -3755,6 +3762,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 101,
       "timestamp": "2026-10-01T22:32:00.136256Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 102,
+      "timestamp": "2026-10-01T22:32:28.967322Z"
     }
   ],
   "watermark": {
