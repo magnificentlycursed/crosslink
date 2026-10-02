@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 118,
-        "tip_oid": "bdac76a4d50ba8558721a4d9dca99415a26bc46c",
-        "prefix_sha256": "38d212ad48f692478fd4169956c8cbcc37818fc54d5e19ccf92cf49f22493265"
+        "sequence": 119,
+        "tip_oid": "a9a8b1d47b7b753dba6f4fb7aa03c64328b9ebbf",
+        "prefix_sha256": "85c923b6683ce7ccc7f799d3d2be2e1e3f043e997cb85a58087ddca7181d9947"
       }
     }
   },
   "next_display_id": 71,
-  "next_comment_id": 171,
+  "next_comment_id": 172,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1233,7 +1233,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-01T22:31:47.734587Z",
-      "updated_at": "2026-10-01T23:17:25.828440Z",
+      "updated_at": "2026-10-02T18:46:18.149482Z",
       "labels": [
         "bug"
       ],
@@ -1286,6 +1286,13 @@
           "content": "Second-trigger test, variant B: this write was held for 100 s after publishing its event and then killed, to see whether the daemon survives a slow write that never finishes.",
           "created_at": "2026-10-01T23:05:37.541048Z",
           "kind": "observation"
+        },
+        "f8c9b595-7273-4cd8-b511-12286936f1fe": {
+          "display_id": 171,
+          "author": "anon-d38ea320",
+          "content": "Plan for the fix (branch fix/daemon-recovers-expired-record, filed upstream as Corvidae-Coding-Projects/crosslink#106): when a housekeeping tick finds the daemon's own record older than MAX_RECORD_AGE_SECONDS, the normal loop returns to run_daemon, which runs reconcile_until_ready again with the same identity instead of exiting. Only the expired-record case takes that path; every other housekeeping failure stays an error. 'daemon ensure --wait-ready' keeps waiting while a live daemon's record is expired instead of failing with 'readiness record is stale'. Unit tests cover the expired path, the unchanged error path, and the ensure wait; an end-to-end run on a scratch repository repeats both reproductions.",
+          "created_at": "2026-10-02T18:46:18.120572Z",
+          "kind": "plan"
         }
       }
     },
@@ -3947,6 +3954,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 118,
       "timestamp": "2026-10-01T23:32:18.147757Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 119,
+      "timestamp": "2026-10-02T18:46:18.149482Z"
     }
   ],
   "watermark": {
