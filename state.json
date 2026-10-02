@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 121,
-        "tip_oid": "aeab14fc218e8741b6993eef36214bc640c50b80",
-        "prefix_sha256": "8ebba9978de819fbf5b12344f835d0f2426c53db45ceb181a90ebbc21a3f02f0"
+        "sequence": 122,
+        "tip_oid": "9de50b8067480c278a27c4fc34e70f4c5714c805",
+        "prefix_sha256": "f31d18318291aea429c7aa83e841384c8184e4ed97ea4481ea667f3f84bbb6e3"
       }
     }
   },
   "next_display_id": 71,
-  "next_comment_id": 174,
+  "next_comment_id": 175,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1233,7 +1233,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-01T22:31:47.734587Z",
-      "updated_at": "2026-10-02T21:44:30.521634Z",
+      "updated_at": "2026-10-02T21:57:54.514356Z",
       "labels": [
         "bug"
       ],
@@ -1300,6 +1300,13 @@
           "content": "Second-trigger test, variant B: this write was held for 100 s after publishing its event and then killed, to see whether the daemon survives a slow write that never finishes.",
           "created_at": "2026-10-01T23:05:37.541048Z",
           "kind": "observation"
+        },
+        "ed98ae9c-89d6-406b-a3ea-093cfc626416": {
+          "display_id": 174,
+          "author": "anon-d38ea320",
+          "content": "[action] Upstream PRs open: #107 (verified fixes, 6 commits) and #108 (sequence seed, rewritten); #103 closed as superseded; #109-ish token design issue filed. Fork PR #9 updated with the daemon identity guard. Next: watch CI on #107/#108/#9; Windows readiness shards flake at the 30 s cap (#67 class).",
+          "created_at": "2026-10-02T21:57:54.484764Z",
+          "kind": "note"
         },
         "f8c9b595-7273-4cd8-b511-12286936f1fe": {
           "display_id": 171,
@@ -3983,6 +3990,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 121,
       "timestamp": "2026-10-02T21:44:30.521634Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 122,
+      "timestamp": "2026-10-02T21:57:54.514356Z"
     }
   ],
   "watermark": {
