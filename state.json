@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 119,
-        "tip_oid": "a9a8b1d47b7b753dba6f4fb7aa03c64328b9ebbf",
-        "prefix_sha256": "85c923b6683ce7ccc7f799d3d2be2e1e3f043e997cb85a58087ddca7181d9947"
+        "sequence": 120,
+        "tip_oid": "c0d20eaf7704e5c2c4ea7e3dfbdbb7b77c90da62",
+        "prefix_sha256": "22d667baf0bcb32d248ea8f9e383e3b97aeae03ad4f99cba39befb6ce0316399"
       }
     }
   },
   "next_display_id": 71,
-  "next_comment_id": 172,
+  "next_comment_id": 173,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1233,7 +1233,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-01T22:31:47.734587Z",
-      "updated_at": "2026-10-02T18:46:18.149482Z",
+      "updated_at": "2026-10-02T19:00:39.110494Z",
       "labels": [
         "bug"
       ],
@@ -1265,6 +1265,13 @@
           "content": "[action] Timing a write with the default git.",
           "created_at": "2026-10-01T22:35:30.597870Z",
           "kind": "note"
+        },
+        "6bcc9655-f86e-4206-aa87-8dc7ebf80638": {
+          "display_id": 172,
+          "author": "anon-d38ea320",
+          "content": "Fix committed on fix/daemon-recovers-expired-record. Unit tests: 3 new, plus the neighbouring daemon and readiness tests (27 passed). End to end on a scratch repository with the built binary: suspend 100 s -> same daemon ready again 20 s after resume; write killed 100 s after publishing -> same daemon ready again 38 s after the kill; daemon.log shows 'readiness record expired; reconciling again.' in both. Note from the first end-to-end attempt: a killed writer that its parent has not reaped (a zombie) still counts as a live permit owner, so the daemon defers until it is reaped; that is existing behaviour and not changed here. Not tested: recovery when the network is down at the moment of re-reconciliation.",
+          "created_at": "2026-10-02T19:00:39.058962Z",
+          "kind": "result"
         },
         "a573c4a4-7c6b-4348-9886-c34ae1761e86": {
           "display_id": 161,
@@ -3959,6 +3966,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 119,
       "timestamp": "2026-10-02T18:46:18.149482Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 120,
+      "timestamp": "2026-10-02T19:00:39.110494Z"
     }
   ],
   "watermark": {
