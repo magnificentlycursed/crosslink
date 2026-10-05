@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 122,
-        "tip_oid": "9de50b8067480c278a27c4fc34e70f4c5714c805",
-        "prefix_sha256": "f31d18318291aea429c7aa83e841384c8184e4ed97ea4481ea667f3f84bbb6e3"
+        "sequence": 123,
+        "tip_oid": "0e42960e812011d3d99fe19477a5e47398d5db20",
+        "prefix_sha256": "56f8b40fce3a4da4c4ffa26f52b988a900466679779a87efc6953a0b72c6457a"
       }
     }
   },
   "next_display_id": 71,
-  "next_comment_id": 175,
+  "next_comment_id": 176,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1233,11 +1233,18 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-01T22:31:47.734587Z",
-      "updated_at": "2026-10-02T21:57:54.514356Z",
+      "updated_at": "2026-10-05T19:43:39.099750Z",
       "labels": [
         "bug"
       ],
       "comments": {
+        "1cf78e69-8212-48e0-91f2-7f92ea729c24": {
+          "display_id": 175,
+          "author": "anon-d38ea320",
+          "content": "[action] Installed upstream develop 875066ad6 (#107 + #108 merged) as the global crosslink; this repo's daemon restarted on it. Fork-only changes remaining: none (lock 120 s and token passthrough stay on fork develop only).",
+          "created_at": "2026-10-05T19:43:39.067301Z",
+          "kind": "note"
+        },
         "34232883-5454-454b-a878-38d3f442e1a7": {
           "display_id": 162,
           "author": "anon-d38ea320",
@@ -3995,6 +4002,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 122,
       "timestamp": "2026-10-02T21:57:54.514356Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 123,
+      "timestamp": "2026-10-05T19:43:39.099750Z"
     }
   ],
   "watermark": {
