@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 125,
-        "tip_oid": "84d3c6f3bfb78d4d02efe5f63f58045d729b07d3",
-        "prefix_sha256": "ef0e35152697edbc9625b91cf0d597fa4b4534c805a3ae78e30d8eadc9901685"
+        "sequence": 126,
+        "tip_oid": "57e0606c51809c9c143f8c60e67b0a622b2ab2ed",
+        "prefix_sha256": "568640372b77e941092fa716df4e29544394302c1ff92aab2f155360221136d4"
       }
     }
   },
   "next_display_id": 71,
-  "next_comment_id": 177,
+  "next_comment_id": 178,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1028,7 +1028,7 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-29T00:54:05.725128Z",
-      "updated_at": "2026-10-01T22:32:59.032688Z",
+      "updated_at": "2026-10-05T19:50:35.620115Z",
       "labels": [
         "bug"
       ],
@@ -1048,6 +1048,13 @@
           "kind": "intervention",
           "trigger_type": "tool_blocked",
           "intervention_context": "Cleaning leftovers from failed kickoff test runs; branch deletion handed to the user"
+        },
+        "6ad04cfa-96b7-4026-a458-f35f85f0b088": {
+          "display_id": 177,
+          "author": "anon-d38ea320",
+          "content": "Superseded: the 30-minute bound was removed entirely (fork PR #8, merged), so there is nothing left to narrow. daemon.rs matches upstream.",
+          "created_at": "2026-10-05T19:50:35.597411Z",
+          "kind": "result"
         },
         "8f8c855c-8d41-45b1-b318-eb85604904bc": {
           "display_id": 155,
@@ -4025,6 +4032,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 125,
       "timestamp": "2026-10-05T19:50:22.274997Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 126,
+      "timestamp": "2026-10-05T19:50:35.620115Z"
     }
   ],
   "watermark": {
