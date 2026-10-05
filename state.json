@@ -13,9 +13,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 130,
-        "tip_oid": "e22162a4867af9fd25c76ed3e624f4322c8e67a8",
-        "prefix_sha256": "c630c66b0de0aa3c920d54f729e3bd01145f5fcd6b0b7b7f446bca759a75e103"
+        "sequence": 131,
+        "tip_oid": "bddb961986e3eb095d88613ffec0258f6f36f934",
+        "prefix_sha256": "633f0fee7356a6b3815252c48c5a1f80a5f196555555e8f2aa6ca96dacac55ab"
       }
     }
   },
@@ -1245,11 +1245,12 @@
       "display_id": 69,
       "title": "Daemon exits when its readiness record is more than 90 s old, so any suspend (laptop sleep, SIGSTOP) kills it and blocks all work until a manual ensure",
       "description": "Reproduced 2026-10-01 on build 973e395dc. The daemon refreshes its readiness record every ~35 s (FLUSH_INTERVAL_SECS=30 plus work). readiness.rs MAX_RECORD_AGE_SECONDS=90. In daemon.rs run_normal_loop, each tick calls acquire_housekeeping_operation, which validates the existing record first; if the record is older than 90 s the tick returns 'readiness record is stale' through '?' and the daemon process exits. The daemon is the only refresher, so any stall longer than 90 s is fatal. Repro: SIGSTOP the daemon mid-wait for 100 s, SIGCONT; it exits within 4 s with 'Error: readiness record is stale' in .crosslink/daemon.log. Real-world trigger: macOS sleep. pmset log shows Idle Sleep 15:01:46 to wake 15:04:24 PDT; last record 15:01:37; daemon.log error written 15:04. Also matches the 13:46 wake today and the 18:43 wake on 2026-09-28. After the daemon exits, work-check blocks every Bash/Edit call with 'readiness is unknown' until someone runs 'crosslink daemon ensure --wait-ready --json'. No test or code path handles suspend (grep for suspend finds nothing). Expected: the daemon re-validates and refreshes (or re-reconciles) after a stall instead of exiting; or hooks start the daemon automatically.",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-01T22:31:47.734587Z",
-      "updated_at": "2026-10-05T19:51:38.729881Z",
+      "updated_at": "2026-10-05T19:51:56.175287Z",
+      "closed_at": "2026-10-05T19:51:56.140398Z",
       "labels": [
         "bug"
       ],
@@ -4073,6 +4074,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 130,
       "timestamp": "2026-10-05T19:51:38.729881Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 131,
+      "timestamp": "2026-10-05T19:51:56.175287Z"
     }
   ],
   "watermark": {
