@@ -16,6 +16,11 @@
         "sequence": 140,
         "tip_oid": "3880820b6cde80dc3ccb1cfe3260836b35926598",
         "prefix_sha256": "ecd37bc43dac5a460162c09270cc3366dffe41db0e541818dcbe994b020e1688"
+      },
+      "pg7D": {
+        "sequence": 1,
+        "tip_oid": "07106659187a24be3abc2f45ca9eea631614c6b8",
+        "prefix_sha256": "6444881f0b4d6b81a6e1ce472c3044424b8903fe66c87da90ed9c89c0229f87c"
       }
     }
   },
@@ -98,6 +103,10 @@
     "68": {
       "agent_id": "Lvh2",
       "claimed_at": "2026-10-01T21:19:04.357702Z"
+    },
+    "71": {
+      "agent_id": "pg7D",
+      "claimed_at": "2026-10-05T20:02:10.365352Z"
     }
   },
   "issues": {
