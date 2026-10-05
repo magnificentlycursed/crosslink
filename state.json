@@ -13,9 +13,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 133,
-        "tip_oid": "2cf74e00a78641d7d00b278b6eea184e7470d4ff",
-        "prefix_sha256": "b255a678e621e2a8bd14bac2dd798df3f368e1780c62d51b707a9a21f31e1e83"
+        "sequence": 134,
+        "tip_oid": "c89adbcbd70884ea262cd0a1216a83945a9cf31c",
+        "prefix_sha256": "bd406b4967403bc005d7baf7b13dc0cbaada12801d28d5c6abe2f9de27d79e5d"
       }
     }
   },
@@ -367,11 +367,12 @@
       "display_id": 70,
       "title": "Return mdatron and vsdd-cli to stock crosslink hook wiring and rule files; drop the fork's 30-minute readiness wait",
       "description": "Operator decision 2026-10-01: no custom crosslink setup. (1) mdatron and vsdd-cli .claude/settings.json: restore the stock hook commands (skip when the hook file is missing) in place of the fail-closed 'payload missing' guard, which blocks every tool call in a plain git worktree. (2) Empty the rule files that only retain the old bundled 0.8 text (stock is zero bytes); vsdd-cli rules/project.md is operator-authored project rules in the designed extension point and stays. (3) Fork: remove ensure_and_wait / the 1800 s bound entirely (fork PR #8 becomes that revert). Prepared from the crosslink session as branches for the operator to push.",
-      "status": "open",
+      "status": "closed",
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-01T23:26:03.484024Z",
-      "updated_at": "2026-10-05T19:52:25.729711Z",
+      "updated_at": "2026-10-05T19:52:43.923756Z",
+      "closed_at": "2026-10-05T19:52:43.894Z",
       "labels": [
         "chore"
       ],
@@ -4092,6 +4093,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 133,
       "timestamp": "2026-10-05T19:52:25.729711Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 134,
+      "timestamp": "2026-10-05T19:52:43.923756Z"
     }
   ],
   "watermark": {
