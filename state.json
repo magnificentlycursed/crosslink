@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 135,
-        "tip_oid": "4e753559f821663f5374b0099e5a4c23cab18180",
-        "prefix_sha256": "25626ef2b915e66fc19b09b7e5e553ec236d4f9a59cd6fe68ae84901e45f6204"
+        "sequence": 136,
+        "tip_oid": "58546c975cd5c6900f9508662f2fe74ddd7a8f6e",
+        "prefix_sha256": "d1a8bd6e5a2f634082427afcec6c49673e16537c89d70d9101d8b6646763e2ee"
       }
     }
   },
   "next_display_id": 71,
-  "next_comment_id": 181,
+  "next_comment_id": 182,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -648,10 +648,19 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-29T00:55:01.210657Z",
-      "updated_at": "2026-09-29T00:55:17.652674Z",
+      "updated_at": "2026-10-05T19:53:16.669371Z",
       "labels": [
         "chore"
-      ]
+      ],
+      "comments": {
+        "2bd8c5d0-c486-4044-b6ee-892af8c2081c": {
+          "display_id": 181,
+          "author": "anon-d38ea320",
+          "content": "Done locally: this checkout's .claude/settings.json and .mcp.json are identical to the stock template and the readiness-era hooks run. They stay as uncommitted local changes because the tracked wiring belongs to upstream's repository, which still ships the old paths; a tracked rewiring would be an upstream change, not a fork one.",
+          "created_at": "2026-10-05T19:53:16.643277Z",
+          "kind": "result"
+        }
+      }
     },
     "4e2e6e54-5223-4664-8572-5c180e29431c": {
       "uuid": "4e2e6e54-5223-4664-8572-5c180e29431c",
@@ -4099,6 +4108,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 135,
       "timestamp": "2026-10-05T19:52:58.354846Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 136,
+      "timestamp": "2026-10-05T19:53:16.669371Z"
     }
   ],
   "watermark": {
