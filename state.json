@@ -13,9 +13,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 128,
-        "tip_oid": "f14f78f7b4d5835d119ea85984ff8ccd99ff795f",
-        "prefix_sha256": "fe2172079b33f3c55a5e5be5b01a2cf34a30ac42441354a422ecb09589e80a6e"
+        "sequence": 129,
+        "tip_oid": "f6629df8648523d08664fcdde50504617901fad9",
+        "prefix_sha256": "e7847f5858602ac1837276583efb6f1f2d4f2f2f5dbe1088e9f74fe9de8a8b17"
       }
     }
   },
@@ -516,11 +516,12 @@
       "uuid": "2e155049-993e-42c9-8463-42e2f964bea6",
       "display_id": 63,
       "title": "container auth login/status/refresh hard-code ghcr.io/corvidae-coding-projects/crosslink-agent:latest, which is not pullable from this fork; add an --image override (and CROSSLINK_CONTAINER_IMAGE) so the fork's nightly image can host the login (vsdd-cli #878 pilot run 2)",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-24T23:20:10.005107Z",
-      "updated_at": "2026-10-05T19:51:05.052788Z",
+      "updated_at": "2026-10-05T19:51:21.517450Z",
+      "closed_at": "2026-10-05T19:51:21.492901Z",
       "labels": [
         "bug"
       ],
@@ -4055,6 +4056,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 128,
       "timestamp": "2026-10-05T19:51:05.052788Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 129,
+      "timestamp": "2026-10-05T19:51:21.517450Z"
     }
   ],
   "watermark": {
