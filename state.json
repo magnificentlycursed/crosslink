@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 132,
-        "tip_oid": "3c9379c7a86db62e6c4ef89551134b303d857c18",
-        "prefix_sha256": "d4a2a9c44348f2d44285ceb38a91e6eef7357e8e4af355d607a96938412f2f47"
+        "sequence": 133,
+        "tip_oid": "2cf74e00a78641d7d00b278b6eea184e7470d4ff",
+        "prefix_sha256": "b255a678e621e2a8bd14bac2dd798df3f368e1780c62d51b707a9a21f31e1e83"
       }
     }
   },
   "next_display_id": 71,
-  "next_comment_id": 180,
+  "next_comment_id": 181,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -371,11 +371,18 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-01T23:26:03.484024Z",
-      "updated_at": "2026-10-01T23:32:18.147757Z",
+      "updated_at": "2026-10-05T19:52:25.729711Z",
       "labels": [
         "chore"
       ],
       "comments": {
+        "401ecb09-9d02-480a-843f-61a0c9a5166f": {
+          "display_id": 180,
+          "author": "anon-d38ea320",
+          "content": "Done: mdatron PR #67 and vsdd-cli PR #50 merged (stock hook wiring, empty rule files; vsdd-cli rules/project.md kept); fork PR #8 merged (30-minute bound removed). Follow-ups left to those repos' sessions: vsdd-cli tracker issue for PR #50 and the stale web.md citation in vsdd-core/src/text.rs.",
+          "created_at": "2026-10-05T19:52:25.707045Z",
+          "kind": "result"
+        },
         "9ecb43d7-7ad4-4314-b9a6-a752c4021b6c": {
           "display_id": 170,
           "author": "anon-d38ea320",
@@ -4080,6 +4087,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 132,
       "timestamp": "2026-10-05T19:52:08.580171Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 133,
+      "timestamp": "2026-10-05T19:52:25.729711Z"
     }
   ],
   "watermark": {
