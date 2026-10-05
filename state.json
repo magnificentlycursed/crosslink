@@ -13,9 +13,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 140,
-        "tip_oid": "3880820b6cde80dc3ccb1cfe3260836b35926598",
-        "prefix_sha256": "ecd37bc43dac5a460162c09270cc3366dffe41db0e541818dcbe994b020e1688"
+        "sequence": 141,
+        "tip_oid": "7df6c3d57b4c55dce4e6bef23397590bb4850cb9",
+        "prefix_sha256": "fe2ec93823bbb0fef9c4b796337c6f16732fca5079abeef29dbc00911ff1ce11"
       },
       "pg7D": {
         "sequence": 1,
@@ -25,7 +25,7 @@
     }
   },
   "next_display_id": 72,
-  "next_comment_id": 182,
+  "next_comment_id": 183,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -678,10 +678,19 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-05T20:00:47.180494Z",
-      "updated_at": "2026-10-05T20:01:07.093862Z",
+      "updated_at": "2026-10-05T20:06:33.883451Z",
       "labels": [
         "feature"
-      ]
+      ],
+      "comments": {
+        "5dfaab5f-0006-44e7-b5e0-b344d5c35b9d": {
+          "display_id": 182,
+          "author": "anon-d38ea320",
+          "content": "Kickoff test on the stock binary 875066ad6 with the fork nightly image, 2026-10-05. Launch succeeded in 106 s: issue, worktree, readiness, lock claim (no confirmation timeout), container start. The agent started, took the lock, read #67, and its first hub write failed: 'v3 own-ref publication for agent pg7D failed: fatal: could not read Username for https://github.com' (upstream #109). The agent could not publish anything after that, so the run was stopped and cleaned up. Result: container kickoff launches and runs on the stock binary; it cannot deliver results to the hub until #109 is decided.",
+          "created_at": "2026-10-05T20:06:33.847368Z",
+          "kind": "result"
+        }
+      }
     },
     "4e2e6e54-5223-4664-8572-5c180e29431c": {
       "uuid": "4e2e6e54-5223-4664-8572-5c180e29431c",
@@ -4154,6 +4163,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 140,
       "timestamp": "2026-10-05T20:01:07.093862Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 141,
+      "timestamp": "2026-10-05T20:06:33.883451Z"
     }
   ],
   "watermark": {
