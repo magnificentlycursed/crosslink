@@ -13,9 +13,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 136,
-        "tip_oid": "58546c975cd5c6900f9508662f2fe74ddd7a8f6e",
-        "prefix_sha256": "d1a8bd6e5a2f634082427afcec6c49673e16537c89d70d9101d8b6646763e2ee"
+        "sequence": 137,
+        "tip_oid": "8c05e9630f5f824bac5323105a9e095c95b5e24a",
+        "prefix_sha256": "1cc79c3ae74e0a64f91d97f94636e18a425bc0a1c790033d383c4f865db7c858"
       }
     }
   },
@@ -644,11 +644,12 @@
       "uuid": "40dfc878-9eb3-453e-bf15-664efcf84381",
       "display_id": 66,
       "title": "Move this repo's Claude wiring to the readiness-era hooks under .crosslink/integrations",
-      "status": "open",
+      "status": "closed",
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-29T00:55:01.210657Z",
-      "updated_at": "2026-10-05T19:53:16.669371Z",
+      "updated_at": "2026-10-05T19:53:31.782434Z",
+      "closed_at": "2026-10-05T19:53:31.758149Z",
       "labels": [
         "chore"
       ],
@@ -4113,6 +4114,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 136,
       "timestamp": "2026-10-05T19:53:16.669371Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 137,
+      "timestamp": "2026-10-05T19:53:31.782434Z"
     }
   ],
   "watermark": {
