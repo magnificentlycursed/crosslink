@@ -13,14 +13,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 127,
-        "tip_oid": "9212b4d2481fc9f443bf10c9019071b3e2536ba7",
-        "prefix_sha256": "21fad650c190160cffe670e4aa8e05c11a733fe8f6f1df3c59d56cccd87d551b"
+        "sequence": 128,
+        "tip_oid": "f14f78f7b4d5835d119ea85984ff8ccd99ff795f",
+        "prefix_sha256": "fe2172079b33f3c55a5e5be5b01a2cf34a30ac42441354a422ecb09589e80a6e"
       }
     }
   },
   "next_display_id": 71,
-  "next_comment_id": 178,
+  "next_comment_id": 179,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -520,7 +520,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-24T23:20:10.005107Z",
-      "updated_at": "2026-09-24T23:20:15.921099Z",
+      "updated_at": "2026-10-05T19:51:05.052788Z",
       "labels": [
         "bug"
       ],
@@ -530,6 +530,13 @@
           "author": "anon-d38ea320",
           "content": "Second commit 2fd150359 on the PR branch: Windows readiness partition lists daemon_recovers_hot_rollback_journal_before_reconciliation (convergence shard); rustls 0.23.40 -> 0.23.45 for RUSTSEC-2026-0285. Both failures pre-dated the PR (red on develop after the sync; red upstream too, unfiled there).",
           "created_at": "2026-09-25T00:20:17.507030Z",
+          "kind": "result"
+        },
+        "9dfe26bc-8df8-419f-97c7-ac2616183d49": {
+          "display_id": 178,
+          "author": "anon-d38ea320",
+          "content": "Fixed upstream: container auth login/status/refresh accept --image and CROSSLINK_CONTAINER_IMAGE (Corvidae-Coding-Projects/crosslink#107, merged 2026-10-02).",
+          "created_at": "2026-10-05T19:51:05.026959Z",
           "kind": "result"
         },
         "af3dfadc-2e61-4f9b-a1f2-6c019bb5b474": {
@@ -4043,6 +4050,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 127,
       "timestamp": "2026-10-05T19:50:48.606461Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 128,
+      "timestamp": "2026-10-05T19:51:05.052788Z"
     }
   ],
   "watermark": {
