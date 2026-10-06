@@ -3,9 +3,9 @@
   "frontier": {
     "agents": {
       "J4Fq": {
-        "sequence": 1,
-        "tip_oid": "2b06641d7e84f01dde581267844a0fccdb23eefc",
-        "prefix_sha256": "a329313997beddc681b4681328d9a43265c443f72cd80f35c61d099ade6a4f5c"
+        "sequence": 2,
+        "tip_oid": "304afa8f38794eedd9b46c1bb333ce2a6c9222ac",
+        "prefix_sha256": "cbebac5ae7d3353bb178f1e4bd9dc9888422998f7b9d1a8c7372f8cf385bce53"
       },
       "Lvh2": {
         "sequence": 1,
@@ -30,7 +30,7 @@
     }
   },
   "next_display_id": 75,
-  "next_comment_id": 186,
+  "next_comment_id": 187,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -2139,10 +2139,19 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:44:53.317681Z",
-      "updated_at": "2026-10-06T19:45:05.764400Z",
+      "updated_at": "2026-10-06T19:48:02.406310708Z",
       "labels": [
         "feature"
-      ]
+      ],
+      "comments": {
+        "bf288f6c-f7fc-4ff9-9035-816b17d3cb54": {
+          "display_id": 186,
+          "author": "J4Fq",
+          "content": "Issue #67 reports that bootstrapping a fresh one-commit repository with daemon ensure --wait-ready spawns about 615 git subprocesses, mostly one 'git cat-file -t' per object from reconcile::publication::validate_source_objects, which takes 16-27 s on macOS and exceeds the 15 s daemon_readiness cap. The proposed durable fix is to batch object validation into a single 'git cat-file --batch-check' per pass. It also proposes memoizing validated OIDs across pin_source calls, which should likewise shorten the roughly five-minute first reconciliation on large hubs.",
+          "created_at": "2026-10-06T19:48:02.396619769Z",
+          "kind": "result"
+        }
+      }
     },
     "e00178bc-6f75-4207-a84f-ff2b13362379": {
       "uuid": "e00178bc-6f75-4207-a84f-ff2b13362379",
@@ -4317,6 +4326,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 153,
       "timestamp": "2026-10-06T19:45:05.764400Z"
+    },
+    {
+      "agent_id": "J4Fq",
+      "agent_seq": 2,
+      "timestamp": "2026-10-06T19:48:02.406310708Z"
     }
   ],
   "watermark": {
