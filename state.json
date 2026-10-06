@@ -3,9 +3,9 @@
   "frontier": {
     "agents": {
       "J4Fq": {
-        "sequence": 2,
-        "tip_oid": "304afa8f38794eedd9b46c1bb333ce2a6c9222ac",
-        "prefix_sha256": "cbebac5ae7d3353bb178f1e4bd9dc9888422998f7b9d1a8c7372f8cf385bce53"
+        "sequence": 3,
+        "tip_oid": "73339624b20bcecf30b32658d325b35e3142ef66",
+        "prefix_sha256": "b6990bdd91114f601ac7fc008cf03a471ccce76b2a177b86cdf36b74fd2e9b53"
       },
       "Lvh2": {
         "sequence": 1,
@@ -123,10 +123,6 @@
     "73": {
       "agent_id": "anon-d38ea320",
       "claimed_at": "2026-10-06T19:04:17.273129Z"
-    },
-    "74": {
-      "agent_id": "J4Fq",
-      "claimed_at": "2026-10-06T19:46:01.745955Z"
     }
   },
   "issues": {
@@ -4331,6 +4327,11 @@
       "agent_id": "J4Fq",
       "agent_seq": 2,
       "timestamp": "2026-10-06T19:48:02.406310708Z"
+    },
+    {
+      "agent_id": "J4Fq",
+      "agent_seq": 3,
+      "timestamp": "2026-10-06T19:48:51.325193206Z"
     }
   ],
   "watermark": {
