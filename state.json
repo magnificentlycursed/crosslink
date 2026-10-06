@@ -13,9 +13,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 150,
-        "tip_oid": "fa3fa7bc7b04a4fbdb527c83e2b48118e22c3a3b",
-        "prefix_sha256": "46b94225050af65c35bceb7f53462b9355aeecc646ac3a7005fce777565e81da"
+        "sequence": 151,
+        "tip_oid": "d510610d7368eb68f5305a8143cb71503d3f7fde",
+        "prefix_sha256": "8d53704dce2ab2150092fa7f50e0b13bca75f735962ead79ff30a9fcaddb2a68"
       },
       "pg7D": {
         "sequence": 1,
@@ -25,7 +25,7 @@
     }
   },
   "next_display_id": 74,
-  "next_comment_id": 185,
+  "next_comment_id": 186,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -537,10 +537,19 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:00:22.876604Z",
-      "updated_at": "2026-10-06T19:00:36.059252Z",
+      "updated_at": "2026-10-06T19:21:59.302976Z",
       "labels": [
         "bug"
-      ]
+      ],
+      "comments": {
+        "7a1b8f87-243a-4234-b2c3-cd32afe661bb": {
+          "display_id": 185,
+          "author": "anon-d38ea320",
+          "content": "Plan: widen is_remote_unavailable_message in reconcile/publication.rs so git transport failures classify as Unavailable (waiting_for_remote with retry) instead of Rejected (blocked_corrupt): match git's 'unable to access' prefix plus connection reset, recv/send failure, operation timed out, could not/failed to connect, early EOF, remote end hung up. Rejections (non-fast-forward, missing ref, failed to push) stay terminal. Unit test covers both sets, including the two observed messages.",
+          "created_at": "2026-10-06T19:21:59.279771Z",
+          "kind": "plan"
+        }
+      }
     },
     "2e155049-993e-42c9-8463-42e2f964bea6": {
       "uuid": "2e155049-993e-42c9-8463-42e2f964bea6",
@@ -4269,6 +4278,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 150,
       "timestamp": "2026-10-06T19:21:33.365258Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 151,
+      "timestamp": "2026-10-06T19:21:59.302976Z"
     }
   ],
   "watermark": {
