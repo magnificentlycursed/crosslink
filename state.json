@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 164,
-        "tip_oid": "376bb7a11558dfdbc7c5a46d90da976f4c78a4da",
-        "prefix_sha256": "164ea080d772c04bdab8bb7c93d8ea8246bf5807518ba42ae9b23954ef11858b"
+        "sequence": 165,
+        "tip_oid": "dd29df2839bbf2f6b076fea61db07c19633680bc",
+        "prefix_sha256": "49705737b799ab13b1d06aace25f675ec48b0594d0bef16d0c066aba9b9577f9"
       },
       "pg7D": {
         "sequence": 1,
@@ -30,7 +30,7 @@
     }
   },
   "next_display_id": 76,
-  "next_comment_id": 195,
+  "next_comment_id": 196,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1269,7 +1269,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:03:51.579365Z",
-      "updated_at": "2026-10-06T19:54:24.725337Z",
+      "updated_at": "2026-10-06T21:21:03.005958Z",
       "labels": [
         "feature"
       ],
@@ -1282,6 +1282,13 @@
           "kind": "intervention",
           "trigger_type": "tool_blocked",
           "intervention_context": "Starting the #109 implementation; created #73 via crosslink quick"
+        },
+        "5ff2fb65-7243-41cf-bfec-a9a22276ab10": {
+          "display_id": 195,
+          "author": "anon-d38ea320",
+          "content": "[action] Fix pass: transport f7e452b8b and daemon 7596d09d2 committed; container branch edited (transport gate, preflight, :ro + HOST_UID, status guard, entrypoint, docs, CI), gate green, image rebuilt, entrypoint live checks pass; next: release-binary CLI checks, kickoff e2e, commit, verify round",
+          "created_at": "2026-10-06T21:21:02.956427Z",
+          "kind": "note"
         },
         "79aabd87-599e-4ad6-9f72-65bfc29fbe9d": {
           "display_id": 189,
@@ -4470,6 +4477,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 164,
       "timestamp": "2026-10-06T20:28:32.248842Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 165,
+      "timestamp": "2026-10-06T21:21:03.005958Z"
     }
   ],
   "watermark": {
