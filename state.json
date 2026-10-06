@@ -22,6 +22,11 @@
         "tip_oid": "046fe11082acf538169dab4b49adeceb4e7db6f0",
         "prefix_sha256": "39f17c6a0fc60febffe04ef5c0ebfef901c1f5adda39a2f75f72d14d03d66e6d"
       },
+      "iTty": {
+        "sequence": 1,
+        "tip_oid": "0dc27b8e9087471c34b3c9fa5816d3c0c41d8f55",
+        "prefix_sha256": "9663cfef211ebbe1e519da1d90dc2821853bc9e239e5803630635b3f7eb1940e"
+      },
       "pg7D": {
         "sequence": 1,
         "tip_oid": "07106659187a24be3abc2f45ca9eea631614c6b8",
@@ -129,6 +134,10 @@
     "75": {
       "agent_id": "anon-d38ea320",
       "claimed_at": "2026-10-06T19:56:38.871059Z"
+    },
+    "76": {
+      "agent_id": "iTty",
+      "claimed_at": "2026-10-06T21:24:46.630863Z"
     }
   },
   "issues": {
