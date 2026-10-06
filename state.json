@@ -2,6 +2,11 @@
   "checkpoint_schema_version": 2,
   "frontier": {
     "agents": {
+      "J4Fq": {
+        "sequence": 1,
+        "tip_oid": "2b06641d7e84f01dde581267844a0fccdb23eefc",
+        "prefix_sha256": "a329313997beddc681b4681328d9a43265c443f72cd80f35c61d099ade6a4f5c"
+      },
       "Lvh2": {
         "sequence": 1,
         "tip_oid": "dbb57bd685c51de22676c24e475aeb9ca78e0829",
@@ -118,6 +123,10 @@
     "73": {
       "agent_id": "anon-d38ea320",
       "claimed_at": "2026-10-06T19:04:17.273129Z"
+    },
+    "74": {
+      "agent_id": "J4Fq",
+      "claimed_at": "2026-10-06T19:46:01.745955Z"
     }
   },
   "issues": {
