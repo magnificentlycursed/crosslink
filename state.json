@@ -18,14 +18,14 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 169,
-        "tip_oid": "98d551e7113eace3f93200b128841ccbdded6683",
-        "prefix_sha256": "2b441b11150cf0f38bb5325ced0c338a3f4a096fe35e5488712e287f80bc26a0"
+        "sequence": 170,
+        "tip_oid": "cc0864cc8843d6e25c53efa4e4da3cc97b66bc9a",
+        "prefix_sha256": "873e61bac81d6667bbd0864546f7a3b907bb87cfb7128a24af69d4416679c744"
       },
       "iTty": {
-        "sequence": 2,
-        "tip_oid": "ee36d6462d4065a157d468964406a1441a461fb4",
-        "prefix_sha256": "478af60552a1a3f50eca88472804f180f82120be345633830d12afb32551a387"
+        "sequence": 3,
+        "tip_oid": "3fc2ebd1e576421ec56c05ea1000703d0a0e7ce1",
+        "prefix_sha256": "ae33967a5bbeb8a1234304ae2558937d173d19aa41048407774b6f52508d2bd2"
       },
       "pg7D": {
         "sequence": 1,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 77,
-  "next_comment_id": 199,
+  "next_comment_id": 200,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -134,10 +134,6 @@
     "75": {
       "agent_id": "anon-d38ea320",
       "claimed_at": "2026-10-06T19:56:38.871059Z"
-    },
-    "76": {
-      "agent_id": "iTty",
-      "claimed_at": "2026-10-06T21:24:46.630863Z"
     }
   },
   "issues": {
@@ -1911,7 +1907,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:52:00.506668Z",
-      "updated_at": "2026-10-06T20:28:32.248842Z",
+      "updated_at": "2026-10-06T21:28:09.257596Z",
       "labels": [
         "bug"
       ],
@@ -1943,6 +1939,13 @@
           "content": "[action] Phase 3 (vsdd) round 1 declared and launched for the three fix branches: 4 cold-session cluster agents (implementation, architecture, communication, adversarial), ceiling 8 for the phase, operator confirmed; plan at scratchpad/vsdd-review/declared-plan-round-1.yaml.",
           "created_at": "2026-10-06T20:05:26.242958Z",
           "kind": "note"
+        },
+        "d1bf4a56-bbe0-4e06-839a-3e93700bd8df": {
+          "display_id": 199,
+          "author": "anon-d38ea320",
+          "content": "Phase 3 review fix pass: 7596d09d2 on fix/daemon-housekeeping-reconciles. Typed readiness::StaleProjection error; housekeeping absorbs a moving hub in place (hydrate + refresh again, up to 3 times, same permit) before escalating; the reconcile path's own record_ready no longer exits the daemon on the same race (loops with backoff); consecutive housekeeping reconciles are budgeted (5 without a completed tick parks blocked_corrupt with the cause) and the reason is written to the reconciling record. Tests for each path incl. a Unix-only hydration-failure test. Pre-existing on this machine: daemon::tests::housekeeping_waits_for_foreground_readiness_publication fails on the base commit too (1 s deadline); CI is the gate.",
+          "created_at": "2026-10-06T21:28:09.230762Z",
+          "kind": "decision"
         }
       }
     },
@@ -4554,6 +4557,16 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 169,
       "timestamp": "2026-10-06T21:27:52.373956Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 170,
+      "timestamp": "2026-10-06T21:28:09.257596Z"
+    },
+    {
+      "agent_id": "iTty",
+      "agent_seq": 3,
+      "timestamp": "2026-10-06T21:28:12.617563709Z"
     }
   ],
   "watermark": {
