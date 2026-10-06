@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 175,
-        "tip_oid": "af1983e750825d11acf2b1e503252d520da3941e",
-        "prefix_sha256": "fd0417ccbed1f698debda06ce823646cbfc31f5423040b6cb5d8a9867b1849e7"
+        "sequence": 176,
+        "tip_oid": "3e46c8c7686f93c858e5fac4a43732686f62e8e9",
+        "prefix_sha256": "433832c57420dc500347f546296d4405bb4a0cc93dc7170a4cb6f7f6ef8d8600"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 77,
-  "next_comment_id": 205,
+  "next_comment_id": 206,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1943,11 +1943,18 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:52:00.506668Z",
-      "updated_at": "2026-10-06T21:28:09.257596Z",
+      "updated_at": "2026-10-06T21:54:37.254903Z",
       "labels": [
         "bug"
       ],
       "comments": {
+        "2bfdeb2b-a9ff-4cc2-8ecb-8ef00b0239cc": {
+          "display_id": 205,
+          "author": "anon-d38ea320",
+          "content": "Verify round follow-up: d89e9c0ec budgets the reconciliation path's own stale retries (parks blocked_corrupt with the cause after 5 consecutive moves, test included), writes the reconciling record before the blocked one when parking, and skips the hydration-failure test under root. Branch is ready to push; upstream PR text for #113 drafted.",
+          "created_at": "2026-10-06T21:54:37.232030Z",
+          "kind": "observation"
+        },
         "61a19ef3-b9b8-476f-8d63-5793e7cb1ea7": {
           "display_id": 194,
           "author": "anon-d38ea320",
@@ -4633,6 +4640,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 175,
       "timestamp": "2026-10-06T21:54:22.283353Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 176,
+      "timestamp": "2026-10-06T21:54:37.254903Z"
     }
   ],
   "watermark": {
