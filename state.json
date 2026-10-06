@@ -13,9 +13,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 149,
-        "tip_oid": "fad88284bde0614177f5bfaf0f316f512d2ce135",
-        "prefix_sha256": "697f4df122a8448eaeabc4209167eca0ff8a5a9e75c7e4a3d1a478c2a2e795f7"
+        "sequence": 150,
+        "tip_oid": "fa3fa7bc7b04a4fbdb527c83e2b48118e22c3a3b",
+        "prefix_sha256": "46b94225050af65c35bceb7f53462b9355aeecc646ac3a7005fce777565e81da"
       },
       "pg7D": {
         "sequence": 1,
@@ -109,6 +109,10 @@
     "71": {
       "agent_id": "pg7D",
       "claimed_at": "2026-10-05T20:02:10.365352Z"
+    },
+    "72": {
+      "agent_id": "anon-d38ea320",
+      "claimed_at": "2026-10-06T19:21:33.365258Z"
     },
     "73": {
       "agent_id": "anon-d38ea320",
@@ -4260,6 +4264,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 149,
       "timestamp": "2026-10-06T19:14:01.072059Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 150,
+      "timestamp": "2026-10-06T19:21:33.365258Z"
     }
   ],
   "watermark": {
