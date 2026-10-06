@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 155,
-        "tip_oid": "564e1dafc395b438f2eec54704514c63c12b8a63",
-        "prefix_sha256": "e11604200a77b89222793b30a6665ea3f8e89aeaef94e7b715f4424a3c46e619"
+        "sequence": 156,
+        "tip_oid": "6a1e704ecb86abf02be231e5c7b9a039d10b661c",
+        "prefix_sha256": "a1b7428aaee7b91960942e4402c9f7b273483f076345b6e73e3ab242a72914bb"
       },
       "pg7D": {
         "sequence": 1,
@@ -30,7 +30,7 @@
     }
   },
   "next_display_id": 76,
-  "next_comment_id": 188,
+  "next_comment_id": 189,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -2150,7 +2150,7 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:44:53.317681Z",
-      "updated_at": "2026-10-06T19:49:21.434102904Z",
+      "updated_at": "2026-10-06T19:53:43.308774Z",
       "labels": [
         "feature"
       ],
@@ -2167,6 +2167,13 @@
           "author": "J4Fq",
           "content": "Issue #67 reports that bootstrapping a fresh one-commit repository with daemon ensure --wait-ready spawns about 615 git subprocesses, mostly one 'git cat-file -t' per object from reconcile::publication::validate_source_objects, which takes 16-27 s on macOS and exceeds the 15 s daemon_readiness cap. The proposed durable fix is to batch object validation into a single 'git cat-file --batch-check' per pass. It also proposes memoizing validated OIDs across pin_source calls, which should likewise shorten the roughly five-minute first reconciliation on large hubs.",
           "created_at": "2026-10-06T19:48:02.396619769Z",
+          "kind": "result"
+        },
+        "c868df14-ddcb-4552-b2b4-cf92a82ebb4b": {
+          "display_id": 188,
+          "author": "anon-d38ea320",
+          "content": "Live test of upstream #109 on branch feat/container-auth-github (0c0768984) with a locally built image carrying gh 2.102.0: launch 91 s; container received crosslink-auth-github-501 at /home/agent/.config/gh and CROSSLINK_REQUIRE_GIT_LOGIN=1; the agent's comment and session-end handoff published to origin (ref crosslink/agents/J4Fq on GitHub) and hydrated on the host after sync; container exited 0; USD 0.08. First container kickoff to complete against a hub remote on a stock-model binary. Side finding: the host daemon exited during the agent's writes (#75, upstream #113).",
+          "created_at": "2026-10-06T19:53:43.254500Z",
           "kind": "result"
         }
       }
@@ -4369,6 +4376,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 155,
       "timestamp": "2026-10-06T19:52:26.007029Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 156,
+      "timestamp": "2026-10-06T19:53:43.308774Z"
     }
   ],
   "watermark": {
