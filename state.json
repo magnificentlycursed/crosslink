@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 153,
-        "tip_oid": "d931462784c351fb935ff3d404e2fd9ba2aa259b",
-        "prefix_sha256": "74a2cff58b80de4475ba52666a5b79fc5f30eefa94af3c69df305e1653318a66"
+        "sequence": 154,
+        "tip_oid": "778926161829a6dd6deabe60fc8d4f0088df8140",
+        "prefix_sha256": "34b05c6cad86c0950944bd92eb08541d35eda326bf38af0b8858e8afc7ed880e"
       },
       "pg7D": {
         "sequence": 1,
@@ -29,7 +29,7 @@
       }
     }
   },
-  "next_display_id": 75,
+  "next_display_id": 76,
   "next_comment_id": 188,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -83,6 +83,7 @@
     "aae267ff-d956-48ef-91fe-d83751e2e8bf": 55,
     "b1c3567b-88ec-4ed5-9c53-62468c3f9e5f": 68,
     "b21ba76e-f322-49ec-9e97-db230081a651": 36,
+    "bbad61bf-e465-4fcb-91b2-1e668175f319": 75,
     "c2b216b7-fd04-4392-b5d8-77fb497b10b9": 42,
     "cb8c0488-0ea3-4629-9834-849fd7b330ac": 54,
     "d010597c-9456-4dad-91f5-44274eaf8aae": 39,
@@ -1828,6 +1829,17 @@
           "kind": "decision"
         }
       }
+    },
+    "bbad61bf-e465-4fcb-91b2-1e668175f319": {
+      "uuid": "bbad61bf-e465-4fcb-91b2-1e668175f319",
+      "display_id": 75,
+      "title": "Daemon exits with 'refusing to publish ready state for a stale projection' when another checkout publishes during its housekeeping tick",
+      "description": "Observed 2026-10-06 19:48 UTC on 875066ad6 while a kickoff container agent (J4Fq, sharing this repository's .git) wrote a comment and then ended its session. Host daemon.log: 'hub reconciliation already current at generation aadb...' then 'Error: refusing to publish ready state for a stale projection'; the daemon exited and every host command was blocked until ensure. Mechanism: the housekeeping tick hydrates, validates, then write_record re-checks projection_is_current; the authority moved between the check and the write, write_record bailed, and run_normal_loop propagated the error out of the daemon. Same class as #69 (#106 upstream): a transient condition during housekeeping is treated as fatal. Fix: a housekeeping failure of this kind should re-run reconciliation (the path #107 added for an expired record) instead of exiting.",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-d38ea320",
+      "created_at": "2026-10-06T19:52:00.506668Z",
+      "updated_at": "2026-10-06T19:52:00.506668Z"
     },
     "c2b216b7-fd04-4392-b5d8-77fb497b10b9": {
       "uuid": "c2b216b7-fd04-4392-b5d8-77fb497b10b9",
@@ -4344,6 +4356,11 @@
       "agent_id": "J4Fq",
       "agent_seq": 4,
       "timestamp": "2026-10-06T19:49:21.434102904Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 154,
+      "timestamp": "2026-10-06T19:52:00.506668Z"
     }
   ],
   "watermark": {
