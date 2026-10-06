@@ -23,9 +23,9 @@
         "prefix_sha256": "13654221c1781a0f7b5a420e4e4fe218637ebdfb5bbc83a9f370bed2ca76050a"
       },
       "iTty": {
-        "sequence": 3,
-        "tip_oid": "3fc2ebd1e576421ec56c05ea1000703d0a0e7ce1",
-        "prefix_sha256": "ae33967a5bbeb8a1234304ae2558937d173d19aa41048407774b6f52508d2bd2"
+        "sequence": 4,
+        "tip_oid": "1f5bb72cf7f0cb692575fa49dd3b9640a20d7169",
+        "prefix_sha256": "5968de3d3386e87144c85abdf474544d5324f765dc8f00d2b139004baea06337"
       },
       "pg7D": {
         "sequence": 1,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 77,
-  "next_comment_id": 201,
+  "next_comment_id": 202,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1141,7 +1141,7 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T21:23:28.162262Z",
-      "updated_at": "2026-10-06T21:27:17.959847778Z",
+      "updated_at": "2026-10-06T21:28:37.462808293Z",
       "labels": [
         "feature"
       ],
@@ -1152,6 +1152,13 @@
           "content": "Summary of #67: Daemon bootstrap of a fresh one-commit repo spawns ~615 git subprocesses (226 cat-file -t, 155 rev-parse --verify, etc.). On macOS with Apple's /usr/bin/git shim (~38 ms/spawn) bootstrap takes 16-27 s, exceeding the 15 s DAEMON_PROCESS_TIMEOUT in daemon_readiness, so 4/7 daemon_readiness tests, 2-3/21 provider_hooks tests and one reconcile::migration test fail. Not sandbox-related and not caused by #65. Root cause: reconcile::publication::validate_source_objects -> validate_object_type runs one git cat-file -t per object on every pin_source. Proposed fix: batch validation with one git cat-file --batch-check per pass and memoize validated OIDs across pin_source calls. Status: open, high priority, no blockers.",
           "created_at": "2026-10-06T21:27:17.951274355Z",
           "kind": "result"
+        },
+        "c97c3c88-6840-4095-abb6-6b7d59d79704": {
+          "display_id": 201,
+          "author": "iTty",
+          "content": "Completed: added one summary comment on #76 for issue #67. No code changes.",
+          "created_at": "2026-10-06T21:28:37.451325188Z",
+          "kind": "handoff"
         }
       }
     },
@@ -4579,6 +4586,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 171,
       "timestamp": "2026-10-06T21:28:27.656627Z"
+    },
+    {
+      "agent_id": "iTty",
+      "agent_seq": 4,
+      "timestamp": "2026-10-06T21:28:37.462808293Z"
     }
   ],
   "watermark": {
