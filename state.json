@@ -13,9 +13,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 142,
-        "tip_oid": "f8449cbe444f8acba7c25e39805dde2fba60c8b7",
-        "prefix_sha256": "40f13dce46f1a2bf66024f6e426ed37b44ddbb42d743aeeea54127d56c239911"
+        "sequence": 143,
+        "tip_oid": "a37197b37ac0853831da6d874d33fcaebe857afe",
+        "prefix_sha256": "f84a1eee4f8cec80040fc2a68cffa9e7f1acb549319166ef6f273678927de58a"
       },
       "pg7D": {
         "sequence": 1,
@@ -24,7 +24,7 @@
       }
     }
   },
-  "next_display_id": 72,
+  "next_display_id": 73,
   "next_comment_id": 183,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -39,6 +39,7 @@
     "1ded09e0-6f5c-428d-aa3e-36ca44d0b368": 7,
     "2038d7ff-f85a-451b-9ba8-a65a52b925a5": 40,
     "259bdaa4-c569-49ca-aff1-34198975bdb8": 49,
+    "2847b97f-5f2e-4837-93bb-4d4a1e357804": 72,
     "2e155049-993e-42c9-8463-42e2f964bea6": 63,
     "32623ccc-e9c8-410c-b6cd-78c39fbc38ed": 23,
     "34964a88-4547-4c86-8e43-b299623b1bc7": 11,
@@ -517,6 +518,17 @@
           "kind": "result"
         }
       }
+    },
+    "2847b97f-5f2e-4837-93bb-4d4a1e357804": {
+      "uuid": "2847b97f-5f2e-4837-93bb-4d4a1e357804",
+      "display_id": 72,
+      "title": "Transient transport error during post-wake reconciliation leaves the daemon blocked_corrupt (upstream #111)",
+      "description": "Observed 2026-10-05 23:40-23:45 UTC on 875066ad6: record expired during sleep, daemon re-reconciled on wake (the #69 fix working), git ls-remote origin failed with 'Recv failure: Connection reset by peer', activation classified it Rejected -> blocked_corrupt, terminal and sticky for 19 h until daemon stop + ensure. Cause: is_remote_unavailable_message in reconcile/publication.rs does not recognise connection-reset / recv-failure / SSL / generic 'unable to access' as transport failures. Fix: classify transport failures as Unavailable (waiting_for_remote with retry), and do not let a remote failure during re-reconciliation be terminal. Filed upstream as Corvidae-Coding-Projects/crosslink#111.",
+      "status": "open",
+      "priority": "high",
+      "created_by": "anon-d38ea320",
+      "created_at": "2026-10-06T19:00:22.876604Z",
+      "updated_at": "2026-10-06T19:00:22.876604Z"
     },
     "2e155049-993e-42c9-8463-42e2f964bea6": {
       "uuid": "2e155049-993e-42c9-8463-42e2f964bea6",
@@ -4174,6 +4186,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 142,
       "timestamp": "2026-10-05T20:06:51.673466Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 143,
+      "timestamp": "2026-10-06T19:00:22.876604Z"
     }
   ],
   "watermark": {
