@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 154,
-        "tip_oid": "778926161829a6dd6deabe60fc8d4f0088df8140",
-        "prefix_sha256": "34b05c6cad86c0950944bd92eb08541d35eda326bf38af0b8858e8afc7ed880e"
+        "sequence": 155,
+        "tip_oid": "564e1dafc395b438f2eec54704514c63c12b8a63",
+        "prefix_sha256": "e11604200a77b89222793b30a6665ea3f8e89aeaef94e7b715f4424a3c46e619"
       },
       "pg7D": {
         "sequence": 1,
@@ -1839,7 +1839,10 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:52:00.506668Z",
-      "updated_at": "2026-10-06T19:52:00.506668Z"
+      "updated_at": "2026-10-06T19:52:26.007029Z",
+      "labels": [
+        "bug"
+      ]
     },
     "c2b216b7-fd04-4392-b5d8-77fb497b10b9": {
       "uuid": "c2b216b7-fd04-4392-b5d8-77fb497b10b9",
@@ -4361,6 +4364,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 154,
       "timestamp": "2026-10-06T19:52:00.506668Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 155,
+      "timestamp": "2026-10-06T19:52:26.007029Z"
     }
   ],
   "watermark": {
