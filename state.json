@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 170,
-        "tip_oid": "cc0864cc8843d6e25c53efa4e4da3cc97b66bc9a",
-        "prefix_sha256": "873e61bac81d6667bbd0864546f7a3b907bb87cfb7128a24af69d4416679c744"
+        "sequence": 171,
+        "tip_oid": "87888834bb4c0ae7fb8f24093123cf0e0ed3f896",
+        "prefix_sha256": "13654221c1781a0f7b5a420e4e4fe218637ebdfb5bbc83a9f370bed2ca76050a"
       },
       "iTty": {
         "sequence": 3,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 77,
-  "next_comment_id": 200,
+  "next_comment_id": 201,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1305,7 +1305,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:03:51.579365Z",
-      "updated_at": "2026-10-06T21:27:11.469522Z",
+      "updated_at": "2026-10-06T21:28:27.656627Z",
       "labels": [
         "feature"
       ],
@@ -1346,6 +1346,13 @@
           "content": "Plan: AuthProvider enum in commands/container.rs (claude, codex, github) with volume name, mount path and login/status commands; credential_volume keeps its AgentProvider signature; github_login_args mounts crosslink-auth-github-<uid> at /home/agent/.config/gh when the volume exists and sets CROSSLINK_REQUIRE_GIT_LOGIN=1 when the hub has a remote, or fails the launch with the login command when the volume is missing and the hub has a remote; kickoff launch_container and container start both use it. Entrypoint: prepares /home/agent/.config/gh, refuses to start when required and gh auth status fails, runs gh auth setup-git after writing .gitconfig. Dockerfile installs gh from GitHub's apt repository. CI smoke checks gh --version. --provider accepts github on all four commands. Guide updated. Tests: provider parsing/volume/mount/commands, entrypoint and Dockerfile markers, no-remote case of github_login_args.",
           "created_at": "2026-10-06T19:14:01.036628Z",
           "kind": "plan"
+        },
+        "ce5dbea1-c56a-45aa-aef2-dfd2245902c7": {
+          "display_id": 200,
+          "author": "anon-d38ea320",
+          "content": "Phase 3 review fix pass: 73a750160f3 on feat/container-auth-github. Hub remote classified by transport (HTTPS requires and mounts the login read-only; no remote mounts nothing; SSH/local/other refused up front, URL never printed); check moved into kickoff preflight before issue/worktree creation; 6 s early-exit watch after docker run -d; auth status checks the volume before docker run (no auto-created volumes); login refuses without a TTY; login/status/refresh forward HOST_UID/HOST_GID so the read-only mount is readable; entrypoint gates on hosts.yml and prints gh's own diagnosis; guide documents token scope/blast radius, PAT recommendation, logout not revoking; CI smoke asserts exit 78 and greps GH_TOKEN. Live: status/login/gate checks and a kickoff e2e (#76) with the read-only mount passed. Rendered html left to the docs workflow (quarto version drift locally).",
+          "created_at": "2026-10-06T21:28:27.630224Z",
+          "kind": "decision"
         }
       }
     },
@@ -4567,6 +4574,11 @@
       "agent_id": "iTty",
       "agent_seq": 3,
       "timestamp": "2026-10-06T21:28:12.617563709Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 171,
+      "timestamp": "2026-10-06T21:28:27.656627Z"
     }
   ],
   "watermark": {
