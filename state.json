@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 188,
-        "tip_oid": "5efe7a3411c248ccb5cb24da7e398a2f856bacbd",
-        "prefix_sha256": "fcf13c22eaa7a5aa5b72e0d71c7d8df5cf9406f9abfb8dbbbc367e3e8bc8b823"
+        "sequence": 189,
+        "tip_oid": "d9c198aa13d6e48bd0e57bd3d2df8ac498eda969",
+        "prefix_sha256": "e2517825803582c4f4f876755e2ff0e607a587e5f5f8766b4cb78bb2b0c6d19c"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 77,
-  "next_comment_id": 214,
+  "next_comment_id": 215,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1986,7 +1986,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:52:00.506668Z",
-      "updated_at": "2026-10-07T00:56:27.653010Z",
+      "updated_at": "2026-10-07T23:44:51.877133Z",
       "labels": [
         "bug"
       ],
@@ -2011,6 +2011,13 @@
           "content": "Plan: extract the housekeeping tick into housekeeping_tick, returning Done or Reconcile(reason); hydration failures and record-refresh failures (including 'refusing to publish ready state for a stale projection') return Reconcile, and run_daemon re-enters reconcile_until_ready with the reason printed to daemon.log; identity and lease failures stay fatal. Tests: a before-write closure that publishes from another agent reproduces the race and the tick returns Reconcile, after which reconciliation reaches ready_current under the same epoch; a quiet tick still refreshes the record.",
           "created_at": "2026-10-06T20:01:45.005622Z",
           "kind": "plan"
+        },
+        "a22d5810-0e85-4f42-bec5-0d56aa7750ac": {
+          "display_id": 214,
+          "author": "anon-d38ea320",
+          "content": "Merged upstream as Corvidae-Coding-Projects/crosslink#115 (388bed89f); upstream #111 and #113 closed with links.",
+          "created_at": "2026-10-07T23:44:51.849182Z",
+          "kind": "resolution"
         },
         "a7c6a6a8-63bc-46af-b6a6-7be28f92ce16": {
           "display_id": 208,
@@ -4755,6 +4762,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 188,
       "timestamp": "2026-10-07T02:16:07.966290Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 189,
+      "timestamp": "2026-10-07T23:44:51.877133Z"
     }
   ],
   "watermark": {
