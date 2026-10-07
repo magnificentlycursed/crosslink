@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 181,
-        "tip_oid": "62c70c7912be34cc962abafffdffa87309375c29",
-        "prefix_sha256": "1cbfa56aae6d2df60375c4ecfd4976802530e0d75c840e088274e2dfb1327baf"
+        "sequence": 182,
+        "tip_oid": "00519bb5b4f56204d96a0e088bf816294ba0feee",
+        "prefix_sha256": "889b3062596b54b4cc14a363787ac24d521dcb6007b67259d94c3f5cbc4f5588"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 77,
-  "next_comment_id": 211,
+  "next_comment_id": 212,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1327,7 +1327,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:03:51.579365Z",
-      "updated_at": "2026-10-07T00:57:00.822822Z",
+      "updated_at": "2026-10-07T01:25:37.432500Z",
       "labels": [
         "feature"
       ],
@@ -1354,6 +1354,13 @@
           "content": "[action] Kickoff e2e #76 done: container pushed agents/iTty + checkpoint to GitHub through the read-only gh login; cleanup done (branch left for operator). PR texts drafted in scratchpad/vsdd-review/pr-*.md. Waiting on the 4 verify agents.",
           "created_at": "2026-10-06T21:31:34.586899Z",
           "kind": "note"
+        },
+        "330fc156-7162-46fd-9dd9-06d7f7e6bf03": {
+          "display_id": 211,
+          "author": "anon-d38ea320",
+          "content": "Routed review items filed upstream: Corvidae-Coding-Projects/crosslink#116 (agent hook policy vs the GitHub login) and Corvidae-Coding-Projects/crosslink#117 (container auth is docker-only).",
+          "created_at": "2026-10-07T01:25:37.405602Z",
+          "kind": "observation"
         },
         "5ff2fb65-7243-41cf-bfec-a9a22276ab10": {
           "display_id": 195,
@@ -4705,6 +4712,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 181,
       "timestamp": "2026-10-07T00:57:00.822822Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 182,
+      "timestamp": "2026-10-07T01:25:37.432500Z"
     }
   ],
   "watermark": {
