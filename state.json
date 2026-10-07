@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 180,
-        "tip_oid": "b4713d8e2ae9b93f3a2af9f362ca55b14aeaefc3",
-        "prefix_sha256": "fccde06ce6955d441f7236eb7bddd288405e42f389683885eb93f9dacdc70348"
+        "sequence": 181,
+        "tip_oid": "62c70c7912be34cc962abafffdffa87309375c29",
+        "prefix_sha256": "1cbfa56aae6d2df60375c4ecfd4976802530e0d75c840e088274e2dfb1327baf"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 77,
-  "next_comment_id": 210,
+  "next_comment_id": 211,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1327,7 +1327,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:03:51.579365Z",
-      "updated_at": "2026-10-06T21:55:46.963266Z",
+      "updated_at": "2026-10-07T00:57:00.822822Z",
       "labels": [
         "feature"
       ],
@@ -1403,6 +1403,13 @@
           "content": "Phase 3 review fix pass: 73a750160f3 on feat/container-auth-github. Hub remote classified by transport (HTTPS requires and mounts the login read-only; no remote mounts nothing; SSH/local/other refused up front, URL never printed); check moved into kickoff preflight before issue/worktree creation; 6 s early-exit watch after docker run -d; auth status checks the volume before docker run (no auto-created volumes); login refuses without a TTY; login/status/refresh forward HOST_UID/HOST_GID so the read-only mount is readable; entrypoint gates on hosts.yml and prints gh's own diagnosis; guide documents token scope/blast radius, PAT recommendation, logout not revoking; CI smoke asserts exit 78 and greps GH_TOKEN. Live: status/login/gate checks and a kickoff e2e (#76) with the read-only mount passed. Rendered html left to the docs workflow (quarto version drift locally).",
           "created_at": "2026-10-06T21:28:27.630224Z",
           "kind": "decision"
+        },
+        "f854af0e-ad66-457b-b34e-f1ff3fdaa501": {
+          "display_id": 210,
+          "author": "anon-d38ea320",
+          "content": "Pushed; review follow-up posted on Corvidae-Coding-Projects/crosslink#114.",
+          "created_at": "2026-10-07T00:57:00.798381Z",
+          "kind": "observation"
         }
       }
     },
@@ -4693,6 +4700,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 180,
       "timestamp": "2026-10-07T00:56:44.072495Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 181,
+      "timestamp": "2026-10-07T00:57:00.822822Z"
     }
   ],
   "watermark": {
