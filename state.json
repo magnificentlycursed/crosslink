@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 182,
-        "tip_oid": "00519bb5b4f56204d96a0e088bf816294ba0feee",
-        "prefix_sha256": "889b3062596b54b4cc14a363787ac24d521dcb6007b67259d94c3f5cbc4f5588"
+        "sequence": 183,
+        "tip_oid": "9de7deb4d7ae982c98242a83a6ec8a936abf3ac8",
+        "prefix_sha256": "c75c19b71587280abc2ed0cdd7841fd2ce18bb68575d103d63a2a09c48e0fe63"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 77,
-  "next_comment_id": 212,
+  "next_comment_id": 213,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -554,11 +554,18 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:00:22.876604Z",
-      "updated_at": "2026-10-07T00:56:44.072495Z",
+      "updated_at": "2026-10-07T01:30:34.751198Z",
       "labels": [
         "bug"
       ],
       "comments": {
+        "34bf7441-0703-49ab-9256-a3fdc5c31b06": {
+          "display_id": 212,
+          "author": "anon-d38ea320",
+          "content": "Merged upstream as Corvidae-Coding-Projects/crosslink#112.",
+          "created_at": "2026-10-07T01:30:34.724049Z",
+          "kind": "resolution"
+        },
         "6107bf10-f896-44d5-88a8-2acf372e88ec": {
           "display_id": 190,
           "author": "anon-d38ea320",
@@ -4717,6 +4724,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 182,
       "timestamp": "2026-10-07T01:25:37.432500Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 183,
+      "timestamp": "2026-10-07T01:30:34.751198Z"
     }
   ],
   "watermark": {
