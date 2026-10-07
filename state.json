@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 183,
-        "tip_oid": "9de7deb4d7ae982c98242a83a6ec8a936abf3ac8",
-        "prefix_sha256": "c75c19b71587280abc2ed0cdd7841fd2ce18bb68575d103d63a2a09c48e0fe63"
+        "sequence": 184,
+        "tip_oid": "38a3a77471dacf6e2f821bc3fb15785479d7ce79",
+        "prefix_sha256": "ea403779b1e0104ba06d83078b129460d2371839c7408d08ed5a01a6b6bb46ed"
       },
       "iTty": {
         "sequence": 4,
@@ -550,11 +550,12 @@
       "display_id": 72,
       "title": "Transient transport error during post-wake reconciliation leaves the daemon blocked_corrupt (upstream #111)",
       "description": "Observed 2026-10-05 23:40-23:45 UTC on 875066ad6: record expired during sleep, daemon re-reconciled on wake (the #69 fix working), git ls-remote origin failed with 'Recv failure: Connection reset by peer', activation classified it Rejected -> blocked_corrupt, terminal and sticky for 19 h until daemon stop + ensure. Cause: is_remote_unavailable_message in reconcile/publication.rs does not recognise connection-reset / recv-failure / SSL / generic 'unable to access' as transport failures. Fix: classify transport failures as Unavailable (waiting_for_remote with retry), and do not let a remote failure during re-reconciliation be terminal. Filed upstream as Corvidae-Coding-Projects/crosslink#111.",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:00:22.876604Z",
-      "updated_at": "2026-10-07T01:30:34.751198Z",
+      "updated_at": "2026-10-07T01:30:53.203917Z",
+      "closed_at": "2026-10-07T01:30:53.171841Z",
       "labels": [
         "bug"
       ],
@@ -4729,6 +4730,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 183,
       "timestamp": "2026-10-07T01:30:34.751198Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 184,
+      "timestamp": "2026-10-07T01:30:53.203917Z"
     }
   ],
   "watermark": {
