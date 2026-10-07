@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 178,
-        "tip_oid": "bb48d8182f5f63476c49310904e565b6976e9f24",
-        "prefix_sha256": "3e9f291dd880fea781ee81af94093df30308fa2da568699768e44a17e426e242"
+        "sequence": 179,
+        "tip_oid": "4ebef2c9708c43085ba06af9c80e319167fe4a0a",
+        "prefix_sha256": "c17e9ce69f995d2520b42c3792d44ce15f295595d9123ce690c436283ada6d07"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 77,
-  "next_comment_id": 208,
+  "next_comment_id": 209,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1957,7 +1957,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-06T19:52:00.506668Z",
-      "updated_at": "2026-10-06T21:54:37.254903Z",
+      "updated_at": "2026-10-07T00:56:27.653010Z",
       "labels": [
         "bug"
       ],
@@ -1982,6 +1982,13 @@
           "content": "Plan: extract the housekeeping tick into housekeeping_tick, returning Done or Reconcile(reason); hydration failures and record-refresh failures (including 'refusing to publish ready state for a stale projection') return Reconcile, and run_daemon re-enters reconcile_until_ready with the reason printed to daemon.log; identity and lease failures stay fatal. Tests: a before-write closure that publishes from another agent reproduces the race and the tick returns Reconcile, after which reconciliation reaches ready_current under the same epoch; a quiet tick still refreshes the record.",
           "created_at": "2026-10-06T20:01:45.005622Z",
           "kind": "plan"
+        },
+        "a7c6a6a8-63bc-46af-b6a6-7be28f92ce16": {
+          "display_id": 208,
+          "author": "anon-d38ea320",
+          "content": "Pushed and opened upstream as Corvidae-Coding-Projects/crosslink#115 (closes #113).",
+          "created_at": "2026-10-07T00:56:27.628476Z",
+          "kind": "observation"
         },
         "b75230f9-272a-4f38-8628-9d0aa753dad5": {
           "display_id": 193,
@@ -4669,6 +4676,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 178,
       "timestamp": "2026-10-06T21:55:46.963266Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 179,
+      "timestamp": "2026-10-07T00:56:27.653010Z"
     }
   ],
   "watermark": {
