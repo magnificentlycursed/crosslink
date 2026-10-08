@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 191,
-        "tip_oid": "672867ffd25ad81308117d3be12235a5c184f2c9",
-        "prefix_sha256": "bc75149bc1957d0802b4354d7afd7ebca6ebb1133b41d5089f3c1d258e028c1c"
+        "sequence": 192,
+        "tip_oid": "725f4a9da15ad0331de7defab25939081758b666",
+        "prefix_sha256": "5e15eaa564ee2f02d46c8511328754754da0a48415ad37091b1239d6bfcc6c97"
       },
       "iTty": {
         "sequence": 4,
@@ -34,7 +34,7 @@
       }
     }
   },
-  "next_display_id": 77,
+  "next_display_id": 78,
   "next_comment_id": 215,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
@@ -62,6 +62,7 @@
     "56231058-8b10-40e4-8dba-5c4003e50941": 32,
     "57601a9d-fc95-44f0-9d97-e607e810a749": 45,
     "586a0663-b17b-455e-aff4-58795893b52f": 33,
+    "58e4b18b-14fc-4d6e-b274-8266bac9cc34": 77,
     "5e560afb-4ceb-4cc5-b8d1-a447d7b0cd27": 56,
     "5fb134c5-be01-43c0-944a-8580dd3ec4c7": 48,
     "61b9ef9f-521b-46ca-a661-e2c930212475": 52,
@@ -901,6 +902,16 @@
           "kind": "result"
         }
       }
+    },
+    "58e4b18b-14fc-4d6e-b274-8266bac9cc34": {
+      "uuid": "58e4b18b-14fc-4d6e-b274-8266bac9cc34",
+      "display_id": 77,
+      "title": "Retire the fork mirror: triage open local and fork issues, move upstream, archive",
+      "status": "open",
+      "priority": "medium",
+      "created_by": "anon-d38ea320",
+      "created_at": "2026-10-08T01:56:27.842305Z",
+      "updated_at": "2026-10-08T01:56:27.842305Z"
     },
     "5e560afb-4ceb-4cc5-b8d1-a447d7b0cd27": {
       "uuid": "5e560afb-4ceb-4cc5-b8d1-a447d7b0cd27",
@@ -4774,6 +4785,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 191,
       "timestamp": "2026-10-07T23:45:23.587776Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 192,
+      "timestamp": "2026-10-08T01:56:27.842305Z"
     }
   ],
   "watermark": {
