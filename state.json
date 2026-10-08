@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 196,
-        "tip_oid": "a82596ea3ee3b9d630b3246e7f0d74ae60f76a5e",
-        "prefix_sha256": "44f0e3675fd739e1e6a7dc6f50cd87632b00409bae1e9ea7b57a6025a76b2649"
+        "sequence": 197,
+        "tip_oid": "c0c98c780eee26a88ac3fb43b208885cda1ed182",
+        "prefix_sha256": "a3bb6a320520a538d744e4c26400185ede3029937f9ea0dbd53ab17e34d23792"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 78,
-  "next_comment_id": 216,
+  "next_comment_id": 217,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -2648,7 +2648,7 @@
       "parent_uuid": "de2745c3-4db7-4d93-a072-dc6a412da7ad",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T22:02:23.896255Z",
-      "updated_at": "2026-08-05T22:03:21.208413Z",
+      "updated_at": "2026-10-08T02:01:28.135002Z",
       "labels": [
         "bug"
       ],
@@ -2659,6 +2659,13 @@
           "content": "[action] gh#74 fix implemented on fix/74-hydration-repair-publish-sqlite-only: v3 repair publishes sqlite-only issues via GH#4 promotion; clippy+fmt clean; full suite running",
           "created_at": "2026-08-05T22:30:16.672624Z",
           "kind": "note"
+        },
+        "79d9f865-2d24-4b9e-983f-43e1edc363bc": {
+          "display_id": 216,
+          "author": "anon-d38ea320",
+          "content": "Upstream #74 is closed; nothing left here.",
+          "created_at": "2026-10-08T02:01:28.097002Z",
+          "kind": "resolution"
         },
         "bf713cfa-b21d-4d04-b658-e56b88653916": {
           "display_id": 141,
@@ -4825,6 +4832,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 196,
       "timestamp": "2026-10-08T02:01:10.267914Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 197,
+      "timestamp": "2026-10-08T02:01:28.135002Z"
     }
   ],
   "watermark": {
