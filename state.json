@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 205,
-        "tip_oid": "e360afb0e3b842c5c6a14f666b12ab7dff9886b1",
-        "prefix_sha256": "e675343cb084e39b55b8a7c8002b21761537e0f1e137eaa3e57fe0b2f8440879"
+        "sequence": 206,
+        "tip_oid": "36946d51f4a60f889402e8489a6c6e226b35f214",
+        "prefix_sha256": "d549a0d1a6654225378f9a0d0b13aa9c79847fc8338bd41c62b0744e141e0737"
       },
       "iTty": {
         "sequence": 4,
@@ -2342,11 +2342,12 @@
       "display_id": 60,
       "title": "vsdd roadmap feedback epic (fork #3): triage 19 upstream issues across 5 epics",
       "description": "vsdd-cli filed magnificentlycursed/crosslink#3 (2026-08-03): roadmap-ordered map of unaddressed dollspace-gay issues gating its build program. Epic 1 tracker-surface for the conformance gate (gh#52 top, #67 #68 #17 #16 #23 #14); Epic 2 dispatch record integrity (gh#73 #18 #66/#55-residual); Epic 3 hub data integrity (gh#74 #33 -- their live frozen negative-id casualty rides on #74); Epic 4 installer/hook integrity (gh#71 #15 #13 #20); Epic 5 milestone parity (gh#79 #22 #21). Suggested sequence: (1) #74 + #52 immediate; (2) #73 + #66/#55 + #18 with Phase-5 dispatch design; (3) Epic-1 batch before their Slice 5; (4) Epic-4 batch before their Slice 4; (5) milestones whenever.",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T21:54:08.586161Z",
-      "updated_at": "2026-10-08T02:03:44.300700Z",
+      "updated_at": "2026-10-08T02:04:00.821371Z",
+      "closed_at": "2026-10-08T02:04:00.799709Z",
       "labels": [
         "epic"
       ],
@@ -4911,6 +4912,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 205,
       "timestamp": "2026-10-08T02:03:44.300700Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 206,
+      "timestamp": "2026-10-08T02:04:00.821371Z"
     }
   ],
   "watermark": {
