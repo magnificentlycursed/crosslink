@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 198,
-        "tip_oid": "fa8ee7b8cf8db84b7499eb7b7f0f4dbda25d31bd",
-        "prefix_sha256": "0c8062a543f5218ac3fa7a592258005cd69b5b08cc06cb7d00c4e09d8e35650b"
+        "sequence": 199,
+        "tip_oid": "a6a5f8471506e408c6bd822fbaa15360d7dccb9b",
+        "prefix_sha256": "bd24b024b5eefebe23cd7241d219974f060b71312f1760d1869d09ba0ea3f007"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 78,
-  "next_comment_id": 217,
+  "next_comment_id": 218,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -2219,7 +2219,7 @@
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:11:31.386113Z",
-      "updated_at": "2026-08-02T00:11:36.342020Z",
+      "updated_at": "2026-10-08T02:01:59.774742Z",
       "labels": [
         "bug"
       ],
@@ -2230,6 +2230,13 @@
           "content": "Context carried from #38/#46 (both closed): stall = workspace-trust dialog on tmux plan path (plan.rs hardcodes skip_permissions=false). Confirmed fix shape: Option A headless folder-trust pre-grant (projects[path].hasTrustDialogAccepted=true in ~/.claude.json) + bypass-mode pre-acceptance; claude 2.1.218+ also gates hooks on worktree trust. No CLI headless trust grant exists (register_repo_root is SDK-only) -- upstream feature request to Anthropic recommended. Design call touches dollspace's kickoff conventions; surface before implementing.",
           "created_at": "2026-08-03T15:29:51.939801Z",
           "kind": "observation"
+        },
+        "f6c2c3d4-985b-4616-af4f-37165867ae70": {
+          "display_id": 217,
+          "author": "anon-d38ea320",
+          "content": "Tracked upstream in Corvidae-Coding-Projects/crosslink#55, which covers the trust dialog; local mirror retired with the fork.",
+          "created_at": "2026-10-08T02:01:59.753946Z",
+          "kind": "resolution"
         }
       }
     },
@@ -4843,6 +4850,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 198,
       "timestamp": "2026-10-08T02:01:45.025378Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 199,
+      "timestamp": "2026-10-08T02:01:59.774742Z"
     }
   ],
   "watermark": {
