@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 206,
-        "tip_oid": "36946d51f4a60f889402e8489a6c6e226b35f214",
-        "prefix_sha256": "d549a0d1a6654225378f9a0d0b13aa9c79847fc8338bd41c62b0744e141e0737"
+        "sequence": 207,
+        "tip_oid": "1e243a133d42e086bdc1d6aefc737b19d2a18c1f",
+        "prefix_sha256": "224e5cc254cb09907a84410a8c52f6beea1174e6c4e8e8b5bf2e089114736ad8"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 78,
-  "next_comment_id": 221,
+  "next_comment_id": 222,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -925,10 +925,19 @@
       "priority": "medium",
       "created_by": "anon-d38ea320",
       "created_at": "2026-10-08T01:56:27.842305Z",
-      "updated_at": "2026-10-08T01:56:40.085018Z",
+      "updated_at": "2026-10-08T02:06:21.291976Z",
       "labels": [
         "chore"
-      ]
+      ],
+      "comments": {
+        "3af69101-3281-4a0a-8281-9d694cc6a5d4": {
+          "display_id": 221,
+          "author": "anon-d38ea320",
+          "content": "Fork retirement: local mirrors closed (#11 #14 #39 #60 #61 #67), write cost filed upstream as #118 (closing #102), fork #1 closed, fork #2/#3 moved to vsdd-cli #62/#63. This checkout is being replaced in place by a fresh upstream clone joined to upstream's hub; this directory moves to crosslink-fork-retired with its tracker intact.",
+          "created_at": "2026-10-08T02:06:21.260709Z",
+          "kind": "resolution"
+        }
+      }
     },
     "5e560afb-4ceb-4cc5-b8d1-a447d7b0cd27": {
       "uuid": "5e560afb-4ceb-4cc5-b8d1-a447d7b0cd27",
@@ -4917,6 +4926,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 206,
       "timestamp": "2026-10-08T02:04:00.821371Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 207,
+      "timestamp": "2026-10-08T02:06:21.291976Z"
     }
   ],
   "watermark": {
