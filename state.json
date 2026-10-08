@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 197,
-        "tip_oid": "c0c98c780eee26a88ac3fb43b208885cda1ed182",
-        "prefix_sha256": "a3bb6a320520a538d744e4c26400185ede3029937f9ea0dbd53ab17e34d23792"
+        "sequence": 198,
+        "tip_oid": "fa8ee7b8cf8db84b7499eb7b7f0f4dbda25d31bd",
+        "prefix_sha256": "0c8062a543f5218ac3fa7a592258005cd69b5b08cc06cb7d00c4e09d8e35650b"
       },
       "iTty": {
         "sequence": 4,
@@ -2643,12 +2643,13 @@
       "uuid": "edc2b97a-f3b6-4a6e-9bfa-d66c9c21ad48",
       "display_id": 61,
       "title": "Fix integrity hydration --repair to actually publish SQLite-only issues to the hub (gh#74)",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "parent_uuid": "de2745c3-4db7-4d93-a072-dc6a412da7ad",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T22:02:23.896255Z",
-      "updated_at": "2026-10-08T02:01:28.135002Z",
+      "updated_at": "2026-10-08T02:01:45.025378Z",
+      "closed_at": "2026-10-08T02:01:45.004679Z",
       "labels": [
         "bug"
       ],
@@ -4837,6 +4838,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 197,
       "timestamp": "2026-10-08T02:01:28.135002Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 198,
+      "timestamp": "2026-10-08T02:01:45.025378Z"
     }
   ],
   "watermark": {
