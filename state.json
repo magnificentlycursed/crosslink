@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 194,
-        "tip_oid": "c8c110b55b7cc4d26cec02800f3a1ea2bfb0a617",
-        "prefix_sha256": "905e46eeb8d7df322dc0a950b4c99c40987f7e84aacb67853c37b8ac3d16d92b"
+        "sequence": 195,
+        "tip_oid": "66d6a84ca3fc682b6510a20925cc262ff49283c8",
+        "prefix_sha256": "55f70e1f3260aee046956e392a051a6619a962ce98ccefd5630544a36c0b71fc"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 78,
-  "next_comment_id": 215,
+  "next_comment_id": 216,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1819,7 +1819,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-09-29T02:05:29.826767Z",
-      "updated_at": "2026-09-29T04:04:25.479248Z",
+      "updated_at": "2026-10-08T02:00:52.884099Z",
       "labels": [
         "bug"
       ],
@@ -1837,6 +1837,13 @@
           "content": "Root cause located 2026-09-29. The failures are not sandbox-related (reproduced unsandboxed) and not caused by #65 (identical on a clean 973e395dc worktree). Bootstrapping a fresh one-commit repository with 'daemon ensure --wait-ready' runs 615 git subprocesses: 226 'cat-file -t', 155 'rev-parse --verify', 25 'remote', 22 for-each-ref, 20 'cat-file blob', 14 'ls-remote .', 13 'fetch --no-tags', and others. A stack sample during the stall sits in reconcile::publication::validate_source_objects -> validate_object_type (publication.rs:2554, one 'git cat-file -t' per object, re-run on every pin_source). On this machine /usr/bin/git is Apple's xcrun shim at ~38 ms per spawn: bootstrap takes 27 s through the shim and 16 s calling /Library/Developer/CommandLineTools/usr/bin/git directly, both over daemon_readiness's 15 s DAEMON_PROCESS_TIMEOUT. CI's macOS runner passes, most likely because of faster git spawns there. The durable fix is batching object validation (one 'git cat-file --batch-check' per pass) and memoizing validated OIDs across pin_source calls; the same per-object spawn pattern explains the ~5-minute first reconciliation on large hubs that motivated ENSURE_WAIT_READY_DEADLINE_SECS.",
           "created_at": "2026-09-29T04:04:25.423209Z",
           "kind": "observation"
+        },
+        "a85cb795-46f2-4f89-bcb8-567ea4b77cfb": {
+          "display_id": 215,
+          "author": "anon-d38ea320",
+          "content": "Filed upstream as Corvidae-Coding-Projects/crosslink#118 (closes out #102).",
+          "created_at": "2026-10-08T02:00:52.858807Z",
+          "kind": "resolution"
         }
       }
     },
@@ -4807,6 +4814,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 194,
       "timestamp": "2026-10-08T01:56:52.453693Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 195,
+      "timestamp": "2026-10-08T02:00:52.884099Z"
     }
   ],
   "watermark": {
