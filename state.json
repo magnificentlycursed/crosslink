@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 204,
-        "tip_oid": "5155ff9de1d5d51900b5e6762b4cd35952ded895",
-        "prefix_sha256": "3e29d05a5b248b0d79b7a1d8eb696f58f3352f8b72ab9e43bd470216cedec268"
+        "sequence": 205,
+        "tip_oid": "e360afb0e3b842c5c6a14f666b12ab7dff9886b1",
+        "prefix_sha256": "e675343cb084e39b55b8a7c8002b21761537e0f1e137eaa3e57fe0b2f8440879"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 78,
-  "next_comment_id": 220,
+  "next_comment_id": 221,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -2346,7 +2346,7 @@
       "priority": "high",
       "created_by": "anon-d38ea320",
       "created_at": "2026-08-05T21:54:08.586161Z",
-      "updated_at": "2026-08-05T21:54:29.421119Z",
+      "updated_at": "2026-10-08T02:03:44.300700Z",
       "labels": [
         "epic"
       ],
@@ -2357,6 +2357,13 @@
           "content": "Triage observations at registration: (a) gh#71 corroborated first-hand 2026-08-03 -- the shipped work-check hook told this agent to run 'crosslink intervene', which errors (real command: crosslink issue intervene); we hit the exact dead-end vsdd reports hitting daily. (b) Overlap with our open trackers: gh#14 = our #11 (Epic 1), gh#33 = our #14 (Epic 3), gh#66/#55 residual = our #39 (Epic 2, fix shape already confirmed: folder-trust pre-grant + bypass pre-acceptance; vsdd's preferred shape is different -- make plan non-interactive or give it --container -- which sidesteps the trust dialog entirely and matches their adopted container vehicle; the two shapes are compatible, plan-container may be the cheaper first land). (c) Epic 3's frozen negative-id casualty matches vsdd #858's known hydration ghost (id -1); gh#74 repair-leg fix is what un-freezes it. (d) Their exclusion list is consistent with our cleanup (v2 0.8.0 issues gh#29/#30 = our closed #12/#13). Awaiting operator prioritization before any implementation.",
           "created_at": "2026-08-05T21:54:36.415967Z",
           "kind": "plan"
+        },
+        "ce2a63a9-d76f-4260-97e8-19f33585b800": {
+          "display_id": 220,
+          "author": "anon-d38ea320",
+          "content": "Fork #3 moved to magnificentlycursed/vsdd-cli#63 (and fork #2 to vsdd-cli#62); triage continues there.",
+          "created_at": "2026-10-08T02:03:44.278721Z",
+          "kind": "resolution"
         },
         "f67a5fa8-ca42-4ec6-96c2-72dfd529fa1f": {
           "display_id": 139,
@@ -4899,6 +4906,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 204,
       "timestamp": "2026-10-08T02:03:27.984942Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 205,
+      "timestamp": "2026-10-08T02:03:44.300700Z"
     }
   ],
   "watermark": {
