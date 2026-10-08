@@ -190,3 +190,4 @@
 {"agent_id":"anon-d38ea320","agent_seq":190,"timestamp":"2026-10-07T23:45:09.827120Z","event":{"type":"StatusChanged","uuid":"bbad61bf-e465-4fcb-91b2-1e668175f319","new_status":"closed","closed_at":"2026-10-07T23:45:09.802808Z"}}
 {"agent_id":"anon-d38ea320","agent_seq":191,"timestamp":"2026-10-07T23:45:23.587776Z","event":{"type":"LockReleased","issue_display_id":75}}
 {"agent_id":"anon-d38ea320","agent_seq":192,"timestamp":"2026-10-08T01:56:27.842305Z","event":{"type":"IssueCreated","uuid":"58e4b18b-14fc-4d6e-b274-8266bac9cc34","title":"Retire the fork mirror: triage open local and fork issues, move upstream, archive","priority":"medium","created_by":"anon-d38ea320"}}
+{"agent_id":"anon-d38ea320","agent_seq":193,"timestamp":"2026-10-08T01:56:40.085018Z","event":{"type":"LabelAdded","issue_uuid":"58e4b18b-14fc-4d6e-b274-8266bac9cc34","label":"chore"}}
