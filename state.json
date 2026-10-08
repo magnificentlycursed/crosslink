@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 199,
-        "tip_oid": "a6a5f8471506e408c6bd822fbaa15360d7dccb9b",
-        "prefix_sha256": "bd24b024b5eefebe23cd7241d219974f060b71312f1760d1869d09ba0ea3f007"
+        "sequence": 200,
+        "tip_oid": "dab409df7d85d1d53f4bb449652068d3d037a41e",
+        "prefix_sha256": "81f9c2a90aabb98a2ca0f8296216f339ae1862ae2a045ba6412e687a3e07cd80"
       },
       "iTty": {
         "sequence": 4,
@@ -2215,11 +2215,12 @@
       "uuid": "d010597c-9456-4dad-91f5-44274eaf8aae",
       "display_id": 39,
       "title": "gh#55 plan-mode half: pre-seed worktree folder-trust so headless kickoff plan agents don't stall on the trust dialog",
-      "status": "open",
+      "status": "closed",
       "priority": "high",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-08-02T00:11:31.386113Z",
-      "updated_at": "2026-10-08T02:01:59.774742Z",
+      "updated_at": "2026-10-08T02:02:14.768358Z",
+      "closed_at": "2026-10-08T02:02:14.745909Z",
       "labels": [
         "bug"
       ],
@@ -4855,6 +4856,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 199,
       "timestamp": "2026-10-08T02:01:59.774742Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 200,
+      "timestamp": "2026-10-08T02:02:14.768358Z"
     }
   ],
   "watermark": {
