@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 201,
-        "tip_oid": "0a10f367af79d4d4dc64d864ade6a3287518f14b",
-        "prefix_sha256": "e0750403e7a1318b933c520b26350936313f344046f351b8ffde8e4bc6d7f640"
+        "sequence": 202,
+        "tip_oid": "83f2bdb8e9c642b873a3d8163c3a998cf7739121",
+        "prefix_sha256": "038771107c999d30c7ad01d695b829ce7b76e9810ac970b0b9991cfb7a9528e9"
       },
       "iTty": {
         "sequence": 4,
@@ -1089,12 +1089,13 @@
       "uuid": "68d2e5e5-e021-4906-a8d2-546df21b34ac",
       "display_id": 14,
       "title": "gh#33: sync ID-promotion strands session work binding, .active-issue sentinel, and lock claims",
-      "status": "open",
+      "status": "closed",
       "priority": "medium",
       "parent_uuid": "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T02:17:53.886459Z",
-      "updated_at": "2026-10-08T02:02:32.988378Z",
+      "updated_at": "2026-10-08T02:02:50.788307Z",
+      "closed_at": "2026-10-08T02:02:50.764154Z",
       "labels": [
         "upstream"
       ],
@@ -4873,6 +4874,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 201,
       "timestamp": "2026-10-08T02:02:32.988378Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 202,
+      "timestamp": "2026-10-08T02:02:50.788307Z"
     }
   ],
   "watermark": {
