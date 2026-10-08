@@ -18,9 +18,9 @@
         "prefix_sha256": "c032aca0596b8774d0dbc22b8e2f9d94e752bcfeef9301c632fdd042c89ef0dc"
       },
       "anon-d38ea320": {
-        "sequence": 200,
-        "tip_oid": "dab409df7d85d1d53f4bb449652068d3d037a41e",
-        "prefix_sha256": "81f9c2a90aabb98a2ca0f8296216f339ae1862ae2a045ba6412e687a3e07cd80"
+        "sequence": 201,
+        "tip_oid": "0a10f367af79d4d4dc64d864ade6a3287518f14b",
+        "prefix_sha256": "e0750403e7a1318b933c520b26350936313f344046f351b8ffde8e4bc6d7f640"
       },
       "iTty": {
         "sequence": 4,
@@ -35,7 +35,7 @@
     }
   },
   "next_display_id": 78,
-  "next_comment_id": 218,
+  "next_comment_id": 219,
   "display_id_map": {
     "029afced-8d1a-4506-80de-17783effd8fd": 29,
     "0335a029-7db2-4095-ba83-7c1ed56e012f": 41,
@@ -1094,7 +1094,7 @@
       "parent_uuid": "7a82a0ea-8414-4f11-8cdd-88c1b0ced3b0",
       "created_by": "anon-8ea7a055",
       "created_at": "2026-07-21T02:17:53.886459Z",
-      "updated_at": "2026-07-21T02:34:22.800781Z",
+      "updated_at": "2026-10-08T02:02:32.988378Z",
       "labels": [
         "upstream"
       ],
@@ -1104,6 +1104,13 @@
           "content": "Filed upstream as dollspace-gay/crosslink#33 with evidence from the vsdd-cli hub (promotion-log.json -1/L1 -> 294 vs sessions.work_item still -1; project details anonymized in the public filing) and a 4-step 0.8.0 repro. Expected fix: promotion remaps sessions.work_item, .active-issue sentinel, lock claims, and timer state atomically using the map it already writes to promotion-log.json.",
           "created_at": "2026-07-21T02:34:24.851995Z",
           "kind": "result"
+        },
+        "84ca952a-dd1d-4d97-83ef-443a777a24d3": {
+          "display_id": 218,
+          "author": "anon-d38ea320",
+          "content": "Tracked upstream in Corvidae-Coding-Projects/crosslink#33; local mirror retired with the fork.",
+          "created_at": "2026-10-08T02:02:32.948243Z",
+          "kind": "resolution"
         }
       }
     },
@@ -4861,6 +4868,11 @@
       "agent_id": "anon-d38ea320",
       "agent_seq": 200,
       "timestamp": "2026-10-08T02:02:14.768358Z"
+    },
+    {
+      "agent_id": "anon-d38ea320",
+      "agent_seq": 201,
+      "timestamp": "2026-10-08T02:02:32.988378Z"
     }
   ],
   "watermark": {
